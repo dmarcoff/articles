@@ -4,4 +4,4 @@ Data and scripts behind articles on the [DMARKOFF blog](https://dmarkoff.com/blo
 
 | Folder | Article |
 |---|---|
-| [free-spf-checkers-compared](free-spf-checkers-compared/) | We Tested 10 Free SPF Checkers on Five Tricky SPF Records. Most Missed at Least One. (October 2026) |
+| [free-spf-checkers-compared](free-spf-checkers-compared/) | Free SPF Checkers Compared: What They Get Wrong About Five Real-World SPF Records (October 2026) |
