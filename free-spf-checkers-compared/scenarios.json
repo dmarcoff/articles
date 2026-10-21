@@ -1,0 +1,18 @@
+[
+  {"ip": "192.0.2.1",     "domain": "gitlab.com",   "expect": {"result": "permerror", "void": 1}, "note": "lookup limit: the 11th DNS-querying term is include:_spf2.mailgun.org"},
+  {"ip": "209.85.128.1",  "domain": "gitlab.com",   "expect": {"result": "pass",      "void": 0}, "note": "Google, matched at term #2"},
+  {"ip": "67.212.179.10", "domain": "gitlab.com",   "expect": {"result": "permerror", "void": 1}, "note": "listed in _spf.sendergen.com, which is never reached"},
+  {"ip": "192.0.2.1",     "domain": "sisley.fr",    "expect": {"result": "permerror", "void": 1}, "note": "include:mailer1.eu.threatsim.com has no TXT records"},
+  {"ip": "37.71.118.23",  "domain": "sisley.fr",    "expect": {"result": "pass",      "void": 0}, "note": "ip4 listed before the broken include"},
+  {"ip": "192.0.2.1",     "domain": "korben.info",  "expect": {"result": "softfail",  "void": 2}, "note": "OVH's two ptr terms, no reverse DNS for the sender"},
+  {"ip": "8.33.137.105",  "domain": "korben.info",  "expect": {"result": "pass",      "void": 0}, "note": "OVH ip4"},
+  {"ip": "50.31.98.110",  "domain": "project7.com", "expect": {"result": "fail",      "void": 0}, "note": "ip4=50.31.98.110 is an unknown modifier and is ignored"},
+  {"ip": "192.0.2.1",     "domain": "turnlss.com",  "expect": {"result": "permerror", "void": 3}, "note": "3rd void lookup at exists:%{i}._spf.corp.salesforce.com"},
+  {"ip": "40.92.0.1",     "domain": "turnlss.com",  "expect": {"result": "pass",      "void": 0}, "note": "Microsoft 365"},
+  {"ip": "209.85.128.1",  "domain": "turnlss.com",  "expect": {"result": "pass",      "void": 1}, "note": "Google, via salesforce.com's corporate record"},
+  {"ip": "192.0.2.1",     "domain": "google.com",   "expect": {"result": "softfail",  "void": 0}, "note": "control"},
+  {"ip": "209.85.128.1",  "domain": "turnlss.com",  "record": "v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com ~all",
+   "expect": {"result": "softfail", "void": 1}, "note": "candidate record without include:salesforce.com"},
+  {"ip": "50.31.98.110",  "domain": "project7.com", "record": "v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4:50.31.98.110 -all",
+   "expect": {"result": "pass", "void": 0}, "note": "candidate record with the typo fixed"}
+]

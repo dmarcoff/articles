@@ -1,0 +1,2 @@
+pyspf==2.0.14
+dnspython==2.9.0

@@ -1,0 +1,352 @@
+######## 192.0.2.1 -> gitlab.com
+gitlab.com: "v=spf1 include:mail.zendesk.com include:_spf.google.com include:mktomail.com include:_spf.salesforce.com include:_spf-ip.gitlab.com a:zgateway.zuora.com include:mailgun.org include:_spf.sendergen.com ip4:35.80.141.6/32 ip4:44.229.121.55/32 -all"
+[term 1] include:mail.zendesk.com
+  mail.zendesk.com: "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all"
+    MATCH ~all -> softfail
+[term 2] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ~all -> softfail
+[term 3] include:mktomail.com
+  mktomail.com: "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all"
+    MATCH ~all -> softfail
+[term 4] include:_spf.salesforce.com
+  _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+  [term 5] exists:%{i}._spf.mta.salesforce.com
+    exists -> 192.0.2.1._spf.mta.salesforce.com A: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 192.0.2.1._spf.mta.salesforce.com)
+    MATCH -all -> fail
+[term 6] include:_spf-ip.gitlab.com
+  _spf-ip.gitlab.com: "v=spf1 ip4:69.169.224.0/20 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.0.0/16 ip4:54.153.54.194 ip4:204.239.0.0/24 ip4:198.207.147.0/24 -all"
+    MATCH -all -> fail
+[term 7] a:zgateway.zuora.com
+[term 8] include:mailgun.org
+  mailgun.org: "v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all"
+  [term 9] include:_spf.mailgun.org
+    _spf.mailgun.org: "v=spf1 include:_spf1.mailgun.org include:_spf2.mailgun.org ~all"
+    [term 10] include:_spf1.mailgun.org
+      _spf1.mailgun.org: "v=spf1 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:204.220.90.0/23 ip4:204.220.92.0/22 ~all"
+        MATCH ~all -> softfail
+    [term 11] include:_spf2.mailgun.org
+PERMERROR: DNS-querying term #11 "include:_spf2.mailgun.org" exceeds the limit of 10 (not queried)
+RESULT: permerror | DNS-querying terms reached 11 | void lookups 1 | expected permerror, 1 void: ok
+
+######## 209.85.128.1 -> gitlab.com
+gitlab.com: "v=spf1 include:mail.zendesk.com include:_spf.google.com include:mktomail.com include:_spf.salesforce.com include:_spf-ip.gitlab.com a:zgateway.zuora.com include:mailgun.org include:_spf.sendergen.com ip4:35.80.141.6/32 ip4:44.229.121.55/32 -all"
+[term 1] include:mail.zendesk.com
+  mail.zendesk.com: "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all"
+    MATCH ~all -> softfail
+[term 2] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ip4:209.85.128.0/17 -> pass
+  MATCH include:_spf.google.com -> pass
+RESULT: pass | DNS-querying terms reached 2 | void lookups 0 | expected pass, 0 void: ok
+
+######## 67.212.179.10 -> gitlab.com
+gitlab.com: "v=spf1 include:mail.zendesk.com include:_spf.google.com include:mktomail.com include:_spf.salesforce.com include:_spf-ip.gitlab.com a:zgateway.zuora.com include:mailgun.org include:_spf.sendergen.com ip4:35.80.141.6/32 ip4:44.229.121.55/32 -all"
+[term 1] include:mail.zendesk.com
+  mail.zendesk.com: "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all"
+    MATCH ~all -> softfail
+[term 2] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ~all -> softfail
+[term 3] include:mktomail.com
+  mktomail.com: "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all"
+    MATCH ~all -> softfail
+[term 4] include:_spf.salesforce.com
+  _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+  [term 5] exists:%{i}._spf.mta.salesforce.com
+    exists -> 67.212.179.10._spf.mta.salesforce.com A: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 67.212.179.10._spf.mta.salesforce.com)
+    MATCH -all -> fail
+[term 6] include:_spf-ip.gitlab.com
+  _spf-ip.gitlab.com: "v=spf1 ip4:69.169.224.0/20 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.0.0/16 ip4:54.153.54.194 ip4:204.239.0.0/24 ip4:198.207.147.0/24 -all"
+    MATCH -all -> fail
+[term 7] a:zgateway.zuora.com
+[term 8] include:mailgun.org
+  mailgun.org: "v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all"
+  [term 9] include:_spf.mailgun.org
+    _spf.mailgun.org: "v=spf1 include:_spf1.mailgun.org include:_spf2.mailgun.org ~all"
+    [term 10] include:_spf1.mailgun.org
+      _spf1.mailgun.org: "v=spf1 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:204.220.90.0/23 ip4:204.220.92.0/22 ~all"
+        MATCH ~all -> softfail
+    [term 11] include:_spf2.mailgun.org
+PERMERROR: DNS-querying term #11 "include:_spf2.mailgun.org" exceeds the limit of 10 (not queried)
+RESULT: permerror | DNS-querying terms reached 11 | void lookups 1 | expected permerror, 1 void: ok
+
+######## 192.0.2.1 -> sisley.fr
+sisley.fr: "v=spf1 include:_spf.google.com ip4:37.71.118.23/32 ip4:37.71.118.24/32 include:mailer1.eu.threatsim.com ~all"
+[term 1] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ~all -> softfail
+[term 2] include:mailer1.eu.threatsim.com
+    void lookup #1 (NOERROR, no TXT records at mailer1.eu.threatsim.com)
+  mailer1.eu.threatsim.com: no SPF record (NOERROR, 0 TXT)
+PERMERROR: include target mailer1.eu.threatsim.com has no SPF record (RFC 7208 §5.2)
+RESULT: permerror | DNS-querying terms reached 2 | void lookups 1 | expected permerror, 1 void: ok
+
+######## 37.71.118.23 -> sisley.fr
+sisley.fr: "v=spf1 include:_spf.google.com ip4:37.71.118.23/32 ip4:37.71.118.24/32 include:mailer1.eu.threatsim.com ~all"
+[term 1] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ~all -> softfail
+  MATCH ip4:37.71.118.23/32 -> pass
+RESULT: pass | DNS-querying terms reached 1 | void lookups 0 | expected pass, 0 void: ok
+
+######## 192.0.2.1 -> korben.info
+korben.info: "v=spf1 include:mx.ovh.com include:spf.brevo.com ~all"
+[term 1] include:mx.ovh.com
+  mx.ovh.com: "v=spf1 ptr:mail-out.ovh.net ptr:mail.ovh.net ip4:8.33.137.105/32 ip4:192.99.77.81/32 ?all"
+  [term 2] ptr:mail-out.ovh.net
+    ptr -> 1.2.0.192.in-addr.arpa: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 1.2.0.192.in-addr.arpa)
+  [term 3] ptr:mail.ovh.net
+    ptr -> 1.2.0.192.in-addr.arpa: NXDOMAIN []
+    void lookup #2 (NXDOMAIN for 1.2.0.192.in-addr.arpa)
+    MATCH ?all -> neutral
+[term 4] include:spf.brevo.com
+  spf.brevo.com: "v=spf1 ip4:185.41.28.0/22 ip4:94.143.16.0/21 ip4:185.24.144.0/22 ip4:153.92.224.0/19 ip4:213.32.128.0/18 ip4:185.107.232.0/22 ip4:77.32.128.0/18 ip4:77.32.192.0/19 ip4:212.146.192.0/18 ip4:172.246.0.0/18 -all"
+    MATCH -all -> fail
+  MATCH ~all -> softfail
+RESULT: softfail | DNS-querying terms reached 4 | void lookups 2 | expected softfail, 2 void: ok
+
+######## 8.33.137.105 -> korben.info
+korben.info: "v=spf1 include:mx.ovh.com include:spf.brevo.com ~all"
+[term 1] include:mx.ovh.com
+  mx.ovh.com: "v=spf1 ptr:mail-out.ovh.net ptr:mail.ovh.net ip4:8.33.137.105/32 ip4:192.99.77.81/32 ?all"
+  [term 2] ptr:mail-out.ovh.net
+    ptr -> 105.137.33.8.in-addr.arpa: NOERROR ['smtp-3008.ovh.ca']
+  [term 3] ptr:mail.ovh.net
+    ptr -> 105.137.33.8.in-addr.arpa: NOERROR ['smtp-3008.ovh.ca']
+    MATCH ip4:8.33.137.105/32 -> pass
+  MATCH include:mx.ovh.com -> pass
+RESULT: pass | DNS-querying terms reached 3 | void lookups 0 | expected pass, 0 void: ok
+
+######## 50.31.98.110 -> project7.com
+project7.com: "v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4=50.31.98.110 -all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH -all -> fail
+[term 2] include:email.rechargeapps.com
+  email.rechargeapps.com: "v=spf1 include:sendgrid.net include:_spf.google.com ~all"
+  [term 3] include:sendgrid.net
+    sendgrid.net: "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all"
+    [term 4] include:ab.sendgrid.net
+      ab.sendgrid.net: "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all"
+        MATCH ~all -> softfail
+      MATCH ~all -> softfail
+  [term 5] include:_spf.google.com
+    _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+      MATCH ~all -> softfail
+    MATCH ~all -> softfail
+[term 6] include:mailer.shopify.com
+  mailer.shopify.com: "v=spf1 include:sendgrid.net ~all"
+  [term 7] include:sendgrid.net
+    sendgrid.net: "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all"
+    [term 8] include:ab.sendgrid.net
+      ab.sendgrid.net: "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all"
+        MATCH ~all -> softfail
+      MATCH ~all -> softfail
+    MATCH ~all -> softfail
+  ip4=50.31.98.110: unknown modifier, ignored
+  MATCH -all -> fail
+RESULT: fail | DNS-querying terms reached 8 | void lookups 0 | expected fail, 0 void: ok
+
+######## 192.0.2.1 -> turnlss.com
+turnlss.com: "v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com include:salesforce.com include:_spf.wpengine.com ~all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH -all -> fail
+[term 2] include:_spf.salesforce.com
+  _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+  [term 3] exists:%{i}._spf.mta.salesforce.com
+    exists -> 192.0.2.1._spf.mta.salesforce.com A: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 192.0.2.1._spf.mta.salesforce.com)
+    MATCH -all -> fail
+[term 4] include:salesforce.com
+  salesforce.com: "v=spf1 include:_spf.google.com include:_spf.salesforce.com exists:%{i}._spf.corp.salesforce.com ~all"
+  [term 5] include:_spf.google.com
+    _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+      MATCH ~all -> softfail
+  [term 6] include:_spf.salesforce.com
+    _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+    [term 7] exists:%{i}._spf.mta.salesforce.com
+      exists -> 192.0.2.1._spf.mta.salesforce.com A: NXDOMAIN []
+      void lookup #2 (NXDOMAIN for 192.0.2.1._spf.mta.salesforce.com)
+      MATCH -all -> fail
+  [term 8] exists:%{i}._spf.corp.salesforce.com
+    exists -> 192.0.2.1._spf.corp.salesforce.com A: NXDOMAIN []
+    void lookup #3 (NXDOMAIN for 192.0.2.1._spf.corp.salesforce.com)
+PERMERROR: void lookup limit: 3 void lookups (recommended limit 2)
+RESULT: permerror | DNS-querying terms reached 8 | void lookups 3 | expected permerror, 3 void: ok
+
+######## 40.92.0.1 -> turnlss.com
+turnlss.com: "v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com include:salesforce.com include:_spf.wpengine.com ~all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH ip4:40.92.0.0/15 -> pass
+  MATCH include:spf.protection.outlook.com -> pass
+RESULT: pass | DNS-querying terms reached 1 | void lookups 0 | expected pass, 0 void: ok
+
+######## 209.85.128.1 -> turnlss.com
+turnlss.com: "v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com include:salesforce.com include:_spf.wpengine.com ~all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH -all -> fail
+[term 2] include:_spf.salesforce.com
+  _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+  [term 3] exists:%{i}._spf.mta.salesforce.com
+    exists -> 209.85.128.1._spf.mta.salesforce.com A: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 209.85.128.1._spf.mta.salesforce.com)
+    MATCH -all -> fail
+[term 4] include:salesforce.com
+  salesforce.com: "v=spf1 include:_spf.google.com include:_spf.salesforce.com exists:%{i}._spf.corp.salesforce.com ~all"
+  [term 5] include:_spf.google.com
+    _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+      MATCH ip4:209.85.128.0/17 -> pass
+    MATCH include:_spf.google.com -> pass
+  MATCH include:salesforce.com -> pass
+RESULT: pass | DNS-querying terms reached 5 | void lookups 1 | expected pass, 1 void: ok
+
+######## 192.0.2.1 -> google.com
+google.com: "v=spf1 include:_spf.google.com ~all"
+[term 1] include:_spf.google.com
+  _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+    MATCH ~all -> softfail
+  MATCH ~all -> softfail
+RESULT: softfail | DNS-querying terms reached 1 | void lookups 0 | expected softfail, 0 void: ok
+
+######## 209.85.128.1 -> turnlss.com (candidate record: v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com ~all)
+turnlss.com: "v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com ~all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH -all -> fail
+[term 2] include:_spf.salesforce.com
+  _spf.salesforce.com: "v=spf1 exists:%{i}._spf.mta.salesforce.com -all"
+  [term 3] exists:%{i}._spf.mta.salesforce.com
+    exists -> 209.85.128.1._spf.mta.salesforce.com A: NXDOMAIN []
+    void lookup #1 (NXDOMAIN for 209.85.128.1._spf.mta.salesforce.com)
+    MATCH -all -> fail
+  MATCH ~all -> softfail
+RESULT: softfail | DNS-querying terms reached 3 | void lookups 1 | expected softfail, 1 void: ok
+
+######## 50.31.98.110 -> project7.com (candidate record: v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4:50.31.98.110 -all)
+project7.com: "v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4:50.31.98.110 -all"
+[term 1] include:spf.protection.outlook.com
+  spf.protection.outlook.com: "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all"
+    MATCH -all -> fail
+[term 2] include:email.rechargeapps.com
+  email.rechargeapps.com: "v=spf1 include:sendgrid.net include:_spf.google.com ~all"
+  [term 3] include:sendgrid.net
+    sendgrid.net: "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all"
+    [term 4] include:ab.sendgrid.net
+      ab.sendgrid.net: "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all"
+        MATCH ~all -> softfail
+      MATCH ~all -> softfail
+  [term 5] include:_spf.google.com
+    _spf.google.com: "v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all"
+      MATCH ~all -> softfail
+    MATCH ~all -> softfail
+[term 6] include:mailer.shopify.com
+  mailer.shopify.com: "v=spf1 include:sendgrid.net ~all"
+  [term 7] include:sendgrid.net
+    sendgrid.net: "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all"
+    [term 8] include:ab.sendgrid.net
+      ab.sendgrid.net: "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all"
+        MATCH ~all -> softfail
+      MATCH ~all -> softfail
+    MATCH ~all -> softfail
+  MATCH ip4:50.31.98.110 -> pass
+RESULT: pass | DNS-querying terms reached 8 | void lookups 0 | expected pass, 0 void: ok
+
+######## static gitlab.com
+gitlab.com: 32 TXT record(s); domain name + TXT text = 2,165 bytes (RFC 7208 §3.4 recommends under 450)
+gitlab.com: v=spf1 include:mail.zendesk.com include:_spf.google.com include:mktomail.com include:_spf.salesforce.com include:_spf-ip.gitlab.com a:zgateway.zuora.com include:mailgun.org include:_spf.sendergen.com ip4:35.80.141.6/32 ip4:44.229.121.55/32 -all
+  # 1 include:mail.zendesk.com
+    mail.zendesk.com: v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all
+  # 2 include:_spf.google.com
+    _spf.google.com: v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all
+  # 3 include:mktomail.com
+    mktomail.com: v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all
+  # 4 include:_spf.salesforce.com
+    _spf.salesforce.com: v=spf1 exists:%{i}._spf.mta.salesforce.com -all
+      # 5 exists:%{i}._spf.mta.salesforce.com
+  # 6 include:_spf-ip.gitlab.com
+    _spf-ip.gitlab.com: v=spf1 ip4:69.169.224.0/20 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.0.0/16 ip4:54.153.54.194 ip4:204.239.0.0/24 ip4:198.207.147.0/24 -all
+  # 7 a:zgateway.zuora.com
+  # 8 include:mailgun.org
+    mailgun.org: v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all
+      # 9 include:_spf.mailgun.org
+        _spf.mailgun.org: v=spf1 include:_spf1.mailgun.org include:_spf2.mailgun.org ~all
+          #10 include:_spf1.mailgun.org
+            _spf1.mailgun.org: v=spf1 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:204.220.90.0/23 ip4:204.220.92.0/22 ~all
+          #11 include:_spf2.mailgun.org   <-- 11th term: limit exceeded here
+            _spf2.mailgun.org: v=spf1 ip4:161.38.192.0/20 ip4:143.55.224.0/21 ip4:143.55.232.0/22 ip4:159.112.240.0/20 ip4:198.244.48.0/20 ip4:204.220.168.0/21 ip4:204.220.176.0/20 ~all
+      #12 include:_spf.eu.mailgun.org
+        _spf.eu.mailgun.org: v=spf1 ip4:141.193.32.0/23 ip4:159.135.140.80/29 ip4:159.135.132.128/25 ip4:161.38.204.0/22 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ip4:143.55.236.0/22 ip4:198.244.60.0/22 ip4:204.220.160.0/20 ~all
+  #13 include:_spf.sendergen.com
+    _spf.sendergen.com: v=spf1 ip4:67.212.179.10 ip4:67.212.168.66 ip4:51.81.185.125 ip4:192.99.150.164 ip4:69.175.35.2 ip4:69.175.48.226 ip4:66.70.177.4 ip4:144.168.44.234 ip4:184.154.0.10 ip4:45.158.37.162 ip4:23.29.121.218 ip4:108.178.2.18 ip4:167.114.100.50 ip4:108.163.197.50 ip4:66.85.143.98 ip4:194.126.173.186 ip4:51.81.244.32 ip4:51.81.11.12 ip4:51.81.11.26 ip4:147.135.46.73 ip4:147.135.46.27 ~all
+
+######## static sisley.fr
+sisley.fr: 57 TXT record(s); domain name + TXT text = 2,018 bytes (RFC 7208 §3.4 recommends under 450)
+sisley.fr: v=spf1 include:_spf.google.com ip4:37.71.118.23/32 ip4:37.71.118.24/32 include:mailer1.eu.threatsim.com ~all
+  # 1 include:_spf.google.com
+    _spf.google.com: v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all
+  # 2 include:mailer1.eu.threatsim.com
+    mailer1.eu.threatsim.com: NO SPF RECORD
+
+######## static korben.info
+korben.info: 10 TXT record(s); domain name + TXT text = 695 bytes (RFC 7208 §3.4 recommends under 450)
+korben.info: v=spf1 include:mx.ovh.com include:spf.brevo.com ~all
+  # 1 include:mx.ovh.com
+    mx.ovh.com: v=spf1 ptr:mail-out.ovh.net ptr:mail.ovh.net ip4:8.33.137.105/32 ip4:192.99.77.81/32 ?all
+      # 2 ptr:mail-out.ovh.net
+      # 3 ptr:mail.ovh.net
+  # 4 include:spf.brevo.com
+    spf.brevo.com: v=spf1 ip4:185.41.28.0/22 ip4:94.143.16.0/21 ip4:185.24.144.0/22 ip4:153.92.224.0/19 ip4:213.32.128.0/18 ip4:185.107.232.0/22 ip4:77.32.128.0/18 ip4:77.32.192.0/19 ip4:212.146.192.0/18 ip4:172.246.0.0/18 -all
+
+######## static project7.com
+project7.com: 6 TXT record(s); domain name + TXT text = 298 bytes (RFC 7208 §3.4 recommends under 450)
+project7.com: v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4=50.31.98.110 -all
+  # 1 include:spf.protection.outlook.com
+    spf.protection.outlook.com: v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all
+  # 2 include:email.rechargeapps.com
+    email.rechargeapps.com: v=spf1 include:sendgrid.net include:_spf.google.com ~all
+      # 3 include:sendgrid.net
+        sendgrid.net: v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all
+          # 4 include:ab.sendgrid.net
+            ab.sendgrid.net: v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all
+      # 5 include:_spf.google.com
+        _spf.google.com: v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all
+  # 6 include:mailer.shopify.com
+    mailer.shopify.com: v=spf1 include:sendgrid.net ~all
+      # 7 include:sendgrid.net
+        sendgrid.net: v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:134.128.64.0/18 ip4:159.26.176.0/20 include:ab.sendgrid.net ~all
+          # 8 include:ab.sendgrid.net
+            ab.sendgrid.net: v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all
+
+######## static turnlss.com
+turnlss.com: 3 TXT record(s); domain name + TXT text = 264 bytes (RFC 7208 §3.4 recommends under 450)
+turnlss.com: v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com include:salesforce.com include:_spf.wpengine.com ~all
+  # 1 include:spf.protection.outlook.com
+    spf.protection.outlook.com: v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/15 ip4:52.102.0.0/16 ip4:52.103.0.0/17 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/51 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all
+  # 2 include:_spf.salesforce.com
+    _spf.salesforce.com: v=spf1 exists:%{i}._spf.mta.salesforce.com -all
+      # 3 exists:%{i}._spf.mta.salesforce.com
+  # 4 include:salesforce.com
+    salesforce.com: v=spf1 include:_spf.google.com include:_spf.salesforce.com exists:%{i}._spf.corp.salesforce.com ~all
+      # 5 include:_spf.google.com
+        _spf.google.com: v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all
+      # 6 include:_spf.salesforce.com
+        _spf.salesforce.com: v=spf1 exists:%{i}._spf.mta.salesforce.com -all
+          # 7 exists:%{i}._spf.mta.salesforce.com
+      # 8 exists:%{i}._spf.corp.salesforce.com
+  # 9 include:_spf.wpengine.com
+    _spf.wpengine.com: NO SPF RECORD
+
+######## static google.com
+google.com: 17 TXT record(s); domain name + TXT text = 937 bytes (RFC 7208 §3.4 recommends under 450)
+google.com: v=spf1 include:_spf.google.com ~all
+  # 1 include:_spf.google.com
+    _spf.google.com: v=spf1 ip4:74.125.0.0/16 ip4:209.85.128.0/17 ip6:2001:4860:4864::/56 ip6:2404:6800:4864::/56 ip6:2607:f8b0:4864::/56 ip6:2800:3f0:4864::/56 ip6:2a00:1450:4864::/56 ip6:2c0f:fb50:4864::/56 ~all
+
+14/14 traces agree with scenarios.json

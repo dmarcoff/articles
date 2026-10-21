@@ -1,0 +1,15 @@
+name	domain	record
+turnlss-fixed	turnlss.com	v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com ~all
+turnlss-fixed-with-google	turnlss.com	v=spf1 include:spf.protection.outlook.com include:_spf.salesforce.com include:_spf.google.com ~all
+sisley-fixed	sisley.fr	v=spf1 include:_spf.google.com ip4:37.71.118.23 ip4:37.71.118.24 ~all
+project7-fixed	project7.com	v=spf1 include:spf.protection.outlook.com include:email.rechargeapps.com include:mailer.shopify.com ip4:50.31.98.110 -all
+gitlab-naive	gitlab.com	v=spf1 include:mail.zendesk.com include:_spf.google.com include:mktomail.com include:_spf.salesforce.com include:_spf-ip.gitlab.com include:mailgun.org include:_spf.sendergen.com ip4:35.80.141.6 ip4:44.229.121.55 -all
+ipv4-typo	example.com	v=spf1 ipv4:192.0.2.10 -all
+bad-ip	example.com	v=spf1 ip4:192.0.2.300 -all
+include-eq	example.com	v=spf1 include=_spf.google.com -all
+two-redirect	example.com	v=spf1 redirect=_spf.google.com redirect=spf.protection.outlook.com
+after-all	example.com	v=spf1 -all include:_spf.google.com
+redirect-all	example.com	v=spf1 redirect=_spf.google.com -all
+plusall	example.com	v=spf1 include:_spf.google.com +all
+no-all	example.com	v=spf1 include:_spf.google.com
+vendor-nxdomain	vendor.net	v=spf1 ip4:203.0.113.25 include:mail.vendor.net -all
