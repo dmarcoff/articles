@@ -1,0 +1,20 @@
+pyspf 2.0.14, DNS from dns-2026-10-21.json
+
+sender IP       domain         result     lookups void  check  explanation
+192.0.2.1       gitlab.com     permerror       11    1  ok     SPF Permanent Error: Too many DNS lookups
+209.85.128.1    gitlab.com     pass             2    0  ok     sender SPF authorized
+67.212.179.10   gitlab.com     permerror       11    1  ok     SPF Permanent Error: Too many DNS lookups
+192.0.2.1       sisley.fr      permerror        2    1  ok     SPF Permanent Error: No valid SPF record for included domain: mailer1.eu.threatsim.com: include:mailer1.eu.threatsim.com
+37.71.118.23    sisley.fr      pass             1    0  ok     sender SPF authorized
+192.0.2.1       korben.info    softfail         4    2  ok     domain owner discourages use of this host
+8.33.137.105    korben.info    pass             3    0  ok     sender SPF authorized
+50.31.98.110    project7.com   fail             8    0  ok     SPF fail - not authorized
+192.0.2.1       turnlss.com    permerror        8    3  ok     SPF Permanent Error: Void lookup limit of 2 exceeded
+40.92.0.1       turnlss.com    pass             1    0  ok     sender SPF authorized
+209.85.128.1    turnlss.com    pass             5    1  ok     sender SPF authorized
+192.0.2.1       google.com     softfail         1    0  ok     domain owner discourages use of this host
+209.85.128.1    turnlss.com *  softfail         3    1  ok     domain owner discourages use of this host
+50.31.98.110    project7.com * pass             8    0  ok     sender SPF authorized
+* candidate record evaluated instead of the published one
+
+14/14 scenarios match the expected results
