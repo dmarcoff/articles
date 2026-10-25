@@ -1,0 +1,182 @@
+== p1
+receiver                               s00    s01    s02
+aol.com                                  R      R      R
+att.net                                  R      R      R
+barracuda-filter.seed.example            A      A      R
+currently.com                            R      R      R
+freenet.de                               R      R      R
+gmail.com                                A      A      A
+gmx.com                                  R      R      R
+gmx.de                                   R      R      R
+hotmail.com                              R      R      R
+icloud.com                               R      R      R
+interia.pl                               A      A      R
+laposte.net                              A      A      R
+libero.it                                A      A      A
+mail.com                                 R      R      R
+mail.ru                                  A      A      R
+mailo.com                                A      A      R
+microsoft-eop-filter.seed.example        R      R      R
+microsoft365-a.seed.example              R      R      R
+microsoft365-b.seed.example              R      R      R
+naver.com                                A      A      R
+onet.pl                                  A      A      R
+outlook.com                              R      R      R
+outlook.com.br                           R      R      R
+outlook.de                               R      R      R
+outlook.fr                               R      R      R
+proofpoint-filter.seed.example           R      R      R
+protonmail.com                           A      A      A
+seznam.cz                                A      A      A
+spamassassin-filter.seed.example         A      A      A
+t-online.de                              R      R      R
+ukr.net                                  A      A      A
+virgilio.it                              A      A      A
+vodafonemail.de                          R      R      R
+web.de                                   R      R      R
+workmail-a.seed.example                  R      R      R
+workmail-b.seed.example                  R      R      R
+workspace-4y-a.seed.example              A      A      A
+workspace-4y-b.seed.example              A      A      A
+workspace-new-a.seed.example             A      A      A
+workspace-new-b.seed.example             A      A      A
+yahoo.com                                R      R      R
+yandex.ru                                A      A      R
+zoho.com                                 R      R      R
+zohomail.eu                              R      R      R
+
+== r1
+receiver                               s00    s01    s02    s03    s04    s05    s06    s07    s08    s09    s10    s11    s12
+aol.com                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+att.net                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+barracuda-filter.seed.example            A      A      R      A      R      A      R      A      R      R      A      R      R
+currently.com                            R      R      R      R      R      R      R      R      R      R      R      R      R
+freenet.de                               R      R      R      R      R      R      R      R      R      R      R      R      R
+gmail.com                                A      A      A      A      A      A      R      A      R      R      A      R      R
+gmx.com                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+gmx.de                                   R      R      R      R      R      R      R      R      R      R      R      R      R
+hotmail.com                              R      R      R   A1R4      R      R      R      R      R      R      R      R      R
+icloud.com                               R      R      R      R      R      R      R      R      R      R      R      R      R
+interia.pl                               A      A      R      A      A      A      R      A      R      D      A   R2D1      D
+laposte.net                              A      A      R      A      A      A      R      A      R      R      A      R      R
+libero.it                                A      A      A      A      A      A      A      A      A      A      A      A      A
+mail.com                                 R      R      R      R      R      R      R      R      R      R      R      R      R
+mail.ru                                  A      A      R      A      A      A      R      A      R      R      A      R      R
+mailo.com                                A      A      R      A      A      A      R      A      R      R      A      R      R
+microsoft-eop-filter.seed.example        R      R      R      R      R      R      R      R      R      R      R      R      R
+microsoft365-a.seed.example              R      R      R      R      R      R      R      R      R      R      R      R      R
+microsoft365-b.seed.example              R      R      R      R      R      R      R      R      R      R      R      R      R
+naver.com                                A      A      R      A      A      A      R      A      R      R      A      R      R
+onet.pl                                  A      A      R      A      R      A      R      A      R      R      A      R      R
+outlook.com                              R   A1R6      R      R      R      R      R   A1R6      R      R      R      R      R
+outlook.com.br                           R      R      R      R      R      R      R      R      R      R      R      R      R
+outlook.de                               R      R      R      R      R      R      R      R      R      R      R      R      R
+outlook.fr                               R      R      R      R      R      R      R      R      R      R      R      R      R
+proofpoint-filter.seed.example           R      R      R      R      R      R      R      R      R      R      R      R      R
+protonmail.com                           A      A      A      A      A      A      A      A      A      A      A      A      A
+seznam.cz                                A      A      A      A      A      A      A      A      A      A      A      A      A
+spamassassin-filter.seed.example         A      A      A      A      A      A      A      A      A      A      A      A      A
+t-online.de                              R      R      R      R      R      R      R      R      R      R      R      R      R
+ukr.net                                  A      A      A      A      A      A      D      A      A      A      A      A      A
+virgilio.it                              A      D      A      A      A      A   A1D1      A      A      A   A1R1      A      A
+vodafonemail.de                          R      R      R      R      R      R      R      R      R      R      R      R      R
+web.de                                   R      R      R      R      R      R      R      R      R      R      R      R      R
+workmail-a.seed.example                  R      R      R      R      R      R      R      R      R      R      R      R      R
+workmail-b.seed.example                  R      R      R      R      R      R      R      R      R      R      R      R      R
+workspace-4y-a.seed.example              A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-4y-b.seed.example              A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-new-a.seed.example             A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-new-b.seed.example             A      A      A      A      A      A      R      A      R      R      A      R      R
+yahoo.com                                R      R      R      R      R      R      R      R      R      R      R      R      R
+yandex.ru                                A      A      R      A      A      A      R      A      R      R      A      A      R
+zoho.com                                 R      R      R      R      R      R      R      R      R      R      R      R      R
+zohomail.eu                              R      R      R      R      R      R      R      R      R      R      R      R      R
+
+== r2
+receiver                               s00    s01    s02    s03    s04    s05    s06    s07    s08    s09    s10    s11    s12
+aol.com                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+att.net                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+barracuda-filter.seed.example            A      A      R      A      R      A      R      A      R      R      A      R      R
+currently.com                            R      R      R      R      R      R      R      R      R      R      R      R      R
+freenet.de                               R      R      R      R      R      R      R      R      R      R      R      R      R
+gmail.com                                A      A      A      A      A      A      R      A      R      R      A      R      R
+gmx.com                                  R      R      R      R      R      R      R      R      R      R      R      R      R
+gmx.de                                   R      R      R      R      R      R      R      R      R      R      R      R      R
+hotmail.com                              R      R      R      R      R      R      R      R      R      R      R      R      R
+icloud.com                               R      R      R      R      R      R      R      R      R      R      R      R      R
+interia.pl                               A      A      R      A      A      A      R      A      R      D      A      R      D
+laposte.net                              A      A      R      A      A      A      R      A      R      R      A      R      R
+libero.it                                A      A      A      A      A      A      A      A      A      A      A      A      A
+mail.com                                 R      R      R      R      R      R      R      R      R      R      R      R      R
+mail.ru                                  A      A      R      A      A      A      R      A      R      R      A      R      R
+mailo.com                                A      A      R      A      A      A      R      A      R      R      A      R      R
+microsoft-eop-filter.seed.example        R      R      R      R      R      R      R      R      R      R      R      R      R
+microsoft365-a.seed.example              R      R      R      R      R      R      R      R      R      R      R      R      R
+microsoft365-b.seed.example              R      R      R      R      R      R      R      R      R      R      R      R      R
+naver.com                                A      A      R      A      A      A      R      A      R      R      A      R      R
+onet.pl                                  A      A      R      A      R      A      R      A      R      R      A      R      R
+outlook.com                              R      R      R      R      R      R      R      R      R   A2R5      R      R      R
+outlook.com.br                           R      R      R      R      R      R      R      R      R      R      R      R      R
+outlook.de                               R      R      R      R      R      R      R      R      R      R      R      R      R
+outlook.fr                               R      R      R      R      R      R      R      R      R      R      R      R      R
+proofpoint-filter.seed.example           R      R      R      R      R      R      R      R      R      R      R      R      R
+protonmail.com                           A      A      A      A      A      A      A      A      A      A      A      A      A
+rambler.ru                                      A             A                           A                                   
+seznam.cz                                A      A      A      A      A      A      A      A      A      A      A      A      A
+spamassassin-filter.seed.example         A      A      A      A      A      A      A      A      A      A      A      A      A
+t-online.de                              R      R      R      R      R      R      R      R      R      R      R      R      R
+ukr.net                                  A      A      A      A      A      A      D      A      A      A      A      A      A
+virgilio.it                              A      A      A      A      A      A      A      A      A      A      A      A      A
+vodafonemail.de                          R      R      R      R      R      R      R      R      R      R      R      R      R
+web.de                                   R      R      R      R      R      R      R      R      R      R      R      R      R
+workmail-a.seed.example                  R      R      R      R      R      R      R      R      R      R      R      R      R
+workmail-b.seed.example                  R      R      R      R      R      R      R      R      R      R      R      R      R
+workspace-4y-a.seed.example              A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-4y-b.seed.example              A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-new-a.seed.example             A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-new-b.seed.example             A      A      A      A      A      A      R      A      R      R      A      R      R
+yahoo.com                                R      R      R      R      R      R      R      R      R      R      R      R      R
+yandex.ru                                A      A      R      A      A      A      R      A      R      R      A      A      R
+zoho.com                                 R      R      R      R      R      R      R      R      R      R      R      R      R
+zohomail.eu                              R      R      R      R      R      R      R      R      R      R      R      R      R
+
+== g1
+receiver                               m00    m01    m02    m03    m04    m05    m06    m07    m08    m09    m10    m11    m12
+aol.com                                  A      A      A      A      A      A      R      A      R      R      A      R      R
+att.net                                  A      A      A      A      A      A      R      A      R      R      A      R      R
+barracuda-filter.seed.example            A      A      R      A      R      A      R      A      R      R      A      R      R
+freenet.de                               A      A      A      A      A      A      A      A      A      A      A      A      A
+gmail.com                                A      A      A      A      A      A      R      A      R      R      A      R      R
+gmx.com                                  A      A      R      A      A      A      R      A      R      R      A      R      R
+gmx.de                                   A      A      R      A      A      A      R      A      R      R      A      R      R
+hotmail.com                              A      A      R      A      A      A      R      A      R      R      A   A1R1      R
+icloud.com                               A      A      R      A      A      A      R      A      R      R      A      R      R
+interia.pl                               A      A      R      A      A      A      R      A      R      D      A      R      D
+laposte.net                              A      A      R      A      A      A      R      A      R      R      A      R      R
+libero.it                                A      A      A      A      A      A      A      A      A      A      A      A      A
+mail.com                                 A      A      R      A      A      A      R      A      R      R      A      R      R
+mail.ru                                  A      A      R      A      A      A      R      A      R      R      A      R      R
+mailo.com                                A      A      R      A      A      A      R      A      R      R      A      R      R
+microsoft-eop-filter.seed.example        A      A      R      A      A      A      R      A      R      R      A      R      R
+microsoft365-a.seed.example              A      A      R      A      A      A      R      A      R      R      A      A      R
+naver.com                                A      A      A      A      A      A      A      A      R      A      A      A      A
+onet.pl                                  A      A      R      A      R      A      R      A      R      R      A      R      R
+outlook.com                              A      A      R      A      A      A      R      A      R      R      A   A1R1      R
+outlook.de                               A      A      R      A      A      A      R      A      R      R      A      R      R
+outlook.fr                               A      A      R      A      A      A      R      A      R      R      A      R      R
+proofpoint-filter.seed.example           A      A      R      A      A      A      R      A      R      R      A      R      R
+protonmail.com                           A      A      A      A      A      A      A      A      A      A      A      A      A
+seznam.cz                                A      A      A      A      A      A      A      A      A      A      A      A      A
+spamassassin-filter.seed.example         A      A      A      A      A      A      A      A      A      A      A      A      A
+t-online.de                              A      A      A      A      A      A      A      A      A      A      A      A      A
+ukr.net                                  A      A      A      A      A      A      D      A      A      A      A      A      A
+virgilio.it                              A      A      A      A      A      A      A      A      A      A      A      A      A
+vodafonemail.de                          A      A      A      A      A      A      A      A      A      A      A      A      A
+web.de                                   A      A      R      A      A      A      R      A      R      R      A      R      R
+workmail-b.seed.example                  A      A      A      A      A      A      A      A      A      A      A      A      A
+workspace-4y-b.seed.example              A      A      A      A      A      A      R      A      R      R      A      R      R
+workspace-new-a.seed.example             A      A      A      A      A      A      R      A      R      R      A      R      R
+yahoo.com                                A      A      A      A      A      A      R      A      R      R      A      R      R
+yandex.ru                                A      A      R      A      A      A      R      A      R      R      A      R      R
+zoho.com                                 A      A      R      A      A      A      R      A      R      R      A      R      R
+

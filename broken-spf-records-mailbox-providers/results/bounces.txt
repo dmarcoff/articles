@@ -1,0 +1,36 @@
+== Direct path (p1, r1, r2): messages by how they ended
+messages                                       3202
+accepted                                       1033
+refused for the IP                             1692   (mail 999, connect 406, rcpt 287)
+refused on SPF or DMARC                         455   (data 425, rcpt 30)
+deferred or cut off when retries stopped         22
+
+retried messages by number of attempts: {2: 96, 3: 3, 4: 2, 5: 12, 6: 6}; longest span 136 min
+
+temporary replies (attempts), most frequent:
+   51  interia.pl             451 4.7.1 <…@interia.pl>: Recipient address rejected: Greylistin
+   46  gmail.com              421 4.7.28 Gmail has detected an unusual rate of mail originatin
+   33  interia.pl             451 4.4.0 <…@interia.pl>: Recipient address rejected: Deferred d
+   33  interia.pl             451 4.4.3 <…@interia.pl>: Recipient address rejected: Deferred d
+   20  ukr.net                451 4.1.0 Temporary error during SPF verification of 184.195.33.
+   16  virgilio.it            451 too many messages, slow down. [smtp-37.iol.local; VIR_650]
+    4  interia.pl             451 4.5.1 Message deferred due to policy reasons / Wiadomosc odr
+    2  yandex.ru              455 4.4.5 Try again later
+    1  vodafonemail.de        421 4.3.2 All server ports are busy
+
+== Mailgun run (g1)
+messages accepted by Mailgun: 585
+permanent failures: 188 {'espblock': 170, 'generic': 15, 'old': 3}
+temporary failures (attempts): 24
+delivered, then failed by a later bounce: 17 messages, 2.3 to 17.1 s after delivery
+
+espblock by recipient domain: aol.com 10, att.net 5, gmail.com 15, gmx.com 6, gmx.de 6, hotmail.com 11, icloud.com 6, laposte.net 6, mail.com 6, mail.ru 6, mailo.com 6, microsoft-eop-filter.seed.example 6, microsoft365-a.seed.example 5, onet.pl 4, outlook.com 11, outlook.de 6, outlook.fr 6, proofpoint-filter.seed.example 6, web.de 6, workspace-4y-b.seed.example 10, workspace-new-a.seed.example 5, yahoo.com 10, yandex.ru 6, zoho.com 6
+
+generic by recipient domain: barracuda-filter.seed.example 7, interia.pl 4, naver.com 1, onet.pl 3
+
+old by recipient domain: interia.pl 2, ukr.net 1
+
+retries before Mailgun gave up (minutes after the first attempt):
+  m06 ukr.net: [0, 10, 20, 35, 65, 125, 245, 485]
+  m09 interia.pl: [0, 10, 20, 35, 65, 125, 245, 485]
+  m12 interia.pl: [0, 10, 20, 35, 65, 125, 486]

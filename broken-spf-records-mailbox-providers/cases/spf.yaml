@@ -1,0 +1,89 @@
+# SPF enforcement experiment: what mailbox providers do with SPF edge cases in practice.
+#
+# Every case is its own subdomain of `domain` (s00.mailpath.io, s01.mailpath.io, ...). That
+# subdomain is the From domain and the MAIL FROM domain, so receivers evaluate exactly the SPF
+# record below. DKIM is off unless a case says otherwise, so DMARC (p=reject) depends on SPF
+# alone and a broken record shows up as a rejection or a spam placement.
+#
+# Templates: {{.IP}} is the sending IP, {{.Domain}} the experiment domain,
+# {{includes N}} expands to N non-matching includes (each costs one DNS lookup),
+# {{voids N}} to N a: terms for names that don't exist (each is one void lookup).
+
+experiment: spf
+domain: mailpath.io
+helo: mta.mailpath.io
+dkim:
+  selector: mx2026
+  domain: mailpath.io
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+# The organizational domain sends nothing itself: anything claiming to be from it is spoofed.
+org_dmarc: "v=DMARC1; p=reject; sp=reject; rua=mailto:{{.RUA}}; fo=1;"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: s00
+    name: control, SPF pass and aligned DKIM
+    spf: ["v=spf1 ip4:{{.IP}} -all"]
+    dkim: true
+    expect: SPF pass, DKIM pass, DMARC pass
+
+  - id: s01
+    name: control, SPF pass only
+    spf: ["v=spf1 ip4:{{.IP}} -all"]
+    expect: SPF pass, DMARC pass. The baseline for every SPF-only case below
+
+  - id: s02
+    name: lookup limit, our IP after 11 includes
+    spf: ["v=spf1 {{includes 11}} ip4:{{.IP}} -all"]
+    expect: permerror at the 11th include (RFC 7208 4.6.4), DMARC fail
+
+  - id: s03
+    name: lookup limit, our IP before 11 includes
+    spf: ["v=spf1 ip4:{{.IP}} {{includes 11}} -all"]
+    expect: pass at the first term; evaluation never reaches the limit
+
+  - id: s04
+    name: void lookup limit, three void lookups before our IP
+    spf: ["v=spf1 {{voids 3}} ip4:{{.IP}} -all"]
+    expect: permerror at the third void lookup (recommended limit of two), DMARC fail
+
+  - id: s05
+    name: two void lookups before our IP
+    spf: ["v=spf1 {{voids 2}} ip4:{{.IP}} -all"]
+    expect: pass; two void lookups are within the recommended limit
+
+  - id: s06
+    name: include with no SPF record, before our IP
+    spf: ["v=spf1 include:nx.{{.Domain}} ip4:{{.IP}} -all"]
+    expect: permerror at the include (RFC 7208 5.2), DMARC fail
+
+  - id: s07
+    name: include with no SPF record, after our IP
+    spf: ["v=spf1 ip4:{{.IP}} include:nx.{{.Domain}} -all"]
+    expect: pass at the first term
+
+  - id: s08
+    name: typo ip4= (unknown modifier)
+    spf: ["v=spf1 ip4={{.IP}} -all"]
+    expect: the modifier is ignored (RFC 7208 6), so our IP gets fail from -all
+
+  - id: s09
+    name: "typo ipv4: (unknown mechanism)"
+    spf: ["v=spf1 ipv4:{{.IP}} -all"]
+    expect: permerror for the whole record (syntax error)
+
+  - id: s10
+    name: ptr mechanism
+    spf: ["v=spf1 ptr:{{.Domain}} -all"]
+    expect: pass if the receiver still evaluates ptr (our PTR is mta.mailpath.io)
+
+  - id: s11
+    name: two SPF records
+    spf: ["v=spf1 ip4:{{.IP}} -all", "v=spf1 -all"]
+    expect: permerror (RFC 7208 4.5, more than one record)
+
+  - id: s12
+    name: no SPF record
+    spf: []
+    expect: none, DMARC fail

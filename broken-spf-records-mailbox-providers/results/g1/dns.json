@@ -1,0 +1,648 @@
+{
+  "records": [
+    {
+      "name": "m00.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m00.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m00.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m01.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m01.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m01.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m02.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:h01.spf.mailpath.io include:h02.spf.mailpath.io include:h03.spf.mailpath.io include:h04.spf.mailpath.io include:h05.spf.mailpath.io include:h06.spf.mailpath.io include:h07.spf.mailpath.io include:h08.spf.mailpath.io include:h09.spf.mailpath.io include:h10.spf.mailpath.io include:h11.spf.mailpath.io include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m02.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m02.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m03.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:_spf.mailgun.org include:h01.spf.mailpath.io include:h02.spf.mailpath.io include:h03.spf.mailpath.io include:h04.spf.mailpath.io include:h05.spf.mailpath.io include:h06.spf.mailpath.io include:h07.spf.mailpath.io include:h08.spf.mailpath.io include:h09.spf.mailpath.io include:h10.spf.mailpath.io include:h11.spf.mailpath.io -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m03.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m03.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m04.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 a:v01.void.mailpath.io a:v02.void.mailpath.io a:v03.void.mailpath.io include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m04.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxb.mailgun.org.",
+        "10 mxa.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m04.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m05.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 a:v01.void.mailpath.io a:v02.void.mailpath.io include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m05.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m05.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m06.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:nx.mailpath.io include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m06.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m06.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m07.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:_spf.mailgun.org include:nx.mailpath.io -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m07.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxb.mailgun.org.",
+        "10 mxa.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m07.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m08.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include=_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m08.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxb.mailgun.org.",
+        "10 mxa.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m08.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m09.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 includes:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m09.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m09.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m10.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ptr:mailgun.net -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m10.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxa.mailgun.org.",
+        "10 mxb.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m10.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m11.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all",
+        "v=spf1 include:_spf.mailgun.org -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m11.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxb.mailgun.org.",
+        "10 mxa.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m11.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "m12.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mxb.mailgun.org.",
+        "10 mxa.mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.m12.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h01.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h02.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h03.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h04.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h05.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h06.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h07.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h08.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h09.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h10.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h11.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "mx._domainkey.m00.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArQ1tUh9CJnfJpaORtOylDqt7p1HCJcrdtuGkn0vppPVYeOBiBAut8Tr3n2zB5gApdjAubEhSfPyWmaOuOhdFNwkRyUxWfKvdsxCiUEZBPVW+7tJeaP6BydCqCQmpXhIx6CoVqsqItVjg9yhMiDjQOfyAapK/bYFeuSQluxyO0PSMbTLaBt6zzFGXc/Uxq4G9G6YlYISoR2B1Kta7eujtXflx4n/+U1mjw3JIf/4AWgae6U2M4nm2iLwLZOQksugUZQVxtgNj4kbCUQp6l0VTgSRoXJWvIbyFCVPkeqZWEW4bbehJ/tWhuw8x7ksKcTuKQ3wg7JIEEhnpe2+mXIzhXwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m00.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "smtp._domainkey.m01.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwvsNOfNvO91lBUIFLlOc6bt4fjupHT0/XMivhDREjDcxT94/cv4Akt8BJjrm/i99O0du7/NOGKvCzmC0elVsS9c2CYDxRXs2FNHOipleQKUcFhxOmt88ViZar006n8ZAsmIg+oPRF73c7rG6msBWGJylmLvfwHQELgxY3OJxKEmdvGYVYmDN2kIRWXP/TdpuSlOcwPGtZGjWntP7YHZCkldVxHY1backp8dvWBOl9+ieXfRvVEONNidvwQYk3Bx++muE84rNqReNufp+2RULRDR0b39GmfFTkMT/pbAtKCupvKW8j2Wb9465wqVwLxOCrBFBpqv6IQ2Plth980wMfQIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m01.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "smtp._domainkey.m02.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAszwmYeheOFrK66IH+dT91VvwoRtVVBS6v0FG2cIJkycG1te8AgC4nteWzhnRD3EVor1sDVMfAF0GqnC5+VDrJXN6hiiaPuXa6/+OHu5yDWfuk+IZsd4x897G6OyUZLbDvh4ku0Q4kN6VfHROQLPyc3Ux93VRfZ9J0jsxAMufk+epl5bnnJZr2TGOF8ZCk5l/71qU1KvoRZxEvmgHP0xiGkiZLxUNVAbI/yIqWSCd1E5ZYIX59Kb/3cr79ibQmiZ8Ykv8b5ZXzPCpSd/8qChiMwCUTj38DPh6QMPYZRD6YCLoMEHhE6fbuXsJvXx8PD1jIPlR/+4p67nOMtVNPBbR8wIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m02.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "smtp._domainkey.m03.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxrI4ZzvPscPD/5yWaxpctnBsGhUofU7qtQyc6IdGmOjPrb7AuQtkTPe7JjvTYFIwHZh8BFjed4LI1f+xbxO2SjadSNmWqIkSO6uzwe2eWpy1OGjbpjVqBsFKEVM5+n/rcfxBEcZdUlyBjxSNUol6qMTq/Hy2s0S+JiwL523gH7ueYBYKa4NuL15D1YYQ27mkXFTSQJVi43heCHeqVhN+RJdFCL4w+5wv6Q50Kdzb95tPIj5c+prJImjb7ByEPJbww98eFqlMcnjHZcQuCtqupX8bcHYc8QK4sRAvM7UFu4eT837ECEIn8Xv8y8TPtC1xZlovwf9kBhnkHK95kZCGUwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m03.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "mx._domainkey.m04.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1FYnzFwpmR+J7dHATRgbvNWqy+6CXx3zLBy87QjXdgBtdBVN/fgCSFDNe84KntVh0PRK5NNcAnbczCQ5wOOowEMcKIDaXR5uLfwpN72EZaSP1i3UqRMFvOI+LN9tMORkFF5e4Fzn+gJCwW9BvBbS1PxG8UQDrrFMhAlCWCLn6ZP9s7FIBcajmTdlLcaAUcvzM82YdRX1hV4yRuZlIDRRurQ6V7uwYeMiYmNaQOX3tk0qd30MeKxJbz0D2BkBbCEYsz66E9ELS4pGm/lbYtCS/lCzzF13MaORCfByiJFE2kwhIFKU/2nqppW/9NJO0udomNXwf3GOKX8JEGAIHdxfeQIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m04.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "mx._domainkey.m05.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtn+DMxTG2wB+it61EckKQmhRwueKBgkez7/2kG107y2blObBzsv3QRiD0u5Zosmtv+yQ9LDixcBIpWvWdv0rGYsYTD1F+xu7+CHtNXTMF8tTxVPh92T4zAZrMzr9SDljZsuq8kCJrn0k+PiwdJbTVkmVdiVsIH0xnTV3EfVVtAv6kS4/cGk0cTI34IaPGmNwLgNDqShpCmlVtoct2965vp0uIeUbwZxCOgsoUa+m0FxXZ5UUsPfSHCsukLul80GKIp2zOlEIAC0IXKAYGvJMYG0oCZGcXC6qU82BzGxdrKtwzOD2zwGmKxAeFjJQ0BIeqXwphmz+t9ZjsgfVWO7fCwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m05.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "k1._domainkey.m06.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsUY5fXTrRWpM9/2nHBAzqc5A6m84ksSzyTA0d6H3ogTlZ/+hiB9ROQvt19YF7MBm49yfYksQ/jiKdTChuACbZDXJperh4K2e2XBmjJJq6RDMwcltXI0Nkju01JoGyqggNjcKKk9rsHTqVz8/V/fjD7OtMpvFTlYHat1Z3zJ6H0RvqUbbLg0v9ytow787VZWtsJMbgVBDVdqoLeeDUA2oenyTiCesjVA+Q4CWKPTLQ/PUKT/gJpufYTu+PMVBM//nY4mOiziPY7Y3IYFXS2S39LAEvQJ/z47XRPdSFGcyZIQg6Tj+xxpgUfYjPkGPbKOev1r2dLPZDXPF3e5acbyKxwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m06.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "mx._domainkey.m07.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwIsNZuSnQ45D5vDTOr7nR4Cay074FSbLDA8+QE9aKhShhNk4N9C4OvK+ucD6NriFMiaHsTpDPGZF+o9d+Bv0tcWqP9E3Md8teY4AApWN31b8fuXXeag3uL0hloDK5u2IICoyLwcda6JEhLxI2ZvOq4G0foJPrpOQBH0eIacu0CfU2zOspBKRY/YrKAFzUcZRbDM0TfE80hHdNUdLnRIQkAxHaemfHdT/SkI3dFv8Pu4XhNdk8uQ17w4jbpglpIJMiIcpsb++V8FF60VNLECGQaw+8sKQidy7GnopwLZq5gk7IppBtdAKfT/TrfaKiGabjF/GRig9Powz906jmfVXgQIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m07.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "krs._domainkey.m08.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2VJKTDVM5ynrR8ArJemUfbVvbLjDgEeMm4IBr0TbEYES+IjFKfstzLqUdQn5NRmSFjWlBI09KfnNQyb5eZvPtNqps4WfbporO3WwQ0U+YIMJZnYLR840vtDhOMSLCMXgzJE3yPC+S3LPYR5DeBwMoi32WlNmqsszEoMdT6bxjL/iEi9V9W6gNivbWRHrCXP3fzu09I0866B7Y8hn88BarXY/mYfHtUDo+/USuGqMnYdmGPpHl0xhH/Z4Ea6RfBSB/ttNN2ZgItsVoZPc4Bxo639E+EXIKbAlw6Sab8gkXhorM1rQDVlG+yntzZmCgcbNVKvANy7W9i+TVJ3yytyNnQIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m08.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "pic._domainkey.m09.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqhcIa7R26zcetZ4/RvphXkKr63C64DEQpK34Ws2Z6zJ0og8dZR7u3cqtetQGxIUo9kZWwNfYabhTbDnQ2zLjx3tiyKQVXl367mneNfIxahf8K23r5uI7bHbBd8hAfG8Gm1a9KLNiBD+qY8P/IRV7rtKb0JiQGgvIwvKDlNpIeUG8YKM27imhf7Ht/Qn8ChJ4VMAvbKRVRFVPgKYLWXjAEIoUszrDwov6App8KQmyjMURcej2Azq8ZzqEog33XR7XAnHs4hDnqtZ2b0SAQavbdmsyBTunlSEBlPbwG9rFPxSdyluzm1STpwTkzmtEBYWkIygfj5C7IeY2eyA395cTpwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m09.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "mailo._domainkey.m10.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyNobkO4ZH/BBoGD9c0Rwce901hgVTv0O8UjEcyPnfUntSRD9UFGsgcp9f8dEMsQSADxaqR0XqrSVGZhjItw2T6jfnSn4cVfRaxLJ9SlnCFCFhOTz6cOKpVw7rQ2reMzD1EHVAly9mFzaV7HbR2Thzt/9u0+vjK3qltRxQ8yjxFbShhms5zZMRNvEY+lYJbiuGuKlTPPRVBZ6H/XculXa3kEylo/PXefJcIXdrWSHbDuDB/yMDv56YQO62lEzEr7xUDtWvIcjcSb1biLU+P7B2F7G2EBQA64KFeExL0nUtLA7oy7EN3bG3H7TIfGlTWYD8PXaJaLEGplqi4oVXbSPiwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m10.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "smtp._domainkey.m11.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAom+RSo4us9+8uYvVH/GjYo5+um3LESi+uYEvhf1yAczAViHUeh7QCQB+He0b7G/DppbwJVnOb1/NVmIrjC9n96XG4wdjESWMlHPc+X/RjU7g/iEy5bAqzLGOD+VHytZAGKUcYv8ys6oMsW2XB5b3qOlS6bl7aaCNFBJZMFgrYR/KEJJYwU08LXFaX/Qru7KiIoq8alUmz4IOXu1i8Qv2h25iAVnJdWubo/FiL63m4VIYJFLYL3SeScQElpOQjq6iCZKJwyfq4Q8IBJfha5ClSMNk4FcpkBFjoF2G8NQiYtp1OBma0r7rpttQ5jqPnhqWjf8KD8vKTGsMG0WMZa6IzwIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m11.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "k1._domainkey.m12.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlLIdLZDrMVeikHnADTbVgzPbtNurkDlGirvgdyMbluOV3ORK3dSa9env4/2zhSSZ0HNacuTPEvR5Y8MBdbp/Zu2P1eyFzQ7CJTGKViHHTYqfqMiYU4H0AdGu+HzNxKnbDyGTW0gqpsuxgTawQ+qwOS2Dr4CydXV6iyBmAiIS3u28Lgw1q+YVil0XqyIzfrsw4Ua7LBF6ETA0lGlMiqsttvRT25Lka9AraLkj/8QT5e0nEO84EhMcZrN6jxdsp30RkZNHG2vy03Lc5lyVqE1MchNHAz2fsnb2j935yRMOz0275quSuv9IGLvBNtcDVg38BbD+DG058SMg1dcmadmzRQIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "email.m12.mailpath.io",
+      "type": "CNAME",
+      "answer": [
+        "mailgun.org."
+      ],
+      "ok": true
+    },
+    {
+      "name": "nx.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup nx.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v01.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v01.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v02.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v02.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v03.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v03.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    }
+  ],
+  "resolver": "1.1.1.1:53",
+  "time": "2026-10-23T06:22:18.58674Z"
+}

@@ -1,0 +1,126 @@
+{
+  "query": {
+    "endpoint": "POST https://api.mailgun.net/v2/bounce-classification/metrics",
+    "read": "2026-10-25",
+    "dimensions": [
+      "entity-name",
+      "category"
+    ],
+    "filter": "domain.name = m00.mailpath.io ... m12.mailpath.io",
+    "note": "Mailgun's bounce classification report for the 13 Mailgun-path domains. It covers 89 of the 170 espblock failures in events.csv and none of the generic ones. delivered_smtp_count is 0 under this domain filter."
+  },
+  "response": {
+    "start": "Thu, 22 Oct 2026 00:00:00 +0000",
+    "end": "Sun, 25 Oct 2026 00:00:00 +0000",
+    "resolution": "day",
+    "duration": "72h0m0s",
+    "dimensions": [
+      "entity-name",
+      "category"
+    ],
+    "pagination": {
+      "sort": "entity-name:asc",
+      "skip": 0,
+      "limit": 50,
+      "total": 6
+    },
+    "items": [
+      {
+        "entity-name": "AT&T",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 5,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 5,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      },
+      {
+        "entity-name": "Gmail",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 15,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 15,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      },
+      {
+        "entity-name": "Google Workspace",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 15,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 15,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      },
+      {
+        "entity-name": "Outlook EU",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 12,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 12,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      },
+      {
+        "entity-name": "Outlook US",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 22,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 22,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      },
+      {
+        "entity-name": "Yahoo US",
+        "category": "ESPBLOCK",
+        "metrics": {
+          "critical_bounce_count": 20,
+          "non_critical_bounce_count": 0,
+          "critical_delay_count": 0,
+          "non_critical_delay_count": 0,
+          "classified_failures_count": 20,
+          "delivered_smtp_count": 0,
+          "critical_bounce_rate": 0,
+          "non_critical_bounce_rate": 0,
+          "critical_delay_rate": 0,
+          "non_critical_delay_rate": 0
+        }
+      }
+    ]
+  }
+}
