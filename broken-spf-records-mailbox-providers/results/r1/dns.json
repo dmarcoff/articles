@@ -1,0 +1,459 @@
+{
+  "records": [
+    {
+      "name": "mta.mailpath.io",
+      "type": "A",
+      "answer": [
+        "184.195.33.8"
+      ],
+      "ok": true
+    },
+    {
+      "name": "mta.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 a -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; sp=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com; fo=1;"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s00.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s00.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s00.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s01.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s01.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s01.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s02.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:h01.spf.mailpath.io include:h02.spf.mailpath.io include:h03.spf.mailpath.io include:h04.spf.mailpath.io include:h05.spf.mailpath.io include:h06.spf.mailpath.io include:h07.spf.mailpath.io include:h08.spf.mailpath.io include:h09.spf.mailpath.io include:h10.spf.mailpath.io include:h11.spf.mailpath.io ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s02.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s02.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s03.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ip4:184.195.33.8 include:h01.spf.mailpath.io include:h02.spf.mailpath.io include:h03.spf.mailpath.io include:h04.spf.mailpath.io include:h05.spf.mailpath.io include:h06.spf.mailpath.io include:h07.spf.mailpath.io include:h08.spf.mailpath.io include:h09.spf.mailpath.io include:h10.spf.mailpath.io include:h11.spf.mailpath.io -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s03.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s03.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s04.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 a:v01.void.mailpath.io a:v02.void.mailpath.io a:v03.void.mailpath.io ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s04.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s04.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s05.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 a:v01.void.mailpath.io a:v02.void.mailpath.io ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s05.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s05.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s06.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 include:nx.mailpath.io ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s06.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s06.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s07.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ip4:184.195.33.8 include:nx.mailpath.io -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s07.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s07.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s08.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ip4=184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s08.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s08.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s09.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ipv4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s09.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s09.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s10.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 ptr:mailpath.io -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s10.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s10.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s11.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all",
+        "v=spf1 ip4:184.195.33.8 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s11.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s11.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "s12.mailpath.io",
+      "type": "MX",
+      "answer": [
+        "10 mta.mailpath.io."
+      ],
+      "ok": true
+    },
+    {
+      "name": "_dmarc.s12.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DMARC1; p=reject; rua=mailto:ac2.pr1k7.ar@reports.dmarkoff.com"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h01.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h02.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h03.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h04.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h05.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h06.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h07.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h08.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h09.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h10.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "h11.spf.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=spf1 -all"
+      ],
+      "ok": true
+    },
+    {
+      "name": "mx2026._domainkey.mailpath.io",
+      "type": "TXT",
+      "answer": [
+        "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA34HMkF5Gm99RLUpMOAdNM3onbjn+yM0N8mFcWgeyYmJ2AXv1JZh7jhFaTYi7lyhZVQWnVQK6rO4/TKMByj4VAoVMPmrcP3Q2IfMcwFut1Ghyu7ba7eS0CpXMeRvir473InfR2QfGdFoQpJ77Bvq/8bCOJftWsvGP+7WNXEOkER0qSujK5+p0blW3sP+sBZmOLkSD7O4EBaEtanDYtZu4pTpgzJF0BgUA/xm/Dladh6NZiY8waLp/KxqiaiXZ0G041yNDd32AAbnoddYsirhtnZjUL5dptt98xMU0/m/Y3pqKpYK+DYVwlRnOmzxHvfq7C3mC3WwH7VKp58zizrFk1QIDAQAB"
+      ],
+      "ok": true
+    },
+    {
+      "name": "nx.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup nx.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v01.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v01.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v02.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v02.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    },
+    {
+      "name": "v03.void.mailpath.io",
+      "type": "absent",
+      "answer": null,
+      "error": "lookup v03.void.mailpath.io on 1.1.1.1:53: no such host",
+      "ok": true
+    }
+  ],
+  "resolver": "1.1.1.1:53",
+  "time": "2026-10-22T06:55:41.014045Z"
+}

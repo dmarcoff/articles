@@ -1,0 +1,5 @@
+time,sending_domain,rcpt_domain,event,severity,reason,code,reply
+2026-10-22T11:23:40Z,m09.mailpath.io,freenet.de,failed,permanent,bounce,550,unrouteable address
+2026-10-22T13:22:27Z,m12.mailpath.io,freenet.de,failed,permanent,bounce,550,unrouteable address
+2026-10-22T14:38:57Z,m05.mailpath.io,freenet.de,failed,permanent,suppress-bounce,605,Not delivering to previously bounced address
+2026-10-22T16:21:05Z,m01.mailpath.io,freenet.de,failed,permanent,suppress-bounce,605,Not delivering to previously bounced address

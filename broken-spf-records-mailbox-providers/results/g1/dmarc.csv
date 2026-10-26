@@ -1,0 +1,139 @@
+case,report_date,reporter,messages,disposition,dmarc,spf_result,spf_domain,dkim_result,dkim_domain_selector
+m00,2026-10-23,GMX Mail,2,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,Interia,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,mail.com,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,Mail.ru,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,Microsoft 365,3,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,Outlook.com,6,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-22,Seznam.cz,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,WEB.DE Mail,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-10-23,Yahoo Mail,5,none,pass,pass,m00.mailpath.io,pass;pass,m00.mailpath.io/mx;mailgun.org/mg
+m01,2026-10-23,GMX Mail,2,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Google,3,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Google,3,none,pass,pass,m01.mailpath.io,pass,mailgun.org/mg
+m01,2026-10-23,Interia,1,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,mail.com,1,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Mail.ru,1,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Microsoft 365,3,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Outlook.com,6,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-22,Seznam.cz,1,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,WEB.DE Mail,1,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-23,Yahoo Mail,5,none,pass,pass,m01.mailpath.io,pass,mailgun.org/mg
+m02,2026-10-23,GMX Mail,2,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-23,Google,3,none,pass,pass,m02.mailpath.io,,
+m02,2026-10-23,Google,3,none,pass,pass,m02.mailpath.io,pass,mailgun.org/mg
+m02,2026-10-23,mail.com,1,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-23,Mail.ru,1,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-23,Microsoft 365,3,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-23,Outlook.com,6,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-22,Seznam.cz,1,none,pass,pass,m02.mailpath.io,,
+m02,2026-10-23,WEB.DE Mail,1,reject,fail,permerror,m02.mailpath.io,,
+m02,2026-10-23,Yahoo Mail,5,none,pass,pass,m02.mailpath.io,pass,mailgun.org/mg
+m03,2026-10-23,GMX Mail,2,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-22,Google,3,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-22,Google,3,none,pass,pass,m03.mailpath.io,pass,mailgun.org/mg
+m03,2026-10-23,Interia,1,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,mail.com,1,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,Mail.ru,1,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,Microsoft 365,3,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,Outlook.com,5,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-22,Seznam.cz,1,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,WEB.DE Mail,1,none,pass,pass,m03.mailpath.io,,
+m03,2026-10-23,Yahoo Mail,5,none,pass,pass,m03.mailpath.io,pass,mailgun.org/mg
+m04,2026-10-23,Amazon SES,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,GMX Mail,2,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-22,Google,3,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-22,Google,3,none,pass,pass,m04.mailpath.io,pass,mailgun.org/mg
+m04,2026-10-23,Interia,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,mail.com,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,Mail.ru,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,Microsoft 365,3,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,Outlook.com,6,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-22,Seznam.cz,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,WEB.DE Mail,1,none,pass,pass,m04.mailpath.io,,
+m04,2026-10-23,Yahoo Mail,5,none,pass,pass,m04.mailpath.io,pass,mailgun.org/mg
+m05,2026-10-23,GMX Mail,2,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Google,3,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Google,3,none,pass,pass,m05.mailpath.io,pass,mailgun.org/mg
+m05,2026-10-23,Interia,1,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,mail.com,1,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Mail.ru,1,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Microsoft 365,3,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Outlook.com,6,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-22,Seznam.cz,1,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,WEB.DE Mail,1,none,pass,pass,m05.mailpath.io,,
+m05,2026-10-23,Yahoo Mail,5,none,pass,pass,m05.mailpath.io,pass,mailgun.org/mg
+m06,2026-10-23,GMX Mail,2,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-22,Google,3,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-22,Google,3,reject,fail,permerror,m06.mailpath.io,pass,mailgun.org/mg
+m06,2026-10-23,mail.com,1,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-23,Mail.ru,1,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-23,Microsoft 365,3,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-23,Outlook.com,6,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-22,Seznam.cz,1,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-23,WEB.DE Mail,1,reject,fail,permerror,m06.mailpath.io,,
+m06,2026-10-23,Yahoo Mail,5,reject,fail,permerror,m06.mailpath.io,pass,mailgun.org/mg
+m07,2026-10-23,GMX Mail,2,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-22,Google,3,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-22,Google,3,none,pass,pass,m07.mailpath.io,pass,mailgun.org/mg
+m07,2026-10-23,Interia,1,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,mail.com,1,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,Mail.ru,1,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,Microsoft 365,3,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,Outlook.com,6,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-22,Seznam.cz,1,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,WEB.DE Mail,1,none,pass,pass,m07.mailpath.io,,
+m07,2026-10-23,Yahoo Mail,5,none,pass,pass,m07.mailpath.io,pass,mailgun.org/mg
+m08,2026-10-23,GMX Mail,2,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-22,Google,3,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-22,Google,3,reject,fail,fail,m08.mailpath.io,pass,mailgun.org/mg
+m08,2026-10-23,mail.com,1,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-23,Mail.ru,1,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-23,Outlook.com,6,reject,fail,permerror,m08.mailpath.io,,
+m08,2026-10-22,Seznam.cz,1,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-23,WEB.DE Mail,1,reject,fail,fail,m08.mailpath.io,,
+m08,2026-10-23,Yahoo Mail,5,reject,fail,fail,m08.mailpath.io,pass,mailgun.org/mg
+m09,2026-10-23,GMX Mail,2,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-22,Google,3,reject,fail,fail,m09.mailpath.io,,
+m09,2026-10-22,Google,3,reject,fail,fail,m09.mailpath.io,pass,mailgun.org/mg
+m09,2026-10-23,mail.com,1,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-23,Mail.ru,1,reject,fail,none,m09.mailpath.io,,
+m09,2026-10-23,Microsoft 365,3,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-23,Outlook.com,6,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-22,Seznam.cz,1,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-23,WEB.DE Mail,1,reject,fail,permerror,m09.mailpath.io,,
+m09,2026-10-23,Yahoo Mail,5,reject,fail,permerror,m09.mailpath.io,pass,mailgun.org/mg
+m10,2026-10-23,GMX Mail,2,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-22,Google,3,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-22,Google,3,none,pass,pass,m10.mailpath.io,pass,mailgun.org/mg
+m10,2026-10-23,Interia,1,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,mail.com,1,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,Mail.ru,1,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,Microsoft 365,3,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,Outlook.com,6,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-22,Seznam.cz,1,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,WEB.DE Mail,1,none,pass,pass,m10.mailpath.io,,
+m10,2026-10-23,Yahoo Mail,5,none,pass,pass,m10.mailpath.io,pass,mailgun.org/mg
+m11,2026-10-23,GMX Mail,2,reject,fail,permerror,m11.mailpath.io,,
+m11,2026-10-22,Google,3,reject,fail,fail,m11.mailpath.io,,
+m11,2026-10-22,Google,3,reject,fail,fail,m11.mailpath.io,pass,mailgun.org/mg
+m11,2026-10-23,Interia,1,reject,fail,fail,m11.mailpath.io,,
+m11,2026-10-23,mail.com,1,reject,fail,permerror,m11.mailpath.io,,
+m11,2026-10-23,Mail.ru,1,reject,fail,permerror,m11.mailpath.io,,
+m11,2026-10-23,Microsoft 365,2,reject,fail,fail,m11.mailpath.io,,
+m11,2026-10-23,Microsoft 365,1,none,pass,pass,m11.mailpath.io,,
+m11,2026-10-23,Outlook.com,4,reject,fail,fail,m11.mailpath.io,,
+m11,2026-10-23,Outlook.com,2,none,pass,pass,m11.mailpath.io,,
+m11,2026-10-22,Seznam.cz,1,reject,fail,permerror,m11.mailpath.io,,
+m11,2026-10-23,WEB.DE Mail,1,reject,fail,permerror,m11.mailpath.io,,
+m11,2026-10-23,Yahoo Mail,5,reject,fail,permerror,m11.mailpath.io,pass,mailgun.org/mg
+m12,2026-10-23,GMX Mail,2,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-22,Google,3,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-22,Google,3,reject,fail,none,m12.mailpath.io,pass,mailgun.org/mg
+m12,2026-10-23,mail.com,1,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-23,Mail.ru,1,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-23,Microsoft 365,3,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-23,Outlook.com,6,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-22,Seznam.cz,1,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-23,WEB.DE Mail,1,reject,fail,none,m12.mailpath.io,,
+m12,2026-10-23,Yahoo Mail,5,reject,fail,none,m12.mailpath.io,pass,mailgun.org/mg

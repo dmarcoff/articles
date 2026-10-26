@@ -1,0 +1,42 @@
+case,provider_group,delivered,inbox,spam,spf,dkim,dmarc
+s00,Gmail (6 months+),17,0,17,pass,pass,pass
+s00,Gmail (4 years+),3,0,3,pass,pass,pass
+s00,Google Workspace (4 years+),3,0,3,pass,pass,pass
+s00,Google Workspace (Up to 6 months),2,0,2,pass,pass,pass
+s00,Yandex.ru,2,1,1,pass,pass,-
+s00,Interia.pl,3,3,0,pass,-,-
+s00,Laposte.net (FR),2,2,0,pass,pass,pass
+s00,Protonmail,1,1,0,pass,-,pass
+s00,Onet.pl,2,2,0,pass,pass,pass
+s00,Mail.ru,2,2,0,pass,pass,pass
+s00,Seznam.cz,2,2,0,pass,-,-
+s00,Virgilio.it,2,2,0,pass,pass,-
+s00,Libero.it,1,1,0,pass,pass,-
+s00,ukr.net,2,2,0,pass,pass,pass
+s00,naver.com,1,1,0,pass,pass,pass
+s00,mailo.com,3,3,0,pass,-,-
+s01,Gmail (6 months+),17,0,17,pass,-,pass
+s01,Gmail (4 years+),3,0,3,pass,-,pass
+s01,Google Workspace (4 years+),3,0,3,pass,-,pass
+s01,Google Workspace (Up to 6 months),2,0,2,pass,-,pass
+s01,Yandex.ru,2,0,2,pass,-,-
+s01,Interia.pl,3,0,3,pass,-,-
+s01,Laposte.net (FR),2,2,0,pass,none,pass
+s01,Protonmail,1,1,0,pass,-,pass
+s01,Onet.pl,2,2,0,pass,none,pass
+s01,Mail.ru,2,2,0,pass,-,pass
+s01,Seznam.cz,2,0,2,pass,-,-
+s01,Virgilio.it,2,2,0,pass,-,-
+s01,Libero.it,1,1,0,pass,-,-
+s01,ukr.net,2,2,0,pass,-,pass
+s01,naver.com,1,1,0,pass,-,pass
+s01,mailo.com,3,3,0,pass,-,-
+s02,Gmail (6 months+),17,0,17,pass,-,pass
+s02,Gmail (4 years+),3,0,3,pass,-,pass
+s02,Google Workspace (4 years+),3,0,3,pass,-,pass
+s02,Google Workspace (Up to 6 months),2,0,2,pass,-,pass
+s02,Protonmail,1,0,1,pass,-,fail
+s02,Seznam.cz,2,0,2,pass,-,-
+s02,Virgilio.it,2,0,2,pass,-,-
+s02,Libero.it,1,0,1,pass,-,-
+s02,ukr.net,2,2,0,pass,-,pass

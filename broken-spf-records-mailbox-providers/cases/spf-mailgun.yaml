@@ -1,0 +1,88 @@
+# The SPF cases of experiments/spf, sent through Mailgun instead of our own host.
+#
+# Our EC2 address sits in Spamhaus PBL, so half the receivers refuse it before they look at SPF.
+# Mailgun's shared IPs have a reputation, so those receivers get to evaluate SPF too. Case mNN
+# mirrors sNN: the same record, with Mailgun's include (or its PTR domain) in place of our IP.
+#
+# Every case is a Mailgun sending domain of its own (m00.mailpath.io, ...). Mailgun sends with
+# MAIL FROM bounce+...@mNN.mailpath.io, so receivers evaluate exactly the record below. Mailgun
+# signs DKIM only for m00; for every other case DMARC (p=reject) depends on SPF alone.
+#
+# include:_spf.mailgun.org costs 2 lookups to match Mailgun's US IPs in _spf1, 3 in _spf2
+# (mailgun.org itself would add the EU include as well). Mailgun's IPs resolve to
+# *.send.mailgun.net, which is what m10 relies on.
+
+experiment: spf-mailgun
+domain: mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: m00
+    name: control, SPF pass and aligned DKIM (signed by Mailgun)
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    dkim: true
+    expect: SPF pass, DKIM pass, DMARC pass
+
+  - id: m01
+    name: control, SPF pass only
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    expect: SPF pass, DMARC pass. The baseline for every SPF-only case below
+
+  - id: m02
+    name: lookup limit, Mailgun after 11 includes
+    spf: ["v=spf1 {{includes 11}} include:_spf.mailgun.org -all"]
+    expect: permerror at the 11th include (RFC 7208 4.6.4), DMARC fail
+
+  - id: m03
+    name: lookup limit, Mailgun before 11 includes
+    spf: ["v=spf1 include:_spf.mailgun.org {{includes 11}} -all"]
+    expect: pass inside Mailgun's include; evaluation never reaches the limit
+
+  - id: m04
+    name: void lookup limit, three void lookups before Mailgun
+    spf: ["v=spf1 {{voids 3}} include:_spf.mailgun.org -all"]
+    expect: permerror at the third void lookup (recommended limit of two), DMARC fail
+
+  - id: m05
+    name: two void lookups before Mailgun
+    spf: ["v=spf1 {{voids 2}} include:_spf.mailgun.org -all"]
+    expect: pass; two void lookups are within the recommended limit
+
+  - id: m06
+    name: include with no SPF record, before Mailgun
+    spf: ["v=spf1 include:nx.{{.Domain}} include:_spf.mailgun.org -all"]
+    expect: permerror at the include (RFC 7208 5.2), DMARC fail
+
+  - id: m07
+    name: include with no SPF record, after Mailgun
+    spf: ["v=spf1 include:_spf.mailgun.org include:nx.{{.Domain}} -all"]
+    expect: pass inside Mailgun's include
+
+  - id: m08
+    name: typo include= (unknown modifier)
+    spf: ["v=spf1 include=_spf.mailgun.org -all"]
+    expect: the modifier is ignored (RFC 7208 6), so Mailgun's IP gets fail from -all
+
+  - id: m09
+    name: "typo includes: (unknown mechanism)"
+    spf: ["v=spf1 includes:_spf.mailgun.org -all"]
+    expect: permerror for the whole record (syntax error)
+
+  - id: m10
+    name: ptr mechanism
+    spf: ["v=spf1 ptr:mailgun.net -all"]
+    expect: pass if the receiver still evaluates ptr (Mailgun's PTRs end in send.mailgun.net)
+
+  - id: m11
+    name: two SPF records
+    spf: ["v=spf1 include:_spf.mailgun.org -all", "v=spf1 -all"]
+    expect: permerror (RFC 7208 4.5, more than one record)
+
+  - id: m12
+    name: no SPF record
+    spf: []
+    expect: none, DMARC fail
