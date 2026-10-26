@@ -1,6 +1,6 @@
 # Free SPF checkers compared: data and scripts
 
-Data and scripts behind the DMARKOFF blog article [We Tested 10 Free SPF Checkers on Five Tricky SPF Records. Most Missed at Least One.](https://dmarkoff.com/blog/free-spf-checkers-compared)
+Data and scripts behind the DMARKOFF blog article [Free SPF Checkers Compared: What They Get Wrong About Five Real-World SPF Records](https://dmarkoff.com/blog/free-spf-checkers-compared)
 
 The article compares what 10 free SPF checkers report for six public domains with what RFC 7208 says should happen. This folder lets you check the RFC 7208 side yourself. You can recompute every verdict, DNS-querying term count and void-lookup count in the article's reference table with [pySPF](https://pypi.org/project/pyspf/), against the DNS records as they were published during the test (15–20 October 2026).
 
