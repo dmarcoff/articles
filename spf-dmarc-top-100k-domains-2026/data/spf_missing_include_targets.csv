@@ -1,0 +1,6 @@
+registrable_domain,domains,names
+registered,389,367
+malformed,36,34
+unregistered,16,14
+no-such-suffix,15,14
+unknown,4,4

@@ -1,0 +1,109 @@
+org_domain,service,kind
+163.com,NetEase Mail,mailbox
+250ok.net,Validity,vendor
+agari.com,Fortra (Agari),vendor
+alibaba.com,Alibaba,in-house
+amazon.com,Amazon,in-house
+area1reports.com,Cloudflare Area 1,vendor
+automattic.com,Automattic,in-house
+barracudanetworks.com,Barracuda,vendor
+bendingspoons.com,Bending Spoons,in-house
+brevo.com,Brevo,vendor
+bund.de,German federal administration,government
+centerasecurity.com,Centera Security,vendor
+cloudflare.net,Cloudflare,vendor
+cni.es,CCN-CERT (Spain),government
+cp-dmarc.com,Check Point (Avanan),vendor
+dhs.gov,CISA (US federal),government
+dmarc-report.com,MxToolbox,vendor
+dmarc-report.net,MxToolbox,vendor
+dmarc.gov.sa,Saudi NCA (Haseen),government
+dmarc.microsoft,Microsoft,in-house
+dmarc25.jp,DMARC/25,vendor
+dmarc360.com,DMARC360 (CTM360),vendor
+dmarcadvisor.com,DMARC Advisor,vendor
+dmarcanalyzer.com,Mimecast DMARC Analyzer,vendor
+dmarcdigests.com,Postmark,vendor
+dmarcian-eu.com,dmarcian,vendor
+dmarcian.com,dmarcian,vendor
+dmarcly.com,DMARCLY,vendor
+dmarcmanager.app,DMARC Manager,vendor
+dmarcwise.email,DMARCwise,vendor
+dmarkoff.com,DMARKOFF,vendor
+doc.gov,US Department of Commerce,government
+e-i.com,Euro-Information (Crédit Mutuel),in-house
+easydmarc.asia,EasyDMARC,vendor
+easydmarc.com,EasyDMARC,vendor
+easydmarc.eu,EasyDMARC,vendor
+easydmarc.us,EasyDMARC,vendor
+emailanalyst.com,eDataSource,vendor
+everest.email,Validity,vendor
+facebookmail.com,Meta,in-house
+fdmarc.net,Fraudmarc,vendor
+flowmailer.net,Flowmailer,vendor
+fraudmarc.com,Fraudmarc,vendor
+funkemedien.de,Funke Mediengruppe,in-house
+glockapps.com,GlockApps,vendor
+gmail.com,Gmail,mailbox
+godmarc.io,GoDMARC,vendor
+google.com,Google,in-house
+graymedia.com,Gray Media,in-house
+hornetdmarc.com,Hornetsecurity,vendor
+hubspot.com,HubSpot,in-house
+inboxmonster.com,Inbox Monster,vendor
+inkydmarc.com,INKY,vendor
+ironscales.com,IRONSCALES,vendor
+kdmarc.com,Kratikal (KDMARC),vendor
+letsdmarc.com,LetsDMARC,vendor
+livesport.eu,Livesport,in-house
+mail.mil,US Department of Defense,government
+mail.schwarz,Schwarz Group,in-house
+mailgun.org,Mailgun,vendor
+mailhardener.com,Mailhardener,vendor
+mailinblue.com,Brevo,vendor
+mailkit.com,Mailkit,vendor
+mailtrap.live,Mailtrap,vendor
+mailtrap.net,Mailtrap,vendor
+merox.io,Merox,vendor
+microsoft.com,Microsoft,in-house
+mimecastdmarcanalyzer.com,Mimecast DMARC Analyzer,vendor
+mpub.ne.jp,EmberPoint,vendor
+ncsc.gov.uk,UK NCSC Mail Check,government
+netcraft.com,Netcraft,vendor
+nicmanager.net,nicmanager,vendor
+ondmarc.com,Red Sift OnDMARC,vendor
+onmicrosoft.com,Microsoft 365 tenant mailboxes,mailbox
+onsecureserver.net,GoDaddy,vendor
+polskapress.pl,Polska Press,in-house
+postmarkapp.com,Postmark,vendor
+postmastery.com,Postmastery,vendor
+postmastery.eu,Postmastery,vendor
+powerdmarc.com,PowerDMARC,vendor
+prensaiberica.es,Prensa Ibérica,in-house
+progist.in,Progist,vendor
+progist.net,Progist,vendor
+proofpoint.com,Proofpoint,vendor
+qq.com,QQ Mail,mailbox
+rakuten.co.jp,Rakuten,in-house
+redsift.cloud,Red Sift OnDMARC,vendor
+report-uri.com,Report URI,vendor
+returnpath.net,Validity,vendor
+sdmarc.net,Sendmarc,vendor
+securemx.jp,IIJ Secure MX,vendor
+secureserver.net,GoDaddy,vendor
+sendforensics.com,SendForensics,vendor
+sendmarc.com,Sendmarc,vendor
+service.gov.uk,UK NCSC Mail Check,government
+skyscanner.net,Skyscanner,in-house
+smartemailing.cz,SmartEmailing,vendor
+smtpeter.com,SMTPeter,vendor
+trendmicro.com,Trend Micro,vendor
+trendmicro.eu,Trend Micro,vendor
+tripadvisor.com,Tripadvisor,in-house
+unisender.com,Unisender,vendor
+uriports.com,URIports,vendor
+vali.email,Valimail,vendor
+vercom.pl,Vercom,vendor
+vinted.com,Vinted,in-house
+yahoo-inc.com,Yahoo,in-house
+yandex.ru,Yandex Mail,mailbox

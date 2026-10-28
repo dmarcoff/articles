@@ -1,0 +1,13 @@
+rank_group,rua,domains
+1-1000,outside_only,448
+1-1000,own_and_outside,73
+1-1000,own_only,151
+1-1000,no_rua,53
+1001-10000,outside_only,3080
+1001-10000,own_and_outside,499
+1001-10000,own_only,1550
+1001-10000,no_rua,886
+10001-100000,outside_only,23365
+10001-100000,own_and_outside,3351
+10001-100000,own_only,14707
+10001-100000,no_rua,11733

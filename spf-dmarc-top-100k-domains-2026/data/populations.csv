@@ -1,0 +1,5 @@
+group,domains,with_spf,with_dmarc,reject_or_quarantine
+analyzed,99441,71117,59896,38595
+non_null_mx,72645,66486,55220,34819
+no_mx,26384,4284,4354,3467
+null_mx,412,347,322,309

@@ -1,0 +1,92 @@
+Populations
+  analyzed     99,441 domains: SPF 71.5%, DMARC 60.2%, reject or quarantine 38.8%
+  non_null_mx  72,645 domains: SPF 91.5%, DMARC 76.0%, reject or quarantine 47.9%
+  no_mx        26,384 domains: SPF 16.2%, DMARC 16.5%, reject or quarantine 13.1%
+  null_mx         412 domains: SPF 84.2%, DMARC 78.2%, reject or quarantine 75.0%
+  DMARC domains with MX that enforce              34,819 of  55,220   63.1%
+
+SPF lookups (single SPF records, longest evaluation path)
+  more than 10 lookups                             2,011 of  70,338    2.9%
+  9 or 10 lookups                                  5,270 of  70,338    7.5%
+  over the limit, ranks 1-1000                        21 of     753    2.8%
+  over the limit, ranks 1001-10000                   170 of   6,712    2.5%
+  over the limit, ranks 10001-100000               1,820 of  62,873    2.9%
+  all term ~all                                   35,213 of  70,338   50.1%
+  all term -all                                   31,704 of  70,338   45.1%
+  all term ?all                                    1,489 of  70,338    2.1%
+  all term +all                                       35 of  70,338    0.0%
+  all term none                                    1,897 of  70,338    2.7%
+  no all term: 1,587 end in a redirect, 310 don't
+
+DMARC policy by rank, domains with a non-null MX
+  ranks 1-1000: reject or quarantine                 508 of     684   74.3%
+  ranks 1-1000: no DMARC record                       73 of     684   10.7%
+  ranks 1001-10000: reject or quarantine           3,893 of   6,548   59.5%
+  ranks 1001-10000: no DMARC record                1,162 of   6,548   17.7%
+  ranks 10001-100000: reject or quarantine        30,418 of  65,413   46.5%
+  ranks 10001-100000: no DMARC record             16,190 of  65,413   24.8%
+
+DMARC details (all analyzed domains)
+  enforcing domains with sp=none                   2,756 of  38,595    7.1%
+  pct below 100: 1,848 domains, 143 with pct=0, 1,494 of them enforcing
+  enforcing with SPF permerror: 1,748
+  malformed p= values: 15, misplaced records: 152
+
+Reporting addresses (domains with a DMARC record)
+  at least one outside address                    30,816 of  59,896   51.4%
+  own domain only                                 16,408 of  59,896   27.4%
+  no rua                                          12,672 of  59,896   21.2%
+  ranks 1-1000: outside address                      521 of     725   71.9%
+  ranks 1001-10000: outside address                3,579 of   6,015   59.5%
+  ranks 10001-100000: outside address             26,716 of  53,156   50.3%
+  rua none: p=none                                 7,218 of  12,672   57.0%
+  rua at_least_one: p=none                        13,916 of  47,224   29.5%
+  outside addresses not authorized                 4,875 of  30,816   15.8%
+  vendor Cloudflare                                3,953 of  22,496   17.6%
+  vendor Valimail                                  3,061 of  22,496   13.6%
+  vendor Proofpoint                                2,946 of  22,496   13.1%
+  vendor Postmark                                  2,003 of  22,496    8.9%
+  vendor dmarcian                                  1,996 of  22,496    8.9%
+  vendor Mimecast DMARC Analyzer                   1,390 of  22,496    6.2%
+  vendor Brevo                                     1,153 of  22,496    5.1%
+  vendor Red Sift OnDMARC                          1,112 of  22,496    4.9%
+  vendor EasyDMARC                                   937 of  22,496    4.2%
+  vendor MxToolbox                                   763 of  22,496    3.4%
+  vendor Fortra (Agari)                              659 of  22,496    2.9%
+  vendor Validity                                    549 of  22,496    2.4%
+  two or more vendors                              2,325 of  22,496   10.3%
+
+SPF permerror by reporting address (domains with SPF)
+  no_dmarc                                           898 of  13,751    6.5%
+  vendor                                           1,086 of  21,579    5.0%
+  own_domain_only                                  1,033 of  16,112    6.4%
+  no_rua                                             873 of  11,810    7.4%
+  unidentified                                       365 of   6,927    5.3%
+  sister_domain                                       12 of   1,585    0.8%
+  government_collector                                15 of     607    2.5%
+  personal_mailbox                                    32 of     525    6.1%
+  no_dmarc, ranks 1-1000                               4 of      60    6.7%
+  no_dmarc, ranks 1001-10000                          55 of     970    5.7%
+  no_dmarc, ranks 10001-100000                       839 of  12,721    6.6%
+  no_rua, ranks 1-1000                                 2 of      50    4.0%
+  no_rua, ranks 1001-10000                            55 of     819    6.7%
+  no_rua, ranks 10001-100000                         816 of  10,941    7.5%
+  own_domain_only, ranks 1-1000                        8 of     149    5.4%
+  own_domain_only, ranks 1001-10000                   80 of   1,528    5.2%
+  own_domain_only, ranks 10001-100000                945 of  14,435    6.5%
+  vendor, ranks 1-1000                                13 of     319    4.1%
+  vendor, ranks 1001-10000                           110 of   2,430    4.5%
+  vendor, ranks 10001-100000                         963 of  18,830    5.1%
+
+Other records, domains with a non-null MX
+  dnssec                                           7,131 of  72,645    9.8%
+  bimi_record                                      6,607 of  72,645    9.1%
+  bimi_certificate                                 2,610 of  72,645    3.6%
+  tls_rpt                                          2,473 of  72,645    3.4%
+  mta_sts_record                                   1,742 of  72,645    2.4%
+  MTA-STS modes: enforce 957, testing 760, none 25
+
+BIMI
+  records not meeting Gmail's DMARC requirement    1,403 of   7,013   20.0%
+  certificates expired                               433 of   2,655   16.3%
+  certificates expiring within 30 days               104 of   2,655    3.9%

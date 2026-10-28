@@ -1,0 +1,4 @@
+rank_group,single_spf_records,over_limit,median_lookups
+1-1000,753,21,3
+1001-10000,6712,170,3
+10001-100000,62873,1820,3

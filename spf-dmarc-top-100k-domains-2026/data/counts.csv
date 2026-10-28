@@ -1,0 +1,13 @@
+measure,value,note
+domains_in_list,100000,"Tranco W3ZV9, first 100,000 entries"
+not_analyzed,559,"temporary DNS failure or timeout, also on the retry"
+spf_records_without_all_with_redirect,1587,
+spf_records_without_all_or_redirect,310,neutral for a sender no mechanism matches
+no_mx_spf_minus_all,2591,no MX record and SPF v=spf1 -all
+no_mx_spf_minus_all_dmarc_reject,2094,the same with DMARC p=reject
+domains_with_outside_rua,30816,
+outside_rua_unauthorized,4875,at least one outside rua address without the RFC 9990 authorization record
+outside_rua_lookup_failed,12,the authorization lookup failed
+bimi_records,7013,default selector
+bimi_certificate_urls,2893,records with an a= URL
+bimi_certificates_read,2655,downloaded and parsed

@@ -1,0 +1,8 @@
+record,domains
+non_null_mx,72645
+dnssec,7131
+dnssec_bogus,2
+bimi_record,6607
+bimi_certificate,2610
+tls_rpt,2473
+mta_sts_record,1742

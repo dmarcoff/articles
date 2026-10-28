@@ -1,0 +1,13 @@
+rua,rank_group,with_spf,spf_permerror
+no_dmarc,1-1000,60,4
+no_dmarc,1001-10000,970,55
+no_dmarc,10001-100000,12721,839
+no_rua,1-1000,50,2
+no_rua,1001-10000,819,55
+no_rua,10001-100000,10941,816
+own_domain_only,1-1000,149,8
+own_domain_only,1001-10000,1528,80
+own_domain_only,10001-100000,14435,945
+vendor,1-1000,319,13
+vendor,1001-10000,2430,110
+vendor,10001-100000,18830,963

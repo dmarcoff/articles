@@ -1,0 +1,9 @@
+rua,domains,with_spf,spf_permerror
+no_dmarc,39545,13751,898
+vendor,22496,21579,1086
+own_domain_only,16408,16112,1033
+no_rua,12672,11810,873
+unidentified,7284,6927,365
+sister_domain,1698,1585,12
+government_collector,646,607,15
+personal_mailbox,544,525,32
