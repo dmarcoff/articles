@@ -32,9 +32,8 @@ FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0
 GROUP BY bucket ORDER BY bucket;
 
--- SPF and DMARC by whether the domain takes mail: a working MX, a null MX (RFC 7505)
--- or no MX at all. Most domains without MX are CDN, API and tracking hosts that send
--- no mail.
+-- SPF and DMARC by MX configuration: a non-null MX, a null MX (RFC 7505: the domain
+-- accepts no mail) or no MX record. An MX-based split, not a list of sending domains.
 SELECT multiIf(mx_null = 1, 'null MX', length(mx_hosts) > 0, 'MX', 'no MX') AS mail,
        count() AS domains,
        countIf(spf_records > 0) AS with_spf,
@@ -62,13 +61,43 @@ FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND spf_record != ''
 GROUP BY lookups ORDER BY lookups;
 
--- Permerror by scope and by the check that failed.
+-- SPF results of the analysed domains with at least one SPF record: the evaluation
+-- for a sender the record doesn't list, and for permerror whether the record itself
+-- is broken or its evaluation fails.
+SELECT spf_evaluation AS evaluation, spf_permerror_scope AS scope, count() AS domains
+FROM domain_scan_results FINAL
+WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND spf_records > 0
+GROUP BY evaluation, scope ORDER BY domains DESC;
+
+-- Permerror by scope and by the check that failed. Only the checks the record-checker
+-- treats as permerror causes (its permErrorChecks): other Critical findings, such as
+-- +all, don't make SPF fail and are left out. A domain can fail more than one.
 SELECT spf_permerror_scope AS scope, err AS error, count() AS domains
 FROM domain_scan_results FINAL ARRAY JOIN spf_errors AS err
-WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND spf_evaluation = 'permerror' AND err LIKE 'Critical:%'
+WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND spf_evaluation = 'permerror'
+  AND err IN ('Critical:spf_syntax_is_ok', 'Critical:only_one_record_found', 'Critical:spf_all_resolution_is_ok',
+              'Critical:spf_number_of_lookups_is_ok', 'Critical:spf_number_of_void_lookups_is_ok')
 GROUP BY scope, error ORDER BY domains DESC;
 
--- SPF records per domain (two or more = permerror for everyone).
+-- Domains flagged by the lookup-limit check, by why the flag differs from the count in
+-- the lookup histogram: a single record over 10 lookups, a single record at 10 or
+-- fewer (a loop, such as an include of itself, fails the same check), or several
+-- records.
+SELECT multiIf(spf_records != 1, 'several records', spf_lookups > 10, 'one record, over 10 lookups', 'one record, 10 or fewer lookups') AS flagged,
+       count() AS domains
+FROM domain_scan_results FINAL
+WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0
+  AND has(spf_errors, 'Critical:spf_number_of_lookups_is_ok')
+GROUP BY flagged ORDER BY domains DESC;
+
+-- Single SPF records with sender- or IP-dependent macros (%{...}) in their own terms:
+-- the lookups the checker counts for them depend on the sender it evaluates.
+SELECT count() AS single_records,
+       countIf(position(spf_record, '%{') > 0) AS with_macros
+FROM domain_scan_results FINAL
+WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND spf_record != '';
+
+-- SPF records per domain (two or more make SPF evaluate to permerror).
 SELECT spf_records AS records, count() AS domains
 FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0
@@ -118,7 +147,8 @@ FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND dmarc_p IN ('reject', 'quarantine')
 GROUP BY policy ORDER BY policy;
 
--- p=reject or quarantine with an SPF record that breaks: their mail relies on DKIM.
+-- p=reject or quarantine while the SPF record on the domain itself ends in permerror:
+-- a message whose SPF evaluation returns permerror needs aligned DKIM to pass DMARC.
 SELECT dmarc_p AS policy, spf_permerror_scope AS scope, count() AS domains
 FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND dmarc_p IN ('reject', 'quarantine') AND spf_evaluation = 'permerror'
@@ -202,7 +232,8 @@ LEFT JOIN domain_scan_dmarc_services AS s ON s.org_domain = org
 WHERE r.scan_id = {scan_id:String} AND r.timed_out = 0 AND r.temp_failure = 0 AND ext = 1
 GROUP BY destination HAVING unauthorized > 0 ORDER BY unauthorized DESC LIMIT 30;
 
--- Domains that send no mail and say so: null MX, or no MX with v=spf1 -all, and DMARC reject.
+-- Records used to park a domain: a null MX, or no MX with v=spf1 -all, and the same
+-- with DMARC p=reject.
 SELECT countIf(mx_null = 1) AS null_mx,
        countIf(length(mx_hosts) = 0 AND spf_record = 'v=spf1 -all') AS no_mx_spf_minus_all,
        countIf(length(mx_hosts) = 0 AND spf_record = 'v=spf1 -all' AND dmarc_p = 'reject') AS fully_parked
@@ -288,8 +319,8 @@ FROM domain_scan_results FINAL ARRAY JOIN dmarc_errors AS err
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND dmarc_record != ''
 GROUP BY error ORDER BY domains DESC LIMIT 20;
 
--- DMARC policy of the domains that ask for no aggregate reports, next to those that
--- do: without rua nobody hears about failing mail.
+-- DMARC policy of the domains that list no aggregate reporting address (rua), next
+-- to those that list at least one.
 SELECT if(length(dmarc_rua) = 0, 'no rua', 'with rua') AS reports,
        if(dmarc_p IN ('reject', 'quarantine', 'none'), dmarc_p, 'malformed') AS policy,
        count() AS domains
@@ -297,7 +328,8 @@ FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND dmarc_record != ''
 GROUP BY reports, policy ORDER BY reports, domains DESC;
 
--- Enforcing domains by their subdomain policy: sp=none leaves subdomains open.
+-- Enforcing domains by their subdomain policy (sp; a missing sp counts as p). What
+-- applies to a given subdomain also depends on its own record and on np.
 SELECT dmarc_p AS policy, if(dmarc_sp = '', '(not set)', dmarc_sp) AS subdomain_policy, count() AS domains
 FROM domain_scan_results FINAL
 WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0 AND dmarc_p IN ('reject', 'quarantine')

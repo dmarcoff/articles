@@ -11,3 +11,9 @@ outside_rua_lookup_failed,12,the authorization lookup failed
 bimi_records,7013,default selector
 bimi_certificate_urls,2893,records with an a= URL
 bimi_certificates_read,2655,downloaded and parsed
+spf_without_error,66876,"domains with at least one SPF record whose evaluation ends without permerror (a sender the record does not list gets fail, softfail or neutral)"
+spf_permerror_record,1134,"SPF permerror because the record itself is broken (syntax, two or more records)"
+spf_permerror_evaluation,3107,"SPF permerror while the record is evaluated (lookups, void lookups, include or redirect targets)"
+lookup_check_single_record_over_10,2011,flagged by the lookup-limit check: one record over 10 lookups
+lookup_check_single_record_10_or_fewer,111,"flagged by the lookup-limit check with 10 or fewer counted lookups, for example a loop"
+single_spf_records_with_macros,2844,single SPF records with sender- or IP-dependent macros in their own terms
