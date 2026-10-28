@@ -44,7 +44,7 @@ def main():
     mx = pop["non_null_mx"]
     line("DMARC domains with MX that enforce", mx["reject_or_quarantine"], mx["with_dmarc"])
 
-    print("\nSPF lookups (single SPF records, longest evaluation path)")
+    print("\nSPF lookups (single SPF records, for a sender the record does not list)")
     hist = by("spf_lookups", "lookups")
     total = sum(hist.values())
     over = sum(v for k, v in hist.items() if k == "20+" or int(k) > 10)
@@ -57,6 +57,15 @@ def main():
         line(f"all term {term}", allt[term], total)
     print(f"  no all term: {counts['spf_records_without_all_with_redirect']:,} end in a redirect, "
           f"{counts['spf_records_without_all_or_redirect']:,} don't")
+    line("records with sender- or IP-dependent macros", counts["single_spf_records_with_macros"], total)
+
+    print("\nSPF permerror (analyzed domains with at least one SPF record)")
+    with_spf = pop["analyzed"]["with_spf"]
+    permerror = counts["spf_permerror_record"] + counts["spf_permerror_evaluation"]
+    line("permerror", permerror, with_spf)
+    print(f"  record itself broken {counts['spf_permerror_record']:,}, fails while evaluated {counts['spf_permerror_evaluation']:,}")
+    print(f"  lookup-limit check: {counts['lookup_check_single_record_over_10']:,} single records over 10 lookups, "
+          f"{counts['lookup_check_single_record_10_or_fewer']:,} at 10 or fewer (for example loops)")
 
     print("\nDMARC policy by rank, domains with a non-null MX")
     pol = by("dmarc_policy_by_rank_mx", "rank_group", "policy")

@@ -5,7 +5,7 @@ Populations
   null_mx         412 domains: SPF 84.2%, DMARC 78.2%, reject or quarantine 75.0%
   DMARC domains with MX that enforce              34,819 of  55,220   63.1%
 
-SPF lookups (single SPF records, longest evaluation path)
+SPF lookups (single SPF records, for a sender the record does not list)
   more than 10 lookups                             2,011 of  70,338    2.9%
   9 or 10 lookups                                  5,270 of  70,338    7.5%
   over the limit, ranks 1-1000                        21 of     753    2.8%
@@ -17,6 +17,12 @@ SPF lookups (single SPF records, longest evaluation path)
   all term +all                                       35 of  70,338    0.0%
   all term none                                    1,897 of  70,338    2.7%
   no all term: 1,587 end in a redirect, 310 don't
+  records with sender- or IP-dependent macros      2,844 of  70,338    4.0%
+
+SPF permerror (analyzed domains with at least one SPF record)
+  permerror                                        4,241 of  71,117    6.0%
+  record itself broken 1,134, fails while evaluated 3,107
+  lookup-limit check: 2,011 single records over 10 lookups, 111 at 10 or fewer (for example loops)
 
 DMARC policy by rank, domains with a non-null MX
   ranks 1-1000: reject or quarantine                 508 of     684   74.3%
