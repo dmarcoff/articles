@@ -1,0 +1,12 @@
+p_value,domains
+quarantine\,3
+(empty),2
+quarentine,2
+no,1
+rejeitar,1
+rnone,1
+nonr,1
+100,1
+p=quarantine,1
+quarantaine,1
+none rua=... (no semicolon before rua),1

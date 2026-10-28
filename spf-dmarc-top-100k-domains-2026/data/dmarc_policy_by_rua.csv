@@ -1,0 +1,9 @@
+rua,policy,domains
+none,none,7218
+none,reject,2651
+none,quarantine,2645
+none,malformed_or_misplaced,158
+at_least_one,reject,18918
+at_least_one,quarantine,14381
+at_least_one,none,13916
+at_least_one,malformed_or_misplaced,9

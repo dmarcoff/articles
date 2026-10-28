@@ -1,0 +1,4 @@
+mode,domains,with_tls_rpt
+enforce,957,843
+testing,760,708
+none,25,21

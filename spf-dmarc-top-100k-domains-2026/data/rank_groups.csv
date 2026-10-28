@@ -1,0 +1,4 @@
+rank_group,analyzed,non_null_mx,one_spf_record,several_spf_records,dmarc_record_at_dmarc,dmarc_record_misplaced,bimi_record
+1-1000,997,684,753,3,724,1,194
+1001-10000,8956,6548,6712,49,6007,8,1021
+10001-100000,89488,65413,62873,727,53013,143,5798

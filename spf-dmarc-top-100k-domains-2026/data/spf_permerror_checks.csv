@@ -1,0 +1,7 @@
+scope,failed_check,description,domains
+evaluation,spf_number_of_lookups_is_ok,more than 10 DNS lookups,2122
+evaluation,spf_all_resolution_is_ok,an include or redirect target has no SPF record or doesn't exist,888
+record,only_one_record_found,two or more SPF records,779
+record,spf_syntax_is_ok,syntax error,355
+evaluation,spf_number_of_void_lookups_is_ok,more than two void lookups,299
+evaluation,spf_no_items_after_all,terms after all,5

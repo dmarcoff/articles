@@ -1,0 +1,7 @@
+certificate_type,state,domains
+VMC,more_than_30_days,1940
+VMC,within_30_days,96
+VMC,expired,402
+CMC,more_than_30_days,178
+CMC,within_30_days,8
+CMC,expired,31

@@ -1,0 +1,3 @@
+policy,domains,sp_reject,sp_quarantine,sp_none,sp_malformed,pct_below_100,pct_zero,spf_permerror_record,spf_permerror_evaluation
+reject,21569,20117,255,1197,0,237,13,99,693
+quarantine,17026,425,15041,1559,1,1257,73,158,798

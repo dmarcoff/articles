@@ -1,0 +1,6 @@
+dmarc,bimi_records,with_certificate
+enforcing,5610,2603
+p_none,698,40
+no_dmarc_record,609,4
+enforcing_pct_below_100,89,7
+malformed_p,7,1
