@@ -61,8 +61,11 @@ lookups: if a receiver refused it, the record's length and not the count would e
 
 ## DMARC aggregate reports
 
-Google and Yahoo reported on 2026-10-30 for every case, except Yahoo for m15. Microsoft's reports
-(Outlook.com, Microsoft 365) usually arrive about 36 hours after the day and weren't in yet.
+Google and Yahoo reported on 2026-10-30 for every case except m15, for which only Google's report is
+here. Yahoo's three reports for m15 (Yahoo, AOL, AT&T) reached DMARKOFF but weren't processed: m15
+was registered there as an unpaid domain, and DMARKOFF drops the reports of unpaid domains without
+storing them. The SMTP answers above cover the same messages. Microsoft's reports (Outlook.com,
+Microsoft 365) usually arrive about 36 hours after the day and weren't in yet.
 
 - **Pass up to 17 lookups.** Google and Yahoo record SPF `pass` and DMARC `pass` for m01, m02, m13
   and m16.
