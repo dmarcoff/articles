@@ -1,0 +1,18 @@
+case,report_date,reporter,messages,disposition,dmarc,spf_result,spf_domain,dkim_result,dkim_domain_selector
+m01,2026-10-29,Google,5,none,pass,pass,m01.mailpath.io,pass,mailgun.org/mg
+m01,2026-10-29,Google,2,none,pass,pass,m01.mailpath.io,,
+m01,2026-10-29,Yahoo Mail,6,none,pass,pass,m01.mailpath.io,pass,mailgun.org/mg
+m02,2026-10-29,Google,5,none,pass,pass,m02.mailpath.io,pass,mailgun.org/mg
+m02,2026-10-29,Google,2,none,pass,pass,m02.mailpath.io,,
+m02,2026-10-29,Yahoo Mail,6,none,pass,pass,m02.mailpath.io,pass,mailgun.org/mg
+m13,2026-10-29,Google,5,none,pass,pass,m13.mailpath.io,pass,mailgun.org/mg
+m13,2026-10-29,Google,2,none,pass,pass,m13.mailpath.io,,
+m13,2026-10-29,Yahoo Mail,6,none,pass,pass,m13.mailpath.io,pass,mailgun.org/mg
+m14,2026-10-29,Google,5,reject,fail,fail,m14.mailpath.io,pass,mailgun.org/mg
+m14,2026-10-29,Google,2,reject,fail,fail,m14.mailpath.io,,
+m14,2026-10-29,Yahoo Mail,6,reject,fail,permerror,m14.mailpath.io,pass,mailgun.org/mg
+m15,2026-10-29,Google,5,reject,fail,fail,m15.mailpath.io,pass,mailgun.org/mg
+m15,2026-10-29,Google,2,reject,fail,fail,m15.mailpath.io,,
+m16,2026-10-29,Google,5,none,pass,pass,m16.mailpath.io,pass,mailgun.org/mg
+m16,2026-10-29,Google,2,none,pass,pass,m16.mailpath.io,,
+m16,2026-10-29,Yahoo Mail,6,none,pass,pass,m16.mailpath.io,pass,mailgun.org/mg
