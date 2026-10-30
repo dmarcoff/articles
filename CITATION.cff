@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below. Each folder's README also gives a citation for its article."
+type: dataset
+title: "DMARKOFF articles: data and scripts"
+abstract: >-
+  Data and scripts behind articles on the DMARKOFF blog about SPF and DMARC:
+  a comparison of free SPF checkers against RFC 7208, a test of how mailbox
+  providers handle broken SPF records, and a DNS snapshot of SPF and DMARC
+  across the Tranco top 100,000 domains (October 2026). One folder per article.
+authors:
+  - family-names: Markau
+    given-names: Aliaksandr
+    orcid: "https://orcid.org/0009-0007-9226-2559"
+  - name: DMARKOFF
+url: "https://github.com/dmarcoff/articles"
+repository-code: "https://github.com/dmarcoff/articles"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-10-30
+keywords:
+  - SPF
+  - DMARC
+  - email authentication
+  - DNS
+  - RFC 7208
+  - Tranco
+references:
+  - type: conference-paper
+    title: "Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation"
+    authors:
+      - family-names: Le Pochat
+        given-names: Victor
+      - family-names: Van Goethem
+        given-names: Tom
+      - family-names: Tajalizadehkhoob
+        given-names: Samaneh
+      - family-names: Korczyński
+        given-names: Maciej
+      - family-names: Joosen
+        given-names: Wouter
+    collection-title: "Proceedings of the 26th Annual Network and Distributed System Security Symposium (NDSS 2019)"
+    year: 2019
+    doi: 10.14722/ndss.2019.23386

@@ -2,13 +2,13 @@
 
 Data behind the DMARKOFF blog article [What Mailbox Providers Really Do With Broken SPF Records: We Tested 21 of Them](https://dmarkoff.com/blog/broken-spf-records-mailbox-providers).
 
-The follow-up, [What the Bounce Says: SPF and DMARC Bounce Codes From 21 Mailbox Providers](https://dmarkoff.com/blog/spf-dmarc-bounce-codes-mailbox-providers), reads the receivers' replies from the same `smtp.csv` and `events.csv`.
+A follow-up article on the receivers' bounce codes, not published yet, reads the receivers' replies from the same `smtp.csv` and `events.csv`.
 
 Between 21 and 23 October 2026 we sent about 3,800 test messages from 26 subdomains of `mailpath.io`, 13 SPF configurations on each of two sending paths, to GlockApps seed mailboxes at 21 mailbox providers and five spam filters. Every subdomain had `p=reject` and, except for one control per path, no aligned DKIM signature, so DMARC depended on SPF alone. This folder holds what we recorded: every SMTP reply, where each message landed, the authentication results in the seeds' headers, and the receivers' own DMARC aggregate reports.
 
 ## Quick start
 
-You need Python 3.9 or later; there are no dependencies.
+You need Python 3.11 or later; there are no dependencies.
 
 ```bash
 cd broken-spf-records-mailbox-providers
@@ -117,3 +117,15 @@ Consumer mailbox domains (`gmail.com`, `outlook.com`, `yahoo.com` and so on) are
 - Seed mailboxes are test accounts with their own history, so folders depend on reputation as much as on our records.
 - 12 of the 21 providers sent no aggregate reports during the test.
 - Receivers change their filtering without notice. This describes 21 to 23 October 2026.
+
+## How to cite
+
+The article:
+
+> DMARKOFF. (2026, October 28). *What Mailbox Providers Really Do With Broken SPF Records: We Tested 21 of Them*. DMARKOFF blog. https://dmarkoff.com/blog/broken-spf-records-mailbox-providers
+
+This folder:
+
+> Markau, A., & DMARKOFF. (2026). *Broken SPF records vs mailbox providers: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/broken-spf-records-mailbox-providers
+
+For licensing, see [License](../README.md#license) in the repository README.

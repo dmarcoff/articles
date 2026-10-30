@@ -1,6 +1,6 @@
 # SPF and DMARC in the Tranco top 100,000: data
 
-Aggregate tables behind the DMARKOFF blog article [SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot](https://dmarkoff.com/blog/spf-dmarc-top-100k-domains-2026).
+Aggregate tables behind the DMARKOFF blog article *SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot*. The article isn't published yet; this README will link it once it is.
 
 On 27 October 2026 we queried the DNS of the first 100,000 domains of the Tranco list [W3ZV9](https://tranco-list.eu/list/W3ZV9/1000000) for SPF, DMARC and its reporting addresses, MX, MTA-STS, TLS-RPT, BIMI and DNSSEC. 99,441 domains were analyzed. This folder holds every count the article quotes or charts, the queries that produced them and the list we used to match DMARC reporting addresses to organizations.
 
@@ -87,3 +87,17 @@ Each is included by one domain. We don't publish the names.
 - The Tranco list ranks domains by popularity signals such as traffic, not by mail volume.
 - The scan reads published DNS configuration. It doesn't show which identities real mail uses, delivery outcomes, or whether DMARC reports are received or read.
 - 7,284 domains report to organizations we couldn't identify, so vendor counts are floors. They count domains, not customers, revenue or mail volume.
+
+## Domain list
+
+The domains come from the Tranco list [W3ZV9](https://tranco-list.eu/list/W3ZV9), generated on 25 October 2026 from the Chrome UX Report, Farsight, Majestic, Cloudflare Radar and Cisco Umbrella rankings of 26 September to 25 October 2026, pay-level domains only. This folder doesn't contain the list or any part of it. Tranco asks users to cite its paper:
+
+> Le Pochat, V., Van Goethem, T., Tajalizadehkhoob, S., Korczyński, M., & Joosen, W. (2019). Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation. In *Proceedings of the 26th Annual Network and Distributed System Security Symposium (NDSS 2019)*. https://doi.org/10.14722/ndss.2019.23386
+
+## How to cite
+
+This folder:
+
+> Markau, A., & DMARKOFF. (2026). *SPF and DMARC in the Tranco top 100,000: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026
+
+If you use these counts, cite the Tranco paper above as well. A citation for the article will be added here once it is published. For licensing, see [License](../README.md#license) in the repository README.
