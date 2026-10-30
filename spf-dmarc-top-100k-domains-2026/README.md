@@ -1,6 +1,6 @@
 # SPF and DMARC in the Tranco top 100,000: data
 
-Aggregate tables behind the DMARKOFF blog article [SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot](https://dmarkoff.com/blog/spf-dmarc-top-100k-domains-2026).
+Aggregate tables behind the DMARKOFF blog article *SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot*. The article isn't published yet; this README will link it once it is.
 
 On 27 October 2026 we queried the DNS of the first 100,000 domains of the Tranco list [W3ZV9](https://tranco-list.eu/list/W3ZV9/1000000) for SPF, DMARC and its reporting addresses, MX, MTA-STS, TLS-RPT, BIMI and DNSSEC. 99,441 domains were analyzed. This folder holds every count the article quotes or charts, the queries that produced them and the list we used to match DMARC reporting addresses to organizations.
 
@@ -96,12 +96,8 @@ The domains come from the Tranco list [W3ZV9](https://tranco-list.eu/list/W3ZV9)
 
 ## How to cite
 
-The article:
-
-> DMARKOFF. (2026). *SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot*. DMARKOFF blog. https://dmarkoff.com/blog/spf-dmarc-top-100k-domains-2026
-
 This folder:
 
 > Markau, A., & DMARKOFF. (2026). *SPF and DMARC in the Tranco top 100,000: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026
 
-If you use these counts, cite the Tranco paper above as well. The scripts and queries are under the MIT License and the rest under CC BY 4.0; see [License](../README.md#license).
+If you use these counts, cite the Tranco paper above as well. A citation for the article will be added here once it is published. For licensing, see [License](../README.md#license) in the repository README.

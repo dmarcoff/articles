@@ -15,6 +15,8 @@ authors:
 url: "https://github.com/dmarcoff/articles"
 repository-code: "https://github.com/dmarcoff/articles"
 license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-10-30
 keywords:
   - SPF
   - DMARC

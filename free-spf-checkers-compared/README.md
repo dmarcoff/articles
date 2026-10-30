@@ -131,4 +131,4 @@ This folder:
 
 > Markau, A., & DMARKOFF. (2026). *Free SPF checkers compared: data and scripts* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/free-spf-checkers-compared
 
-The scripts are under the MIT License and the rest under CC BY 4.0, except third-party content; see [License](../README.md#license).
+For licensing, see [License](../README.md#license) in the repository README.
