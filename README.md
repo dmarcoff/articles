@@ -1,6 +1,8 @@
 # DMARKOFF articles
 
-Data and scripts behind articles on the [DMARKOFF blog](https://dmarkoff.com/blog), published so readers can check the results themselves. Each folder belongs to one article and has its own README.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23809122.svg)](https://doi.org/10.5281/zenodo.23809122)
+
+Data and scripts behind articles on the [DMARKOFF blog](https://dmarkoff.com/blog), published so readers can check the results themselves. Each folder belongs to one article and has its own README. [CONTRIBUTING.md](CONTRIBUTING.md) describes how a new folder is added and released.
 
 The code is under the MIT License and the data and documentation under CC BY 4.0, except the screenshots and content produced by other systems; see [License](#license) before reusing anything.
 
@@ -12,7 +14,7 @@ The code is under the MIT License and the data and documentation under CC BY 4.0
 
 ## How to cite
 
-[CITATION.cff](CITATION.cff) holds the citation for the whole repository; GitHub shows it as "Cite this repository". Each folder's README gives citations for its folder and for its article once the article is published. Links to `tree/main` follow later changes; to cite the files exactly as you used them, replace `main` with the commit hash.
+[CITATION.cff](CITATION.cff) holds the citation for the whole repository; GitHub shows it as "Cite this repository". Each folder's README gives citations for its folder and for its article once the article is published. Every release is archived on [Zenodo](https://doi.org/10.5281/zenodo.23809122): the DOI in the badge always points to the latest release, and each release has its own DOI, listed on the Zenodo page, for citing the files exactly as you used them.
 
 ## License
 
