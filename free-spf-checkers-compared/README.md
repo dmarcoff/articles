@@ -120,3 +120,15 @@ To record a fresh fixture and check against it:
 - The checkers in the article were run on the domain name alone and don't evaluate a specific sender. The sender IPs here pin down what RFC 7208 implies for each record: does it work, and if not, where does it break.
 - For the article, the sender-specific verdicts were also confirmed with Kitterman's web tester, which runs pySPF with its own DNS resolver.
 - We don't republish the page text we captured from other vendors' checkers. The screenshots are what the article shows.
+
+## How to cite
+
+The article:
+
+> Markau, A. (2026, October 23). *Free SPF Checkers Compared: What They Get Wrong About Five Real-World SPF Records*. DMARKOFF blog. https://dmarkoff.com/blog/free-spf-checkers-compared
+
+This folder:
+
+> Markau, A., & DMARKOFF. (2026). *Free SPF checkers compared: data and scripts* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/free-spf-checkers-compared
+
+The scripts are under the MIT License and the rest under CC BY 4.0, except third-party content; see [License](../README.md#license).

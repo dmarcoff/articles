@@ -1,0 +1,28 @@
+# gitleaks configuration: the default rules plus allowlists for known false positives.
+# Run from the repository root: gitleaks git . --log-opts="--all"
+
+[extend]
+useDefault = true
+
+# Domain verification tokens (verification_token=, yahoo-verification-key=,
+# 1password-site-verification= and the like) in TXT records of other domains.
+# They are public DNS data, captured in free-spf-checkers-compared/data and
+# fixtures for the SPF checkers article and repeated in DMARKOFF's API responses
+# for the same domains. The allowlist matches the token itself rather than these
+# paths: gitleaks skips allowlisted paths entirely, so a path entry would also
+# hide a real secret in those folders.
+[[allowlists]]
+description = "Verification tokens in public TXT records of other domains"
+regexTarget = "match"
+regexes = [
+  '''(?i)verification[\w-]*=''',
+]
+
+# The rua address of the test domains, published in their DMARC records
+# (_dmarc.<subdomain>.mailpath.io), so it appears in DNS snapshots and reports.
+[[allowlists]]
+description = "Published DMARC rua address at reports.dmarkoff.com"
+regexTarget = "match"
+regexes = [
+  '''ac2\.pr1k7\.ar@reports\.dmarkoff\.com''',
+]

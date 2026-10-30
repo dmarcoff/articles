@@ -117,3 +117,15 @@ Consumer mailbox domains (`gmail.com`, `outlook.com`, `yahoo.com` and so on) are
 - Seed mailboxes are test accounts with their own history, so folders depend on reputation as much as on our records.
 - 12 of the 21 providers sent no aggregate reports during the test.
 - Receivers change their filtering without notice. This describes 21 to 23 October 2026.
+
+## How to cite
+
+The article:
+
+> DMARKOFF. (2026, October 28). *What Mailbox Providers Really Do With Broken SPF Records: We Tested 21 of Them*. DMARKOFF blog. https://dmarkoff.com/blog/broken-spf-records-mailbox-providers
+
+This folder:
+
+> Markau, A., & DMARKOFF. (2026). *Broken SPF records vs mailbox providers: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/broken-spf-records-mailbox-providers
+
+The scripts are under the MIT License and the rest under CC BY 4.0, except third-party content; see [License](../README.md#license).
