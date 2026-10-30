@@ -135,6 +135,9 @@ and La Poste reported for the g1 mail, Amazon (for WorkMail) for one case. The l
 Microsoft 365 reports arrived on 2026-10-25, 34 to 41 hours after their window, and were added on
 2026-10-26. Zoho's arrived on 2026-10-24 but were missed until 2026-10-30 because of their dates,
 and La Poste's arrived on 2026-10-29, about 143 hours after the mail; both were added on 2026-10-30.
+Both came after the test, which ended on 2026-10-23. The article counts Zoho as reporting only days
+later and La Poste among the 12 of the 21 providers that sent no reports during the test; the rows
+added here don't change that count.
 
 - **Every verdict matches the SMTP and seed results** (La Poste's DMARC column aside, see below).
   Google, Yahoo and Seznam `pass` m02; GMX, WEB.DE, mail.com and Mail.ru report `permerror` and
