@@ -43,10 +43,12 @@ one dead address. The DNS was switched to the case records at 06:17 UTC; `mailex
   receivers' own SPF verdicts where GlockApps' summary shows something else (Libero, Virgilio,
   Proton, T-Online, vodafone and freenet on m02 and m12), with WorkMail, ukr.net (m02, m04, m10)
   and the two Outlook.com and Hotmail copies of m11 for comparison.
-- `dmarc.csv`: the receivers' aggregate reports for the g1 mail (read 2026-10-25), dated as in
-  `results/r1`. Google's rows come from its 2026-10-22 report for the cases sent before 07:00 UTC
-  (Google's day follows Pacific time), told apart from the warm-up by the missing domain DKIM
-  signature; m00's can't be told apart and are left out.
+- `dmarc.csv`: the receivers' aggregate reports for the g1 mail (read 2026-10-25; La Poste and
+  Zoho added 2026-10-30), dated as in `results/r1`. Google's rows come from its 2026-10-22 report
+  for the cases sent before 07:00 UTC (Google's day follows Pacific time), told apart from the
+  warm-up by the missing domain DKIM signature; m00's can't be told apart and are left out.
+  Zoho's rows carry the date its reports state (2026-10-21, see below); m00's Zoho row also counts
+  the w1 message of 2026-10-22 and is left out too.
 - `bounce-classification.json`: what Mailgun's bounce classification report (its API, read
   2026-10-25) returns for the 13 domains: 89 critical bounces, all `ESPBLOCK`, under six provider
   labels.
@@ -128,13 +130,18 @@ Outlook.de and Outlook.fr, and the Microsoft 365 seed; every delivered copy read
 
 ## DMARC aggregate reports
 
-Google, Yahoo, GMX, WEB.DE, mail.com, Mail.ru, Seznam, Interia, Outlook.com and Microsoft 365
-reported for the g1 mail, Amazon (for WorkMail) for one case; Zoho hadn't by 2026-10-26. The last
-Outlook.com and Microsoft 365 reports arrived on 2026-10-25, 34 to 41 hours after their window, and
-were added on 2026-10-26.
+Google, Yahoo, GMX, WEB.DE, mail.com, Mail.ru, Seznam, Interia, Outlook.com, Microsoft 365, Zoho
+and La Poste reported for the g1 mail, Amazon (for WorkMail) for one case. The last Outlook.com and
+Microsoft 365 reports arrived on 2026-10-25, 34 to 41 hours after their window, and were added on
+2026-10-26. Zoho's arrived on 2026-10-24 but were missed until 2026-10-30 because of their dates,
+and La Poste's arrived on 2026-10-29, about 143 hours after the mail; both were added on 2026-10-30.
+Both came after the test, which ended on 2026-10-23. The article counts Zoho as reporting only days
+later and La Poste among the 12 of the 21 providers that sent no reports during the test; the rows
+added here don't change that count.
 
-- **Every verdict matches the SMTP and seed results.** Google, Yahoo and Seznam `pass` m02;
-  GMX, WEB.DE, mail.com and Mail.ru report `permerror` and `reject`.
+- **Every verdict matches the SMTP and seed results** (La Poste's DMARC column aside, see below).
+  Google, Yahoo and Seznam `pass` m02; GMX, WEB.DE, mail.com and Mail.ru report `permerror` and
+  `reject`.
 - **Mailgun's `mailgun.org/mg` signature** is on every m04 copy delivered to Gmail, Yahoo, AOL,
   AT&T, GMX, WEB.DE and mail.com (12 seeds, checked header by header) and on none of the other
   26. Google's and Yahoo's reports list it (Google's on half its copies: Gmail, not Workspace);
@@ -144,10 +151,20 @@ were added on 2026-10-26.
   bounced after accepting, except m08's three.
 - **m11 (two records):** Outlook.com reports two messages `pass` and four `fail`, Microsoft 365 one
   `pass` and two `fail`: a `pass` for exactly the messages Microsoft delivered. Google, Interia and
-  Microsoft label the failure `fail`; Yahoo, GMX, Mail.ru and Seznam `permerror`.
+  Microsoft label the failure `fail`; Yahoo, GMX, Mail.ru, Seznam, Zoho and La Poste `permerror`.
 - **m09 (`includes:`):** Google `fail`, Mail.ru `none`, everyone else (Microsoft included)
   `permerror`.
 - **m08 (`include=`):** `fail` everywhere, as RFC 7208 §6 implies for an ignored modifier, except at
   Outlook.com, which reports `permerror`.
 - **Seznam** reports `reject` for the failing cases it accepted at SMTP, as in the direct runs.
+- **La Poste and Zoho** report `reject` for exactly the six cases they refused at SMTP (m02, m06,
+  m08, m09, m11, m12, all with 550 5.7.1), and both label SPF the same way: `permerror` for m02,
+  m06, m09 and m11, `fail` for m08, `none` for m12.
+- **La Poste's DMARC result reads `pass` on every row**, the six rejected ones included, while
+  its SPF result says `permerror`, `fail` or `none` and its disposition `reject`. `dmarc.csv` keeps
+  the value as reported; for La Poste, go by `spf_result` and `disposition`. Each report covers one
+  message, with the window set to that message's time.
+- **Zoho's reports state a window that ends before the mail they count**: 2026-10-21 07:00 to
+  2026-10-22 07:00 UTC on every case, for mail sent from 2026-10-22 08:55 (w1, m00) to 2026-10-23
+  07:28 UTC. Apart from w1's m00 message, these domains sent Zoho no other mail.
 
