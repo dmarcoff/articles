@@ -55,20 +55,24 @@ lookups: if a receiver refused it, the record's length and not the count would e
 - `dns.json`: the case records as public DNS (1.1.1.1) served them before sending.
 - `glockapps.csv`: per case and provider group, where the message landed (placement only; GlockApps'
   per-seed SPF values are left out, see `results/r1`). The counts match each test's totals.
-- `dmarc.csv`: the receivers' aggregate reports for the g2 mail (read 2026-10-30), from DMARKOFF
-  (`experiments/spf-mailgun-limit/results_g2g3.py`). Google's day follows Pacific time, so this mail
-  is in its 2026-10-29 report.
+- `dmarc.csv`: the receivers' aggregate reports for the g2 mail (Google's and Yahoo's read
+  2026-10-30, Microsoft's 2026-10-31), from DMARKOFF (`experiments/spf-mailgun-limit/results_g2g3.py`).
+  Google's day follows Pacific time, so this mail is in its 2026-10-29 report.
 
 ## DMARC aggregate reports
 
-Google and Yahoo reported on 2026-10-30 for every case except m15, for which only Google's report is
-here. Yahoo's three reports for m15 (Yahoo, AOL, AT&T) reached DMARKOFF but weren't processed: m15
-was registered there as an unpaid domain, and DMARKOFF drops the reports of unpaid domains without
-storing them. The SMTP answers above cover the same messages. Microsoft's reports (Outlook.com,
-Microsoft 365) usually arrive about 36 hours after the day and weren't in yet.
+Google and Yahoo reported on 2026-10-30 and Microsoft (Outlook.com, for the Outlook and Hotmail
+seeds) on 2026-10-31, for every case except that Yahoo's reports for m15 are missing. Yahoo's three
+reports for m15 (Yahoo, AOL, AT&T) reached DMARKOFF but weren't processed: m15 was registered there
+as an unpaid domain, and DMARKOFF drops the reports of unpaid domains without storing them. The SMTP
+answers above cover the same messages.
 
-- **Pass up to 17 lookups.** Google and Yahoo record SPF `pass` and DMARC `pass` for m01, m02, m13
-  and m16.
+- **Google and Yahoo pass up to 17 lookups.** They record SPF `pass` and DMARC `pass` for m01, m02,
+  m13 and m16.
+- **Microsoft passes only m01 and m16** (2 lookups). For m02, m13, m14 and m15 it records SPF
+  `permerror` and `reject`: its 550 5.7.509 refusals ("does not pass DMARC verification") were SPF
+  permerrors, and the count is the only thing wrong with these records. Its report counts 3 of the
+  4 m15 messages it refused.
 - **The refusals at 22 and 27 show up as `reject`,** with different SPF labels: Yahoo records
-  `permerror` for m14, Google records `fail` for m14 and m15. In g3, Google labels the same count
-  `permerror` when the includes are nested (m20).
+  `permerror` for m14 and Microsoft for m14 and m15, while Google records `fail` for both. In g3,
+  Google labels the same count `permerror` when the includes are nested (m20).

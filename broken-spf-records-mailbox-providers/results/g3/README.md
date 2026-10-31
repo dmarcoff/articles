@@ -47,11 +47,15 @@ As in `results/g2`: `events.csv`, `dns.json` (the case records and the 20 chain 
 
 ## DMARC aggregate reports
 
-Google and Yahoo reported on 2026-10-30 for every case except m17, for which only Google's report is
-here. Yahoo's three reports for m17 (Yahoo, AOL, AT&T) reached DMARKOFF but weren't processed: m17
-was registered there as an unpaid domain, and DMARKOFF drops the reports of unpaid domains without
-storing them. The SMTP answers above cover the same messages. Microsoft's reports weren't in yet.
+Google and Yahoo reported on 2026-10-30 and Microsoft (Outlook.com) on 2026-10-31, for every case
+except that Yahoo's reports for m17 are missing. Yahoo's three reports for m17 (Yahoo, AOL, AT&T)
+reached DMARKOFF but weren't processed: m17 was registered there as an unpaid domain, and DMARKOFF
+drops the reports of unpaid domains without storing them. The SMTP answers above cover the same
+messages.
 
-- **Pass up to 17 lookups,** nested or not: Google and Yahoo record SPF `pass` for m17, m18 and m19.
-- **m20 (22 lookups) is `reject`,** and both Google and Yahoo record SPF `permerror`. For the same
-  count in a flat record (g2's m14), Google records `fail`.
+- **Google and Yahoo pass up to 17 lookups,** nested or not: they record SPF `pass` for m17, m18 and
+  m19.
+- **Microsoft passes only m17** (7 lookups) and records SPF `permerror` and `reject` for m18, m19
+  and m20, as for the flat records in g2.
+- **m20 (22 lookups) is `reject`,** and Google, Yahoo and Microsoft all record SPF `permerror`. For
+  the same count in a flat record (g2's m14), Google records `fail`.
