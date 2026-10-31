@@ -1,0 +1,72 @@
+# A CNAME next to a TXT record at the same name, each with its own SPF record: run g4.
+#
+# Seen in production on customers' Return-Paths: one ESP's CNAME and another
+# ESP's SPF record at the same name, sometimes with an MX as well. RFC 1034 3.6.2 forbids a CNAME
+# next to other data, but some DNS providers publish it. The authoritative server then answers a
+# TXT query with the name's own record and any type the name lacks with the CNAME, so what a
+# resolver returns for TXT depends on its cache: once it holds the CNAME (from an A, or an MX when
+# the name has none), it answers TXT from the target. SPF is evaluated through the receiver's
+# resolver, so the same message can pass at one receiver and fail at another.
+#
+# Route 53 refuses such a zone, so these names live in cx.mailpath.io, delegated to authdns on our
+# host, which answers the way those providers do and logs every query: the log shows which name
+# each receiver's resolver asked for TXT.
+#
+# Every case is sent through Mailgun with DKIM off, so DMARC (p=reject) rests on SPF alone. The
+# pairs mirror each other: in c03 and c04 the name's own record passes and the target's fails, in
+# c05 and c06 the other way round, so a receiver's verdict tells which record it read. c04 and c06
+# have no MX at the name: a receiver that checks the sender domain before SPF asks for its MX and
+# gets the CNAME, which its resolver then holds when SPF asks for TXT.
+#   c01 own TXT only (control: authdns serves the zone)
+#   c02 CNAME only, the target passes (control: a CNAME'd Return-Path, as ESPs set them up)
+#   c03 own pass + CNAME to fail, with MX
+#   c04 own pass + CNAME to fail, no MX
+#   c05 own fail + CNAME to pass, with MX
+#   c06 own fail + CNAME to pass, no MX
+
+experiment: spf-cname-txt
+domain: cx.mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+target_a: 184.195.33.8
+
+cases:
+  - id: c01
+    name: own SPF record only (control)
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    expect: SPF pass, DMARC pass
+
+  - id: c02
+    name: CNAME only, the target's record passes (control)
+    target_spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    no_mx: true
+    expect: SPF pass through the CNAME, DMARC pass
+
+  - id: c03
+    name: own record passes, CNAME to a record that fails, with MX
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    target_spf: ["v=spf1 -all"]
+    expect: pass where the resolver asks the name for TXT, fail where it follows the CNAME
+
+  - id: c04
+    name: own record passes, CNAME to a record that fails, no MX
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    target_spf: ["v=spf1 -all"]
+    no_mx: true
+    expect: as c03; more receivers follow the CNAME if they check the sender's MX first
+
+  - id: c05
+    name: own record fails, CNAME to a record that passes, with MX
+    spf: ["v=spf1 -all"]
+    target_spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    expect: fail where the resolver asks the name for TXT, pass where it follows the CNAME
+
+  - id: c06
+    name: own record fails, CNAME to a record that passes, no MX
+    spf: ["v=spf1 -all"]
+    target_spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    no_mx: true
+    expect: as c05; more receivers follow the CNAME if they check the sender's MX first
