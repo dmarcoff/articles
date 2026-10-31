@@ -17,7 +17,7 @@ repository-code: "https://github.com/dmarcoff/articles"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.23809122
 version: 1.0.1
-date-released: 2026-10-31
+date-released: 2026-11-02
 keywords:
   - SPF
   - DMARC
