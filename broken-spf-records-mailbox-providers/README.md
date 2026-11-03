@@ -82,10 +82,10 @@ Each run's `README.md` holds the notes we wrote during the experiment, with the 
 
 **`dmarc.csv`**: the receivers' aggregate reports for the run's mail, one row per reporter and distinct result: messages, disposition, DMARC result, SPF result and domain, DKIM results with `domain/selector`. `report_date` is the UTC date the report's window starts. Two reporters need care when you match reports to a run:
 
-- Seznam's day runs 22:00 to 22:00 UTC, so its report for a day's mail is dated the day before.
+- Seznam's day starts at midnight Prague time: 22:00 UTC until 2026-10-24, 23:00 UTC since the clocks changed on 2026-10-25. Its report for a day's mail is dated the day before.
 - Google's reports state 00:00 to 23:59 UTC, but its day follows Pacific time: mail sent before 07:00 UTC is in the previous day's report. For g1 that's the cases sent before 07:00; their Google rows are dated 2026-10-22 and were told apart from the previous day's warm-up by the missing DKIM signature of the case domain. m00, signed like the warm-up, has no Google rows here.
 
-Message counts in the reports are not message counts we sent: Google counts deferred attempts too, and Seznam's counts for passing mail are double what we sent. Quote the verdicts, not the counts.
+Message counts in the reports are not always the messages we sent. In the direct runs Google counts deferred attempts too, and Seznam's counts for passing mail are double what we sent; in the Mailgun runs both match. Outlook.com left out one of the messages it refused in g2 (m15) and in g4 (c03). Quote the verdicts, not the counts.
 
 **`dns.json`**: every record of the experiment as public DNS (1.1.1.1) served it right before the run; for g4, as our authoritative server served it right after the zone switch.
 

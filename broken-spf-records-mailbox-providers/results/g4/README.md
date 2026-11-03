@@ -82,7 +82,8 @@ verdicts it wrote into the seed's headers come from GlockApps.
 | Libero, Virgilio | own with an MX, split without | inbox | inbox and spam | spam | spam |
 | Apple iCloud | own with an MX, unsteady without | spam | 554 5.7.1 | 554 5.7.1 | 554 5.7.1 |
 | Seznam | both | inbox | inbox | inbox | inbox |
-| Vodafone, T-Online | no SPF check | inbox | inbox | inbox | inbox |
+| Vodafone | after accepting, through resolvers outside its network (by timing): target, in c05 and c06 both | inbox | inbox | inbox | inbox |
+| T-Online | not seen: its resolvers never showed up | inbox | inbox | inbox | inbox |
 
 c01 and c02 were accepted by every receiver. A CNAME alone is fine; the trouble is a CNAME next to
 the name's own records.
@@ -106,7 +107,14 @@ the name's own records.
 - **Some outcomes don't show at SMTP.** ukr.net and freenet file the failing message in spam.
   Amazon WorkMail accepted c05 and c06 at SMTP, and neither had reached the mailbox by 11:40 UTC. Proton's resolvers fetched both records; its DMARC result
   followed the target's.
-- **Vodafone never asked for TXT**, so it doesn't evaluate SPF. T-Online records no SPF result either
+- **Vodafone's own resolvers never asked for TXT**, only for the domain's A and MX. Four to five
+  seconds after Vodafone accepted c02, c04, c05 and c06, though, two resolvers outside its network
+  (in CONVOTIS's and Hetzner's) fetched the SPF record, and they appear nowhere else in authdns's
+  log. They had fetched c03's records 100 seconds before Vodafone's c03 delivery, within the
+  300-second TTL, and they don't appear for c01. So Vodafone most likely checks SPF after accepting
+  the message, through resolvers outside its network, and files it in the inbox whatever the
+  result. This rests on timing alone and isn't in `matrix.txt`, which ties resolvers to receivers
+  by network. T-Online's resolvers never showed up, and its headers record no SPF result
   (`results/r1`).
 
 ## What GlockApps showed
@@ -127,7 +135,9 @@ the name's own records.
   (`experiments/spf-mailgun/events_csv.py`), recipients reduced to their domain.
 - `queries.csv`: authdns's log for the case names (the name, its CNAME target and its DMARC record;
   not Mailgun's DKIM and tracking names) from 10:55 to 11:40 UTC, with the resolver's AS from Team
-  Cymru's DNS service. c05's re-verification window is left out.
+  Cymru's DNS service. c05's re-verification window is left out. authdns's full log, to
+  2026-11-02, stays with our raw logs: after 11:36 it holds periodic lookups, many from Google's
+  and Amazon's networks, none of them at the time of a delivery (the last was at 11:27:56).
 - `dnslog.txt`: per case and resolver network, the order of its queries ("A name>cname" is the
   CNAME, "TXT target>data" the target's record), and the SMTP outcomes
   (`experiments/spf-cname-txt/dnslog.py`).
@@ -135,15 +145,51 @@ the name's own records.
   (`experiments/spf-cname-txt/matrix.py`).
 - `dns.json`: the case zone as authdns served it, checked with
   `mailexp dns check --resolver 184.195.33.8:53` at 10:49:37 UTC, right after the switch.
+- `dmarc.csv`: the receivers' aggregate reports for this mail that arrived by 2026-11-02, as in
+  `results/g2` (`experiments/spf-cname-txt/results_g4.py`). Zoho's and La Poste's are not in it
+  yet.
 
 The GlockApps results are summarized above; the tests are listed in the case table.
 
 ## DMARC aggregate reports
 
 The six domains were added to DMARKOFF (project 1012) as paid before sending, so no report is lost
-the way Yahoo's for m15 and m17 were (`results/g2`, `results/g3`). Google and Yahoo are due on
-2026-11-01, Microsoft about 2026-11-02. Google's day follows Pacific time, so this mail is in its
-2026-10-31 report. The zone stays delegated until the reports are in.
+the way Yahoo's for m15 and m17 were (`results/g2`, `results/g3`). Google, Yahoo, Mail.ru, Seznam,
+GMX, web.de, mail.com, Interia and Amazon (for WorkMail) reported on 2026-11-01, Microsoft
+(Outlook.com and Microsoft 365) on 2026-11-02 (`dmarc.csv`). Zoho's reports are due about
+2026-11-03 and La Poste's about 2026-11-07; the zone stays delegated until they are in.
+
+- **The reports agree with the SMTP answers.** Where a reporter refused a message at SMTP, its
+  report says `reject` with SPF `fail` (Interia aside, below); where it accepted one, `pass`.
+  Google and the Yahoo family pass c01 to c04 and reject c05 and c06, Mail.ru the other way round,
+  and GMX, web.de and mail.com split as their 554s did: in c04 GMX's two seeds and web.de reject
+  and mail.com passes, in c06 one GMX seed and mail.com reject.
+- **Microsoft's reports split within a case as its 550 5.7.509s did.** Outlook.com reports 2
+  `pass` and 3 `reject` for c03, 3 and 3 for c04, 5 and 1 for c05, and only `pass` for c01, c02
+  and c06. Microsoft 365 reports `reject` for all of c03 and c04, `reject` for 2 of c05's 3
+  messages and `pass` for the third, and only `pass` for c01, c02 and c06. Outlook.com counted 5 of
+  c03's 6 messages: it refused 4 at SMTP and reports 3, as it counted 3 of the 4 it refused for
+  m15 (`results/g2`).
+- **Every report names the case domain as the SPF domain, whichever record was evaluated.** Mail.ru
+  fetched the CNAME target's record and reports SPF `fail` for `c03.cx.mailpath.io`; Google read
+  the name's own record and reports `fail` for `c05.cx.mailpath.io`. Nothing in the reports points
+  to the CNAME: the domain's owner sees the same mail pass SPF at some receivers and fail at others.
+- **Seznam passes all six.** In c03 its resolvers fetched only the name's own record and in c05
+  only the target's, each time the one that passes; in c04 and c06 they fetched both, and its
+  report says `pass` for those too.
+- **Interia has no rows for c04 and c05**, the two it refused at SMTP; its rows for the four it
+  accepted read `pass`.
+- **Amazon reports only c02, c03 and c04**, one `pass` each. There are no rows for c05 and c06,
+  which WorkMail accepted at SMTP but didn't put in the mailbox, nor for c01, which Mailgun logged
+  as delivered. Its reports for those three arrived at 10:28 to 10:50 UTC, so more are
+  unlikely to follow. In g1 Amazon reported one case of 13, so the gaps may say more about its
+  reporting than about these messages.
+- **Seznam's report is dated 2026-10-30.** Its window starts at midnight Prague time, which since
+  2026-10-25 is 23:00 UTC, not 22:00 as in the earlier runs. Google's day follows Pacific time;
+  this mail fell on 2026-10-31 there too.
+- **The message counts match the seeds** this time, Seznam's included: Google 6, the Yahoo family
+  5, Outlook.com 6, Microsoft 365 3, GMX 2, one elsewhere. The one exception is Outlook.com's c03
+  (above).
 
 ## Caveats
 
@@ -152,6 +198,14 @@ the way Yahoo's for m15 and m17 were (`results/g2`, `results/g3`). Google and Ya
 - Resolvers are tied to receivers by their AS and by timing. Microsoft's consumer and business mail
   share an AS, as do GMX, web.de and mail.com (IONOS); Google's resolvers also serve the Google
   Workspace seeds and the Google filter probe.
+- A receiver whose resolvers sit outside its own network can look as if it never fetched the record
+  (Vodafone, above), and a network that hosts other services picks up their queries too: Google's
+  resolvers also answer for Google Public DNS, and Amazon's AS14618, where WorkMail's resolvers
+  are, kept looking up the case domains after the run. WorkMail's queries in the second of each
+  delivery asked for the name's own record (for c02, the CNAME's target). A resolver that already
+  holds a record doesn't ask again until its 300-second TTL runs out. Resolvers in Amazon's
+  Frankfurt region, Prolocation's and Cloudflare's networks queried some case names during the run
+  without being tied to a receiver.
 - The three Microsoft 365 tenants are GlockApps' Microsoft 365, Microsoft EOP filter and Proofpoint
   filter seeds; all three have their MX at Exchange Online.
 - Onet refused c06 after DATA with "554 5.7.1 Rejected" and no reason, though its resolver read the
