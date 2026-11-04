@@ -26,11 +26,38 @@ SPF permerror (analyzed domains with at least one SPF record)
 
 DMARC policy by rank, domains with a non-null MX
   ranks 1-1000: reject or quarantine                 508 of     684   74.3%
+  ranks 1-1000: reject                               346 of     684   50.6%
+  ranks 1-1000: quarantine                           162 of     684   23.7%
+  ranks 1-1000: none                                 102 of     684   14.9%
+  ranks 1-1000: misplaced or malformed                 1 of     684    0.1%
   ranks 1-1000: no DMARC record                       73 of     684   10.7%
   ranks 1001-10000: reject or quarantine           3,893 of   6,548   59.5%
+  ranks 1001-10000: reject                         2,200 of   6,548   33.6%
+  ranks 1001-10000: quarantine                     1,693 of   6,548   25.9%
+  ranks 1001-10000: none                           1,483 of   6,548   22.6%
+  ranks 1001-10000: misplaced or malformed            10 of   6,548    0.2%
   ranks 1001-10000: no DMARC record                1,162 of   6,548   17.7%
   ranks 10001-100000: reject or quarantine        30,418 of  65,413   46.5%
+  ranks 10001-100000: reject                      15,728 of  65,413   24.0%
+  ranks 10001-100000: quarantine                  14,690 of  65,413   22.5%
+  ranks 10001-100000: none                        18,670 of  65,413   28.5%
+  ranks 10001-100000: misplaced or malformed         135 of  65,413    0.2%
   ranks 10001-100000: no DMARC record             16,190 of  65,413   24.8%
+  all ranks: reject or quarantine                 34,819 of  72,645   47.9%
+  all ranks: reject                               18,274 of  72,645   25.2%
+  all ranks: quarantine                           16,545 of  72,645   22.8%
+  all ranks: none                                 20,255 of  72,645   27.9%
+  all ranks: misplaced or malformed                  146 of  72,645    0.2%
+  all ranks: no DMARC record                      17,425 of  72,645   24.0%
+
+DMARC policy, all analyzed domains
+  all ranks: reject or quarantine                 38,595 of  99,441   38.8%
+  all ranks: reject                               21,569 of  99,441   21.7%
+  all ranks: quarantine                           17,026 of  99,441   17.1%
+  all ranks: none                                 21,134 of  99,441   21.3%
+  all ranks: misplaced or malformed                  167 of  99,441    0.2%
+  all ranks: no DMARC record                      39,545 of  99,441   39.8%
+  reject, of domains with a DMARC record          21,569 of  59,896   36.0%
 
 DMARC details (all analyzed domains)
   enforcing domains with sp=none                   2,756 of  38,595    7.1%
