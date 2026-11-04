@@ -32,6 +32,25 @@ def line(label, n, d):
     print(f"  {label:<46} {n:>7,} of {d:>7,}  {pct(n, d):>6}")
 
 
+def policies(name, rank=None):
+    """Domains per policy in a policy-by-rank CSV, for one rank group or for all of them."""
+    out = {}
+    for r in rows(name):
+        if rank in (None, r["rank_group"]):
+            out[r["policy"]] = out.get(r["policy"], 0) + int(r["domains"])
+    return out
+
+
+def policy_lines(label, pol):
+    n = sum(pol.values())
+    line(f"{label}: reject or quarantine", pol["reject"] + pol["quarantine"], n)
+    line(f"{label}: reject", pol["reject"], n)
+    line(f"{label}: quarantine", pol["quarantine"], n)
+    line(f"{label}: none", pol["none"], n)
+    line(f"{label}: misplaced or malformed", pol["misplaced"] + pol["malformed"], n)
+    line(f"{label}: no DMARC record", pol["no_record"], n)
+
+
 def main():
     pop = {r["group"]: {k: int(v) for k, v in r.items() if k != "group"} for r in rows("populations")}
     counts = by("counts", "measure", value="value")
@@ -68,11 +87,14 @@ def main():
           f"{counts['lookup_check_single_record_10_or_fewer']:,} at 10 or fewer (for example loops)")
 
     print("\nDMARC policy by rank, domains with a non-null MX")
-    pol = by("dmarc_policy_by_rank_mx", "rank_group", "policy")
     for rk in RANKS:
-        n = sum(v for (r, _), v in pol.items() if r == rk)
-        line(f"ranks {rk}: reject or quarantine", pol[(rk, "reject")] + pol[(rk, "quarantine")], n)
-        line(f"ranks {rk}: no DMARC record", pol[(rk, "no_record")], n)
+        policy_lines(f"ranks {rk}", policies("dmarc_policy_by_rank_mx", rk))
+    policy_lines("all ranks", policies("dmarc_policy_by_rank_mx"))
+
+    print("\nDMARC policy, all analyzed domains")
+    everyone = policies("dmarc_policy_by_rank_all")
+    policy_lines("all ranks", everyone)
+    line("reject, of domains with a DMARC record", everyone["reject"], pop["analyzed"]["with_dmarc"])
 
     print("\nDMARC details (all analyzed domains)")
     enf = {r["policy"]: {k: int(v) for k, v in r.items() if k != "policy"} for r in rows("dmarc_enforcing")}
