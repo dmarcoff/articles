@@ -145,9 +145,8 @@ the name's own records.
   (`experiments/spf-cname-txt/matrix.py`).
 - `dns.json`: the case zone as authdns served it, checked with
   `mailexp dns check --resolver 184.195.33.8:53` at 10:49:37 UTC, right after the switch.
-- `dmarc.csv`: the receivers' aggregate reports for this mail that arrived by 2026-11-02, as in
-  `results/g2` (`experiments/spf-cname-txt/results_g4.py`). Zoho's and La Poste's are not in it
-  yet.
+- `dmarc.csv`: the receivers' aggregate reports for this mail that arrived by 2026-11-06, as in
+  `results/g2` (`experiments/spf-cname-txt/results_g4.py`). La Poste's are not in it yet.
 
 The GlockApps results are summarized above; the tests are listed in the case table.
 
@@ -155,13 +154,15 @@ The GlockApps results are summarized above; the tests are listed in the case tab
 
 The six domains were added to DMARKOFF (project 1012) as paid before sending, so no report is lost
 the way Yahoo's for m15 and m17 were (`results/g2`, `results/g3`). Google, Yahoo, Mail.ru, Seznam,
-GMX, web.de, mail.com, Interia and Amazon (for WorkMail) reported on 2026-11-01, Microsoft
-(Outlook.com and Microsoft 365) on 2026-11-02 (`dmarc.csv`). Zoho's reports are due about
-2026-11-03 and La Poste's about 2026-11-07; the zone stays delegated until they are in.
+GMX, web.de, mail.com, Interia, Amazon (for WorkMail) and Zoho reported on 2026-11-01, Microsoft
+(Outlook.com and Microsoft 365) on 2026-11-02 (`dmarc.csv`). La Poste's reports usually come six
+days after the mail, so these were due by about 15:20 UTC on 2026-11-06; they hadn't arrived by
+20:30 UTC that day. The zone stays delegated until they are in.
 
 - **The reports agree with the SMTP answers.** Where a reporter refused a message at SMTP, its
   report says `reject` with SPF `fail` (Interia aside, below); where it accepted one, `pass`.
-  Google and the Yahoo family pass c01 to c04 and reject c05 and c06, Mail.ru the other way round,
+  Google, the Yahoo family and Zoho pass c01 to c04 and reject c05 and c06, Mail.ru the other way
+  round,
   and GMX, web.de and mail.com split as their 554s did: in c04 GMX's two seeds and web.de reject
   and mail.com passes, in c06 one GMX seed and mail.com reject.
 - **Microsoft's reports split within a case as its 550 5.7.509s did.** Outlook.com reports 2
@@ -187,6 +188,9 @@ GMX, web.de, mail.com, Interia and Amazon (for WorkMail) reported on 2026-11-01,
 - **Seznam's report is dated 2026-10-30.** Its window starts at midnight Prague time, which since
   2026-10-25 is 23:00 UTC, not 22:00 as in the earlier runs. Google's day follows Pacific time;
   this mail fell on 2026-10-31 there too.
+- **Zoho's reports are dated 2026-10-30 and state a window that ends before the mail they count,**
+  as in `results/g1`: 2026-10-30 07:00 to 2026-10-31 07:00 UTC, for mail sent from 10:55 UTC on
+  2026-10-31. Each counts the one message sent to Zoho's seed.
 - **The message counts match the seeds** this time, Seznam's included: Google 6, the Yahoo family
   5, Outlook.com 6, Microsoft 365 3, GMX 2, one elsewhere. The one exception is Outlook.com's c03
   (above).
