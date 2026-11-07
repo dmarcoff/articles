@@ -426,6 +426,16 @@ FROM missing ARRAY JOIN names AS name
 LEFT JOIN (SELECT target, status FROM domain_scan_include_targets FINAL WHERE scan_id = {scan_id:String}) AS i ON i.target = name
 GROUP BY registrable_domain ORDER BY domains DESC;
 
+-- Records that fail the SPF syntax check, for spf_syntax_errors.csv and
+-- spf_syntax_error_details.csv (added 2026-11-07). It returns the records, not the domains,
+-- and the records aren't published: each was run through the record-checker's SPF parser
+-- and counted once, by its first syntax error (see the README).
+SELECT spf_records, spf_record
+FROM domain_scan_results FINAL
+WHERE scan_id = {scan_id:String} AND timed_out = 0 AND temp_failure = 0
+  AND spf_evaluation = 'permerror' AND has(spf_errors, 'Critical:spf_syntax_is_ok')
+ORDER BY spf_record;
+
 -- Scan health: the slowest domains and the checker errors.
 SELECT domain, rank, duration_ms, timed_out, checker_errors
 FROM domain_scan_results FINAL

@@ -61,6 +61,8 @@ All files are in [data/](data/). Counts are domains unless the column says other
 | `mta_sts_modes.csv` | MTA-STS paragraph | domains with an MTA-STS record by the mode of the policy they serve, and how many publish TLS-RPT |
 | `bimi_certificates.csv` | Figure 9 | mark certificates by type (`VMC`, `CMC`) and time to expiry on the scan day |
 | `bimi_by_dmarc.csv` | BIMI paragraph | BIMI records by the domain's DMARC, and how many have a certificate |
+| `spf_syntax_errors.csv` | *SPF Record Syntax*, error table (see [Syntax errors by cause](#syntax-errors-by-cause)) | the 355 domains whose record fails the syntax check (`spf_syntax_is_ok` in `spf_permerror_checks.csv`) by the `cause` of the first syntax error, with a description and an example; each domain is counted once |
+| `spf_syntax_error_details.csv` | *SPF Record Syntax*, text under the table | domains within a `cause` that share the detail in `measure`, such as `ipv4:` among wrong mechanism names; `all` is the 355 |
 
 ## Queries
 
@@ -80,6 +82,14 @@ The 14 registrable domains in the `unregistered` row of `spf_missing_include_tar
 | no answer from the ccTLD registry | 2 |
 
 Each is included by one domain. We don't publish the names.
+
+## Syntax errors by cause
+
+Added on 7 November 2026, after release 1.0.1, for the DMARKOFF blog article *SPF Record Syntax: Mechanisms, Qualifiers, Modifiers and Common Errors*, which isn't published yet. The numbers of the census article don't change.
+
+The 355 records come from the query above the scan health list in [queries.sql](queries.sql), run on the same scan on 7 November 2026. We decoded each record's TXT escapes (the scan stores a non-breaking space as `\194\160`) and ran it through the SPF parser of our record checker, the one behind the [SPF Checker](https://dmarkoff.com/tools/spf-checker), in its version of 5 November 2026. The parser isn't published. Each domain is counted once, by the first error the parser reported, and the errors are grouped into the causes in `spf_syntax_errors.csv`. 98 records have more than one error; the later ones aren't counted.
+
+The causes are our grouping of the parser's messages, and another parser could put a few records elsewhere. The examples use documentation addresses and example names, not the records we found. As with the other tables, the records themselves aren't published.
 
 ## Caveats
 
