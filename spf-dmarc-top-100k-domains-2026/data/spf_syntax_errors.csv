@@ -1,0 +1,12 @@
+cause,description,example,domains
+wrong_mechanism_name,"a misspelled, doubled or made-up mechanism name",ipv4:192.0.2.10,87
+space_inside_term,a space after the colon or inside a term,ip4: 192.0.2.10,48
+other_txt_value,"another TXT value inside the SPF record, such as a site-verification token or a second v=spf1",~allgoogle-site-verification=...,47
+no_space_between_terms,two terms run together,ip4:192.0.2.10~all,35
+not_a_domain,an IP address or a name without a dot where a domain belongs,a:192.0.2.10,27
+bad_character,"a non-breaking space, line break, tab or another character outside printable ASCII",,27
+stray_text,punctuation or a word that isn't a term,-all;,25
+no_mechanism_name,an address or domain name with no mechanism in front of it,192.0.2.10,23
+empty_value,a mechanism with nothing after it,ip4:,21
+bad_ip,an incomplete or malformed address in ip4,ip4:192.0.2,13
+bad_macro,a malformed macro,exists:%.spf.example.com,2

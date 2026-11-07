@@ -1,0 +1,12 @@
+cause,measure,domains
+all,more than one syntax error in the record,98
+wrong_mechanism_name,ipv4: in place of ip4:,40
+wrong_mechanism_name,ipv6: in place of ip6:,3
+wrong_mechanism_name,ip: or ip in place of ip4:,20
+space_inside_term,a space after the colon,40
+no_space_between_terms,all run into the term before it,17
+other_txt_value,a Google site-verification token,26
+other_txt_value,the value follows all with no space,34
+bad_character,a non-breaking space (U+00A0),13
+bad_character,a line break or a tab,11
+empty_value,"the whole record is v=spf1 a mx ip4: ~all, with a and mx in either order",8
