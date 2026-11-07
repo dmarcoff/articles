@@ -1,0 +1,57 @@
+{
+  "upload_type": "dataset",
+  "title": "DMARKOFF articles: data and scripts",
+  "description": "Data and scripts behind articles on the DMARKOFF blog about SPF and DMARC: a comparison of free SPF checkers against RFC 7208, a test of how mailbox providers handle broken SPF records, and a DNS snapshot of SPF and DMARC across the Tranco top 100,000 domains (October 2026). One folder per article.",
+  "creators": [
+    {
+      "name": "Markau, Aliaksandr",
+      "orcid": "0009-0007-9226-2559"
+    },
+    {
+      "name": "DMARKOFF"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "SPF",
+    "DMARC",
+    "email authentication",
+    "DNS",
+    "RFC 7208",
+    "Tranco"
+  ],
+  "language": "eng",
+  "dates": [
+    {
+      "type": "Collected",
+      "start": "2026-10-15",
+      "end": "2026-11-02"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/dmarcoff/articles",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://dmarkoff.com/blog/free-spf-checkers-compared",
+      "relation": "isSupplementTo",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "https://dmarkoff.com/blog/broken-spf-records-mailbox-providers",
+      "relation": "isSupplementTo",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.14722/ndss.2019.23386",
+      "relation": "cites",
+      "resource_type": "publication-conferencepaper"
+    }
+  ],
+  "references": [
+    "Le Pochat, V., Van Goethem, T., Tajalizadehkhoob, S., Korczyński, M., & Joosen, W. (2019). Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation. NDSS 2019. https://doi.org/10.14722/ndss.2019.23386"
+  ],
+  "notes": "If you use this data, please cite it as below. Each folder's README also gives a citation for its article."
+}

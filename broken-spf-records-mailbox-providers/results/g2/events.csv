@@ -1,0 +1,229 @@
+time,run,case,rcpt_domain,event,severity,code,mx,attempt,reply,reason,enhanced_code,provider
+2026-10-29T13:03:38.534714Z,g2,m01,aol.com,accepted,,,,,,,,
+2026-10-29T13:03:41.750881Z,g2,m01,aol.com,accepted,,,,,,,,
+2026-10-29T13:03:44.440913Z,g2,m01,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:03:46.531615Z,g2,m01,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:04:17.311004Z,g2,m01,att.net,accepted,,,,,,,,
+2026-10-29T13:04:23.805232Z,g2,m01,att.net,delivered,,250,mx-att.mail.am0.yahoodns.net,1,ok dirdel,,,AT&T
+2026-10-29T13:03:35.281034Z,g2,m01,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:03:38.502029Z,g2,m01,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 432D820586,,2.0.0,Other
+2026-10-29T13:04:01.181350Z,g2,m01,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:04:08.073853Z,g2,m01,workspace-4y-b.seed.example,delivered,,250,aspmx.l.google.com,1,2.0.0 OK 1793279048 6a1803df08f44-91c6c8dbe06si108067256d6.146 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:03:44.987525Z,g2,m01,gmail.com,accepted,,,,,,,,
+2026-10-29T13:03:46.426884Z,g2,m01,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279026 d75a77b69052e-53838f2ac7esi141582611cf.99 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:03:48.248633Z,g2,m01,gmail.com,accepted,,,,,,,,
+2026-10-29T13:03:49.849960Z,g2,m01,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279029 d75a77b69052e-53838f2ac7esi141582611cf.99 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:03:51.495040Z,g2,m01,gmail.com,accepted,,,,,,,,
+2026-10-29T13:03:53.119037Z,g2,m01,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279032 6a1803df08f44-91c6e35bf4bsi98456006d6.128 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:03:54.710783Z,g2,m01,gmail.com,accepted,,,,,,,,
+2026-10-29T13:03:55.528191Z,g2,m01,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279035 d75a77b69052e-538396f5f93si143307001cf.341 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:03:57.948046Z,g2,m01,gmail.com,accepted,,,,,,,,
+2026-10-29T13:03:59.008588Z,g2,m01,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279038 d75a77b69052e-538396f5f93si143307001cf.341 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:04:27.021804Z,g2,m01,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:04:30.251680Z,g2,m01,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:04:30.371337Z,g2,m01,hotmail.com,delivered,,250,hotmail-com.olc.protection.outlook.com,1,"2.6.0 <…@m01.mailpath.io> [InternalId=95296734365818, Hostname=DB4PR02MB9527.eurprd02.prod.outlook.com] 9861 bytes in 0.198, 48.419 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:04:36.415165Z,g2,m01,hotmail.com,delivered,,250,hotmail-com.olc.protection.outlook.com,1,"2.6.0 <…@m01.mailpath.io> [InternalId=39732742457906, Hostname=DS0PR02MB11162.namprd02.prod.outlook.com] 9889 bytes in 0.248, 38.828 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:04:33.476657Z,g2,m01,icloud.com,accepted,,,,,,,,
+2026-10-29T13:04:39.416029Z,g2,m01,icloud.com,delivered,,250,mx02.mail.icloud.com,1,2.0.0 Ok: queued as D462BC0016D,,2.0.0,Apple
+2026-10-29T13:04:20.539953Z,g2,m01,outlook.com,accepted,,,,,,,,
+2026-10-29T13:04:23.215080Z,g2,m01,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m01.mailpath.io> [InternalId=92766998628778, Hostname=GVXPR02MB10965.eurprd02.prod.outlook.com] 9817 bytes in 0.273, 35.094 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:04:23.781084Z,g2,m01,outlook.com,accepted,,,,,,,,
+2026-10-29T13:04:25.963427Z,g2,m01,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m01.mailpath.io> [InternalId=51067161152025, Hostname=VI0P194MB2861.EURP194.PROD.OUTLOOK.COM] 9885 bytes in 0.350, 27.524 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:04:04.407690Z,g2,m01,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:04:05.825264Z,g2,m01,workspace-new-a.seed.example,delivered,,250,smtp.google.com,1,2.0.0 OK 1793279045 d75a77b69052e-53838f2f6d0si144450191cf.107 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:04:07.619091Z,g2,m01,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:04:10.410411Z,g2,m01,yahoo.com,delivered,,250,mta7.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:04:10.863497Z,g2,m01,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:04:12.214962Z,g2,m01,yahoo.com,delivered,,250,mta7.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:04:14.091512Z,g2,m01,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:04:18.550054Z,g2,m01,yahoo.com,delivered,,250,mta7.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:05:36.930106Z,g2,m02,aol.com,accepted,,,,,,,,
+2026-10-29T13:05:40.208288Z,g2,m02,aol.com,accepted,,,,,,,,
+2026-10-29T13:05:42.318541Z,g2,m02,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:05:48.381103Z,g2,m02,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:06:16.204116Z,g2,m02,att.net,accepted,,,,,,,,
+2026-10-29T13:06:17.463761Z,g2,m02,att.net,delivered,,250,mx-att.mail.am0.yahoodns.net,1,ok dirdel,,,AT&T
+2026-10-29T13:05:33.629303Z,g2,m02,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:05:35.729306Z,g2,m02,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 7A62920586,,2.0.0,Other
+2026-10-29T13:05:59.846406Z,g2,m02,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:06:04.987917Z,g2,m02,workspace-4y-b.seed.example,delivered,,250,aspmx.l.google.com,1,2.0.0 OK 1793279164 6a1803df08f44-91c80a4e950si47954166d6.627 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:05:43.500651Z,g2,m02,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:45.492584Z,g2,m02,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279145 6a1803df08f44-91c7bdcfa3csi62816976d6.586 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:05:46.787288Z,g2,m02,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:48.729697Z,g2,m02,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279148 af79cd13be357-94411cb35besi268023485a.62 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:05:50.048380Z,g2,m02,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:53.119372Z,g2,m02,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279152 6a1803df08f44-91c7bdcfa3csi62816976d6.586 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:05:53.307313Z,g2,m02,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:56.574235Z,g2,m02,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:57.373064Z,g2,m02,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279157 d75a77b69052e-5383915d079si144014961cf.143 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:06:00.283067Z,g2,m02,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279160 6a1803df08f44-91c47f33e04si190470636d6.452 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:06:26.061229Z,g2,m02,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:06:29.357437Z,g2,m02,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:06:31.451329Z,g2,m02,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M02.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AS1PR02MB8162.eurprd02.prod.outlook.com 2026-10-29T13:06:31.116Z 08DF3493AE757728] [CY8PR12CA0049.namprd12.prod.outlook.com 2026-10-29T13:06:31.175Z 08DF35918F7DC64F] [SN1PEPF000397B0.namprd05.prod.outlook.com 2026-10-29T13:06:31.321Z 08DF34EA415CA6F3]",espblock,5.7.509,Outlook US
+2026-10-29T13:06:49.212373Z,g2,m02,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M02.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [PH7PR02MB8882.namprd02.prod.outlook.com 2026-10-29T13:06:48.812Z 08DF34CE84302A5A] [PS2PR01CA0049.apcprd01.prod.exchangelabs.com 2026-10-29T13:06:48.882Z 08DF35B441EF26B4] [OSA0EPF000000CD.apcprd02.prod.outlook.com 2026-10-29T13:06:48.877Z 08DF30F62F67376E]",espblock,5.7.509,Outlook US
+2026-10-29T13:06:32.644786Z,g2,m02,icloud.com,accepted,,,,,,,,
+2026-10-29T13:06:37.833596Z,g2,m02,icloud.com,failed,permanent,554,mx02.mail.icloud.com,1,5.7.1 Your message was rejected due to m02.mailpath.io's DMARC policy. See https://support.apple.com/en-us/HT204137 for info. Txn ID 5604b47e-ee3e-46c9-b769-c3d192974c41,espblock,5.7.1,Apple
+2026-10-29T13:06:19.479410Z,g2,m02,outlook.com,accepted,,,,,,,,
+2026-10-29T13:06:22.783937Z,g2,m02,outlook.com,accepted,,,,,,,,
+2026-10-29T13:06:25.881605Z,g2,m02,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M02.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AM7PPF07ACA6522.EURP194.PROD.OUTLOOK.COM 2026-10-29T13:06:25.716Z 08DF323F0D6D9A4D] [BL1PR13CA0072.namprd13.prod.outlook.com 2026-10-29T13:06:25.742Z 08DF359E5FB93378] [BL2PEPF000352D1.namprd02.prod.outlook.com 2026-10-29T13:06:25.749Z 08DF34DCB9B60908]",espblock,5.7.509,Outlook US
+2026-10-29T13:06:52.247918Z,g2,m02,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M02.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [DB9PR02MB6778.eurprd02.prod.outlook.com 2026-10-29T13:06:52.003Z 08DF352CAB0A11BF] [CY5PR19CA0078.namprd19.prod.outlook.com 2026-10-29T13:06:52.054Z 08DF35A0EA0770B7] [EA8PEPF00000007.namprd05.prod.outlook.com 2026-10-29T13:06:52.058Z 08DF30D247E84CBB]",espblock,5.7.509,Outlook US
+2026-10-29T13:06:03.120358Z,g2,m02,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:06:05.203452Z,g2,m02,workspace-new-a.seed.example,delivered,,250,smtp.google.com,1,2.0.0 OK 1793279165 6a1803df08f44-91c7fac0090si49919886d6.494 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:06:06.376664Z,g2,m02,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:06:07.687187Z,g2,m02,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:06:09.650589Z,g2,m02,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:06:11.654723Z,g2,m02,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:06:12.931911Z,g2,m02,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:06:17.194401Z,g2,m02,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:07:37.385777Z,g2,m13,aol.com,accepted,,,,,,,,
+2026-10-29T13:07:39.000459Z,g2,m13,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:07:40.670575Z,g2,m13,aol.com,accepted,,,,,,,,
+2026-10-29T13:07:47.692324Z,g2,m13,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:08:16.859749Z,g2,m13,att.net,accepted,,,,,,,,
+2026-10-29T13:08:19.976377Z,g2,m13,att.net,delivered,,250,mx-att.mail.am0.yahoodns.net,1,ok dirdel,,,AT&T
+2026-10-29T13:07:34.078171Z,g2,m13,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:07:39.920654Z,g2,m13,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as A036920586,,2.0.0,Other
+2026-10-29T13:08:00.388216Z,g2,m13,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:08:01.368356Z,g2,m13,workspace-4y-b.seed.example,delivered,,250,aspmx.l.google.com,1,2.0.0 OK 1793279281 6a1803df08f44-91c7fbbcf83si48998136d6.484 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:07:43.980028Z,g2,m13,gmail.com,accepted,,,,,,,,
+2026-10-29T13:07:45.188291Z,g2,m13,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279265 6a1803df08f44-91c47d05772si203170006d6.421 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:07:47.273322Z,g2,m13,gmail.com,accepted,,,,,,,,
+2026-10-29T13:07:49.819883Z,g2,m13,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279269 af79cd13be357-940f0a77610si1356316085a.191 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:07:50.583111Z,g2,m13,gmail.com,accepted,,,,,,,,
+2026-10-29T13:07:51.738194Z,g2,m13,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279271 6a1803df08f44-91c47dd2efasi189472836d6.663 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:07:53.865003Z,g2,m13,gmail.com,accepted,,,,,,,,
+2026-10-29T13:07:56.323091Z,g2,m13,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279276 af79cd13be357-940f059275dsi1426411785a.11 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:07:57.130371Z,g2,m13,gmail.com,accepted,,,,,,,,
+2026-10-29T13:07:59.284316Z,g2,m13,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279279 6a1803df08f44-91c7b106a04si76874286d6.331 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:08:26.761322Z,g2,m13,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:08:30.034049Z,g2,m13,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M13.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AS4PR02MB7949.eurprd02.prod.outlook.com 2026-10-29T13:08:29.737Z 08DF3516A9032ABC] [PA7P264CA0077.FRAP264.PROD.OUTLOOK.COM 2026-10-29T13:08:29.752Z 08DF358610A5CA81] [ZR1PEPF0000E6B7.eurprd07.prod.outlook.com 2026-10-29T13:08:29.740Z 08DF30D3A39916B0]",espblock,5.7.509,Outlook US
+2026-10-29T13:08:30.057786Z,g2,m13,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:08:36.927479Z,g2,m13,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M13.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [CY8PR02MB9622.namprd02.prod.outlook.com 2026-10-29T13:08:36.805Z 08DF34D8CB8D98D8] [MN0P222CA0025.NAMP222.PROD.OUTLOOK.COM 2026-10-29T13:08:36.847Z 08DF32696AF57217] [IA0PEPF0000003A.namprd03.prod.outlook.com 2026-10-29T13:08:36.853Z 08DF34B2F8C16BBA]",espblock,5.7.509,Outlook US
+2026-10-29T13:08:33.339128Z,g2,m13,icloud.com,accepted,,,,,,,,
+2026-10-29T13:08:41.636968Z,g2,m13,icloud.com,failed,permanent,554,mx01.mail.icloud.com,1,5.7.1 Your message was rejected due to m13.mailpath.io's DMARC policy. See https://support.apple.com/en-us/HT204137 for info. Txn ID c7207434-488d-4bfb-8d9d-91ba93dd1d17,espblock,5.7.1,Apple
+2026-10-29T13:08:20.151155Z,g2,m13,outlook.com,accepted,,,,,,,,
+2026-10-29T13:08:23.417890Z,g2,m13,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M13.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [GV2PR02MB8724.eurprd02.prod.outlook.com 2026-10-29T13:08:23.262Z 08DF35790EBD94E7] [CH2PR12CA0028.namprd12.prod.outlook.com 2026-10-29T13:08:23.328Z 08DF3543F275297C] [BN3PEPF00022BC1.namprd04.prod.outlook.com 2026-10-29T13:08:23.351Z 08DF3476FF9A3B08]",espblock,5.7.509,Outlook US
+2026-10-29T13:08:23.458437Z,g2,m13,outlook.com,accepted,,,,,,,,
+2026-10-29T13:08:29.903505Z,g2,m13,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M13.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [GV1P194MB2615.EURP194.PROD.OUTLOOK.COM 2026-10-29T13:08:29.665Z 08DF353F6866A8D7] [SJ0PR03CA0155.namprd03.prod.outlook.com 2026-10-29T13:08:29.734Z 08DF24506D882893] [BY1PEPF0002695A.namprd05.prod.outlook.com 2026-10-29T13:08:29.760Z 08DF30F8DE41108F]",espblock,5.7.509,Outlook US
+2026-10-29T13:08:03.683613Z,g2,m13,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:08:05.571778Z,g2,m13,workspace-new-a.seed.example,delivered,,250,smtp.google.com,1,2.0.0 OK 1793279285 6a1803df08f44-91c47c1feddsi218386376d6.130 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:08:06.991447Z,g2,m13,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:08:10.280557Z,g2,m13,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:08:12.640249Z,g2,m13,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:08:13.546555Z,g2,m13,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:08:13.632977Z,g2,m13,yahoo.com,delivered,,250,mta7.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:08:14.818907Z,g2,m13,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:02:39.483618Z,g2,m14,aol.com,accepted,,,,,,,,
+2026-10-29T13:02:41.349345Z,g2,m14,aol.com,failed,permanent,554,mx-aol.mail.gm0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:02:42.826052Z,g2,m14,aol.com,accepted,,,,,,,,
+2026-10-29T13:02:52.599595Z,g2,m14,aol.com,failed,permanent,554,mx-aol.mail.gm0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:03:18.326282Z,g2,m14,att.net,accepted,,,,,,,,
+2026-10-29T13:03:24.785328Z,g2,m14,att.net,failed,permanent,554,mx-att.mail.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,AT&T
+2026-10-29T13:02:36.261690Z,g2,m14,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:02:45.776575Z,g2,m14,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 637F720586,,2.0.0,Other
+2026-10-29T13:03:02.215228Z,g2,m14,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:03:08.899043Z,g2,m14,workspace-4y-b.seed.example,failed,permanent,550,aspmx.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c47c963fcsi217714226d6.276 - gsmtp",espblock,5.7.26,Google Workspace
+2026-10-29T13:02:46.046098Z,g2,m14,gmail.com,accepted,,,,,,,,
+2026-10-29T13:02:49.281615Z,g2,m14,gmail.com,accepted,,,,,,,,
+2026-10-29T13:02:52.337500Z,g2,m14,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection d75a77b69052e-538396fb019si147150731cf.359 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:02:52.356825Z,g2,m14,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection d75a77b69052e-5383915010fsi145143081cf.134 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:02:52.512888Z,g2,m14,gmail.com,accepted,,,,,,,,
+2026-10-29T13:02:55.769334Z,g2,m14,gmail.com,accepted,,,,,,,,
+2026-10-29T13:02:59.007648Z,g2,m14,gmail.com,accepted,,,,,,,,
+2026-10-29T13:02:59.826564Z,g2,m14,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c47c20984si195397126d6.174 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:03:01.053051Z,g2,m14,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c763eab1fsi86209476d6.5 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:03:02.550264Z,g2,m14,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection af79cd13be357-940f0aa7e5asi1357184785a.331 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:03:28.026421Z,g2,m14,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:03:31.291707Z,g2,m14,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:03:35.131602Z,g2,m14,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M14.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [PA6PR02MB10851.eurprd02.prod.outlook.com 2026-10-29T13:03:33.695Z 08DF327492623E9D] [AS9PR04CA0110.eurprd04.prod.outlook.com 2026-10-29T13:03:33.716Z 08DF352D6A0B56A6] [AMS0EPF0000056A.eurprd02.prod.outlook.com 2026-10-29T13:03:33.713Z 08DF3532D0D46BAD]",espblock,5.7.509,Outlook US
+2026-10-29T13:03:36.163041Z,g2,m14,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M14.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [MW4PR02MB7266.namprd02.prod.outlook.com 2026-10-29T13:03:36.019Z 08DF327588B2DDEC] [YT1PR01CA0082.CANPRD01.PROD.OUTLOOK.COM 2026-10-29T13:03:36.061Z 08DF35AB0C1F545E] [IA0PEPF0000003A.namprd03.prod.outlook.com 2026-10-29T13:03:36.071Z 08DF34B2F8BF8039]",espblock,5.7.509,Outlook US
+2026-10-29T13:03:34.493626Z,g2,m14,icloud.com,accepted,,,,,,,,
+2026-10-29T13:03:48.341249Z,g2,m14,icloud.com,failed,permanent,554,mx01.mail.icloud.com,1,5.7.1 Your message was rejected due to m14.mailpath.io's DMARC policy. See https://support.apple.com/en-us/HT204137 for info. Txn ID 7968a65d-d315-49fc-8359-2298ad331d1e,espblock,5.7.1,Apple
+2026-10-29T13:03:21.539268Z,g2,m14,outlook.com,accepted,,,,,,,,
+2026-10-29T13:03:24.780468Z,g2,m14,outlook.com,accepted,,,,,,,,
+2026-10-29T13:03:29.063412Z,g2,m14,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M14.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [DB9PR02MB10018.eurprd02.prod.outlook.com 2026-10-29T13:03:28.956Z 08DF352633E96F97] [CH2PR15CA0009.namprd15.prod.outlook.com 2026-10-29T13:03:28.998Z 08DF3585A3787A1B] [BN2PEPF0000449F.namprd02.prod.outlook.com 2026-10-29T13:03:29.018Z 08DF316C6907EC36]",espblock,5.7.509,Outlook US
+2026-10-29T13:03:32.666661Z,g2,m14,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M14.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AS8P194MB1541.EURP194.PROD.OUTLOOK.COM 2026-10-29T13:03:31.813Z 08DF35166E33BADB] [AS4P189CA0036.EURP189.PROD.OUTLOOK.COM 2026-10-29T13:03:31.811Z 08DF348CA0DB8067] [AMS1EPF0000009D.eurprd02.prod.outlook.com 2026-10-29T13:03:31.806Z 08DF31322335AD40]",espblock,5.7.509,Outlook US
+2026-10-29T13:03:05.414771Z,g2,m14,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:03:09.165534Z,g2,m14,workspace-new-a.seed.example,failed,permanent,550,smtp.google.com,1,"5.7.26 Unauthenticated email from m14.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m14.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c78f948ebsi74450596d6.617 - gsmtp",espblock,5.7.26,Google Workspace
+2026-10-29T13:03:08.632059Z,g2,m14,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:03:11.885371Z,g2,m14,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:03:15.105858Z,g2,m14,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:03:16.660257Z,g2,m14,yahoo.com,failed,permanent,554,mta6.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:03:26.613309Z,g2,m14,yahoo.com,failed,permanent,554,mta5.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:03:26.707003Z,g2,m14,yahoo.com,failed,permanent,554,mta6.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:06:37.068074Z,g2,m15,aol.com,accepted,,,,,,,,
+2026-10-29T13:06:40.369965Z,g2,m15,aol.com,accepted,,,,,,,,
+2026-10-29T13:06:41.127509Z,g2,m15,aol.com,failed,permanent,554,mx-aol.mail.gm0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:06:50.274855Z,g2,m15,aol.com,failed,permanent,554,mx-aol.mail.gm0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:07:16.705350Z,g2,m15,att.net,accepted,,,,,,,,
+2026-10-29T13:07:17.813320Z,g2,m15,att.net,failed,permanent,554,mx-att.mail.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,AT&T
+2026-10-29T13:06:33.785375Z,g2,m15,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:06:36.090694Z,g2,m15,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as C838420586,,2.0.0,Other
+2026-10-29T13:07:00.199960Z,g2,m15,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:07:10.638152Z,g2,m15,workspace-4y-b.seed.example,failed,permanent,550,aspmx.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c47c2074bsi198672556d6.103 - gsmtp",espblock,5.7.26,Google Workspace
+2026-10-29T13:06:43.677658Z,g2,m15,gmail.com,accepted,,,,,,,,
+2026-10-29T13:06:46.996709Z,g2,m15,gmail.com,accepted,,,,,,,,
+2026-10-29T13:06:50.341412Z,g2,m15,gmail.com,accepted,,,,,,,,
+2026-10-29T13:06:53.613850Z,g2,m15,gmail.com,accepted,,,,,,,,
+2026-10-29T13:06:54.293362Z,g2,m15,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection af79cd13be357-940f0aaaf39si1380289285a.350 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:06:56.906452Z,g2,m15,gmail.com,accepted,,,,,,,,
+2026-10-29T13:06:58.816544Z,g2,m15,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection 6a1803df08f44-91c47d222a0si200806336d6.474 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:06:59.616960Z,g2,m15,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection d75a77b69052e-538394e80a0si146325911cf.324 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:07:00.182104Z,g2,m15,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection d75a77b69052e-538391578f2si147442161cf.135 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:07:02.864857Z,g2,m15,gmail.com,failed,permanent,550,gmail-smtp-in.l.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection af79cd13be357-940f0ab6788si1400894885a.391 - gsmtp",espblock,5.7.26,Gmail
+2026-10-29T13:07:26.591714Z,g2,m15,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:07:29.866714Z,g2,m15,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:07:37.052058Z,g2,m15,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M15.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [BL3PR02MB8915.namprd02.prod.outlook.com 2026-10-29T13:07:36.426Z 08DF34AA7BB28D08] [AM9P192CA0030.EURP192.PROD.OUTLOOK.COM 2026-10-29T13:07:36.465Z 08DF3296435ADEB9] [AM1PEPF000C1ADB.eurprd02.prod.outlook.com 2026-10-29T13:07:36.466Z 08DF3110D1CC8F2C]",espblock,5.7.509,Outlook US
+2026-10-29T13:07:39.250105Z,g2,m15,hotmail.com,failed,permanent,550,hotmail-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M15.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AS2PR02MB9141.eurprd02.prod.outlook.com 2026-10-29T13:07:38.456Z 08DF35545DE1F171] [DM6PR08CA0046.namprd08.prod.outlook.com 2026-10-29T13:07:38.487Z 08DF35A599E0ED9A] [CH2PEPF000166C5.namprd04.prod.outlook.com 2026-10-29T13:07:38.506Z 08DF30FD31B5991A]",espblock,5.7.509,Outlook US
+2026-10-29T13:07:33.151637Z,g2,m15,icloud.com,accepted,,,,,,,,
+2026-10-29T13:07:43.944053Z,g2,m15,icloud.com,failed,permanent,554,mx01.mail.icloud.com,1,5.7.1 Your message was rejected due to m15.mailpath.io's DMARC policy. See https://support.apple.com/en-us/HT204137 for info. Txn ID 41b2aa0b-43c2-40cf-8f26-0e9302a808b7,espblock,5.7.1,Apple
+2026-10-29T13:07:19.974277Z,g2,m15,outlook.com,accepted,,,,,,,,
+2026-10-29T13:07:23.292953Z,g2,m15,outlook.com,accepted,,,,,,,,
+2026-10-29T13:07:38.709936Z,g2,m15,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M15.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [AS8P194MB1923.EURP194.PROD.OUTLOOK.COM 2026-10-29T13:07:38.413Z 08DF34AC3F4700FB] [PA7P264CA0253.FRAP264.PROD.OUTLOOK.COM 2026-10-29T13:07:38.416Z 08DF32311E6F3B5C] [MI3PEPF00008492.eurprd03.prod.outlook.com 2026-10-29T13:07:38.429Z 08DF311FCD4E8650]",espblock,5.7.509,Outlook US
+2026-10-29T13:12:23.154335Z,g2,m15,outlook.com,failed,permanent,550,outlook-com.olc.protection.outlook.com,1,"5.7.509 Access denied, sending domain [M15.MAILPATH.IO] does not pass DMARC verification and has a DMARC policy of reject. [DB4PR02MB8750.eurprd02.prod.outlook.com 2026-10-29T13:12:23.006Z 08DF34BE197BBC10] [DS0PR17CA0010.namprd17.prod.outlook.com 2026-10-29T13:12:23.054Z 08DF2A0B71E38E85] [DS8PEPF000000E3.namprd05.prod.outlook.com 2026-10-29T13:12:23.059Z 08DF344679B2654B]",espblock,5.7.509,Outlook US
+2026-10-29T13:07:03.504399Z,g2,m15,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:07:06.502904Z,g2,m15,workspace-new-a.seed.example,failed,permanent,550,smtp.google.com,1,"5.7.26 Unauthenticated email from m15.mailpath.io is not accepted due to 5.7.26 domain's DMARC policy. Please contact the administrator of 5.7.26 m15.mailpath.io domain if this was a legitimate mail. To learn about 5.7.26 the DMARC initiative, go to 5.7.26 https://support.google.com/mail/?p=DmarcRejection d75a77b69052e-53839376dc7si145174071cf.201 - gsmtp",espblock,5.7.26,Google Workspace
+2026-10-29T13:07:06.814574Z,g2,m15,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:07:10.104057Z,g2,m15,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:07:11.993975Z,g2,m15,yahoo.com,failed,permanent,554,mta5.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:07:13.410991Z,g2,m15,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:07:15.502411Z,g2,m15,yahoo.com,failed,permanent,554,mta6.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:07:17.994149Z,g2,m15,yahoo.com,failed,permanent,554,mta7.am0.yahoodns.net,1,5.7.9 This mail has been blocked because it failed authentication checks against the sending domains DMARC policy. See https://senders.yahooinc.com/smtp-error-codes#dmarc-fail for more information.,espblock,5.7.9,Yahoo US
+2026-10-29T13:04:37.629551Z,g2,m16,aol.com,accepted,,,,,,,,
+2026-10-29T13:04:38.986979Z,g2,m16,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:04:40.881551Z,g2,m16,aol.com,accepted,,,,,,,,
+2026-10-29T13:04:41.698746Z,g2,m16,aol.com,delivered,,250,mx-aol.mail.gm0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:05:16.404383Z,g2,m16,att.net,accepted,,,,,,,,
+2026-10-29T13:05:30.776961Z,g2,m16,att.net,delivered,,250,mx-att.mail.am0.yahoodns.net,1,ok dirdel,,,AT&T
+2026-10-29T13:04:34.383484Z,g2,m16,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-10-29T13:04:42.446061Z,g2,m16,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 3494720586,,2.0.0,Other
+2026-10-29T13:05:00.250035Z,g2,m16,workspace-4y-b.seed.example,accepted,,,,,,,,
+2026-10-29T13:05:08.695730Z,g2,m16,workspace-4y-b.seed.example,delivered,,250,aspmx.l.google.com,1,2.0.0 OK 1793279108 af79cd13be357-940f0a7ccd0si1410394985a.202 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:04:44.108166Z,g2,m16,gmail.com,accepted,,,,,,,,
+2026-10-29T13:04:47.345657Z,g2,m16,gmail.com,accepted,,,,,,,,
+2026-10-29T13:04:50.268548Z,g2,m16,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279090 af79cd13be357-94411cb35besi268023485a.62 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:04:50.549993Z,g2,m16,gmail.com,accepted,,,,,,,,
+2026-10-29T13:04:53.102566Z,g2,m16,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279092 d75a77b69052e-538394b86absi140052121cf.280 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:04:53.751347Z,g2,m16,gmail.com,accepted,,,,,,,,
+2026-10-29T13:04:54.791251Z,g2,m16,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279094 af79cd13be357-94411cb35besi268023485a.62 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:04:54.873366Z,g2,m16,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279093 af79cd13be357-940f0a7f3basi1363233385a.226 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:04:57.023366Z,g2,m16,gmail.com,accepted,,,,,,,,
+2026-10-29T13:05:05.164155Z,g2,m16,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793279105 af79cd13be357-94411cb35besi268023485a.62 - gsmtp,,2.0.0,Gmail
+2026-10-29T13:05:26.098791Z,g2,m16,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:05:27.384050Z,g2,m16,hotmail.com,delivered,,250,hotmail-com.olc.protection.outlook.com,1,"2.6.0 <…@m16.mailpath.io> [InternalId=90709709294414, Hostname=AS2PR02MB10313.eurprd02.prod.outlook.com] 10016 bytes in 0.185, 52.842 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:05:29.311210Z,g2,m16,hotmail.com,accepted,,,,,,,,
+2026-10-29T13:06:03.740592Z,g2,m16,hotmail.com,delivered,,250,hotmail-com.olc.protection.outlook.com,1,"2.6.0 <…@m16.mailpath.io> [InternalId=2911987830415, Hostname=SAEPR02MB325893.namprd02.prod.outlook.com] 10069 bytes in 0.225, 43.625 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:05:32.542018Z,g2,m16,icloud.com,accepted,,,,,,,,
+2026-10-29T13:05:35.057678Z,g2,m16,icloud.com,delivered,,250,mx01.mail.icloud.com,1,2.0.0 Ok: queued as 1592BC000FE,,2.0.0,Apple
+2026-10-29T13:05:19.618072Z,g2,m16,outlook.com,accepted,,,,,,,,
+2026-10-29T13:05:22.867331Z,g2,m16,outlook.com,accepted,,,,,,,,
+2026-10-29T13:05:27.287133Z,g2,m16,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m16.mailpath.io> [InternalId=114456583474080, Hostname=VI0PR02MB10876.eurprd02.prod.outlook.com] 9919 bytes in 0.290, 33.360 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:05:30.051913Z,g2,m16,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m16.mailpath.io> [InternalId=6451040881799, Hostname=MMZP194MB110695.EURP194.PROD.OUTLOOK.COM] 10290 bytes in 0.291, 34.515 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-10-29T13:05:03.469782Z,g2,m16,workspace-new-a.seed.example,accepted,,,,,,,,
+2026-10-29T13:05:35.782253Z,g2,m16,workspace-new-a.seed.example,delivered,,250,smtp.google.com,1,2.0.0 OK 1793279135 6a1803df08f44-91c7ce9a47csi58387136d6.44 - gsmtp,,2.0.0,Google Workspace
+2026-10-29T13:05:06.723062Z,g2,m16,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:05:09.936771Z,g2,m16,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:05:10.178774Z,g2,m16,yahoo.com,delivered,,250,mta5.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:05:13.173311Z,g2,m16,yahoo.com,accepted,,,,,,,,
+2026-10-29T13:05:15.048920Z,g2,m16,yahoo.com,delivered,,250,mta5.am0.yahoodns.net,1,ok dirdel,,,Yahoo US
+2026-10-29T13:05:28.666545Z,g2,m16,yahoo.com,delivered,,250,mta6.am0.yahoodns.net,1,ok dirdel,,,Yahoo US

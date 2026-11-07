@@ -1,0 +1,65 @@
+# How far past 10 DNS lookups Gmail and Yahoo go: run g2, a follow-up to spf-mailgun's m02.
+#
+# In g1 (2026-10-23) Gmail and Yahoo/AOL passed m02, Mailgun's include after 11 non-matching
+# includes, while Microsoft and Apple refused it. These cases push the count to 15, 20 and 25
+# includes, sent through Mailgun as in g1 (our EC2 address is in Spamhaus PBL, and Yahoo refuses it
+# before SPF). m01 and m02 are the same domains and records as in g1: the day's baseline and the
+# 11-include case again.
+#
+# Every receiver reaches its 11th lookup at the 11th include. include:_spf.mailgun.org then costs 2
+# lookups to match Mailgun's US IPs in _spf1, 3 in _spf2, so m15 needs up to 28 in all.
+#
+# m16 is as long as m15 (732 characters against 736, three 255-byte strings, a DNS answer over 512
+# bytes) but needs only Mailgun's lookups: the padding is ip4: terms in 192.0.2.0/24, the
+# documentation range (RFC 5737), which costs no lookups and matches no sender. If a receiver fails
+# m16, a long record is the problem and m13-m15 say nothing about the count.
+
+experiment: spf-mailgun-limit
+domain: mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: m01
+    name: control, SPF pass only
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    expect: SPF pass, DMARC pass. The day's baseline
+
+  - id: m02
+    name: lookup limit, Mailgun after 11 includes
+    spf: ["v=spf1 {{includes 11}} include:_spf.mailgun.org -all"]
+    expect: as in g1, pass at Gmail and Yahoo, refused by Microsoft and Apple
+
+  - id: m13
+    name: lookup limit, Mailgun after 15 includes
+    spf: ["v=spf1 {{includes 15}} include:_spf.mailgun.org -all"]
+    expect: permerror at the 11th include (RFC 7208 4.6.4), DMARC fail
+
+  - id: m14
+    name: lookup limit, Mailgun after 20 includes
+    spf: ["v=spf1 {{includes 20}} include:_spf.mailgun.org -all"]
+    expect: permerror at the 11th include, DMARC fail
+
+  - id: m15
+    name: lookup limit, Mailgun after 25 includes
+    spf: ["v=spf1 {{includes 25}} include:_spf.mailgun.org -all"]
+    expect: permerror at the 11th include, DMARC fail
+
+  - id: m16
+    name: long record, as long as m15, within the lookup limit
+    spf:
+      - >-
+        v=spf1 ip4:192.0.2.1 ip4:192.0.2.2 ip4:192.0.2.3 ip4:192.0.2.4 ip4:192.0.2.5
+        ip4:192.0.2.6 ip4:192.0.2.7 ip4:192.0.2.8 ip4:192.0.2.9 ip4:192.0.2.10 ip4:192.0.2.11
+        ip4:192.0.2.12 ip4:192.0.2.13 ip4:192.0.2.14 ip4:192.0.2.15 ip4:192.0.2.16
+        ip4:192.0.2.17 ip4:192.0.2.18 ip4:192.0.2.19 ip4:192.0.2.20 ip4:192.0.2.21
+        ip4:192.0.2.22 ip4:192.0.2.23 ip4:192.0.2.24 ip4:192.0.2.25 ip4:192.0.2.26
+        ip4:192.0.2.27 ip4:192.0.2.28 ip4:192.0.2.29 ip4:192.0.2.30 ip4:192.0.2.31
+        ip4:192.0.2.32 ip4:192.0.2.33 ip4:192.0.2.34 ip4:192.0.2.35 ip4:192.0.2.36
+        ip4:192.0.2.37 ip4:192.0.2.38 ip4:192.0.2.39 ip4:192.0.2.40 ip4:192.0.2.41
+        ip4:192.0.2.42 ip4:192.0.2.43 ip4:192.0.2.44 ip4:192.0.2.45 ip4:192.0.2.46
+        ip4:192.0.2.47 include:_spf.mailgun.org -all
+    expect: SPF pass, DMARC pass. A receiver that fails it limits record length

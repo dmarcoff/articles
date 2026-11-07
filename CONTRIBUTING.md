@@ -4,7 +4,7 @@ This repository holds the data and scripts behind studies published on the DMARK
 
 ## Where a new dataset goes
 
-A new study goes into a new folder in this repository, whatever its topic. The repository is defined by the blog, not by SPF or DMARC; when the topic is new, update the `abstract` and `keywords` in `CITATION.cff` so the Zenodo record describes it.
+A new study goes into a new folder in this repository, whatever its topic. The repository is defined by the blog, not by SPF or DMARC; when the topic is new, update the `abstract` and `keywords` in `CITATION.cff` and `.zenodo.json` so the Zenodo record describes it.
 
 Use a separate repository with its own Zenodo record instead when one of these applies:
 
@@ -58,11 +58,45 @@ Nothing needs to be added per folder. The root README's License section covers n
 
 Don't rename, move or delete published files; the blog and other sites link to them. Corrections and late additions, such as aggregate reports that arrived after an article came out, are added to the existing files with a note in the folder's README saying what changed and when. If an article quotes a number the change affects, say in the README whether the article's number still holds.
 
+## Zenodo metadata
+
+Zenodo builds the record of each version from `.zenodo.json`. When that file exists, Zenodo ignores `CITATION.cff` entirely, while GitHub's "Cite this repository" and citation managers still read `CITATION.cff`. The two files describe the same work and have to agree.
+
+Change `.zenodo.json` in the same pull request as the change that calls for it:
+
+- **An article whose data is here is published.** Add its URL to `related_identifiers` with `"relation": "isSupplementTo"` and `"resource_type": "publication"`. Add it only once the page is live, as with links in the READMEs.
+- **A study builds on a paper or a dataset with a DOI.** Add the DOI to `related_identifiers` with `"relation": "cites"`, and the full reference to `references`, as for Tranco.
+- **New data is added.** Move the `end` of the `Collected` date to the last day the data was collected; for aggregate reports, the day they were read.
+- **The title, abstract, authors, keywords or data license change in `CITATION.cff`.** Make the same change here. The abstract goes in `description`.
+
+Leave out `version` and `publication_date`: Zenodo takes them from the release tag and from the day it processes the release. `related_identifiers` links to the repository rather than to a release tag, because this list replaces the link to the tag that Zenodo adds on its own.
+
+The file uses Zenodo's legacy deposit format, which differs from `CITATION.cff`:
+
+- `creators[].name` is "Family, Given" for a person and the plain name for an organization. `orcid` is the bare ID, without `https://orcid.org/`.
+- `license` takes a single license ID (`cc-by-4.0`); there is no way to give a second one.
+- `relation` uses camelCase names (`isSupplementTo`, `cites`), and `resource_type` uses Zenodo's IDs (`publication`, `publication-conferencepaper`, `dataset`, `software`).
+- `dates[].type` is a word such as `Collected`, and `language` is a three-letter ISO 639 code (`eng`).
+
+Zenodo drops fields it doesn't know without a warning. A value it can't read, such as an unknown license or a malformed date or identifier, makes it reject the whole release, and the error shows on the repository's GitHub page on Zenodo. Zenodo reads the file from the release tag, so the fix is a corrected file on `main` and a new release.
+
+Before opening the pull request, check that the file parses and agrees with `CITATION.cff`:
+
+```sh
+python3 -m json.tool .zenodo.json > /dev/null
+cffconvert -f zenodo | python3 -c '
+import json, sys
+c, z = json.load(sys.stdin), json.load(open(".zenodo.json"))
+diff = [k for k in ("title", "description", "creators", "keywords") if c[k] != z[k]]
+diff += ["license"] if c["license"]["id"].lower() != z["license"].lower() else []
+print("out of sync:", ", ".join(diff) if diff else "nothing")'
+```
+
 ## Releasing
 
 Each release is archived on Zenodo, which gives it a version DOI; the concept DOI in the README badge always resolves to the latest release.
 
-1. In the pull request, update `version` and `date-released` in `CITATION.cff`, plus `abstract`, `keywords` and `references` if the new folder needs it. Versions: a new folder is a minor release (1.1.0); corrections and late additions to existing folders are a patch release (1.0.1). Run `cffconvert --validate`.
+1. In the pull request, update `version` and `date-released` in `CITATION.cff`, plus `abstract`, `keywords` and `references` if the new folder needs it, and `.zenodo.json` as described above. Versions: a new folder is a minor release (1.1.0); corrections and late additions to existing folders are a patch release (1.0.1). Run `cffconvert --validate` and the two checks above.
 2. Merge, then publish a GitHub release on `main` the same day, so `date-released` matches:
 
    ```sh
@@ -70,10 +104,11 @@ Each release is archived on Zenodo, which gives it a version DOI; the concept DO
    ```
 
    Zenodo picks up published releases only, not tags.
-3. Check the new version on Zenodo and fix it with Edit, then Publish. Zenodo reads only part of `CITATION.cff`, so look at least at:
-   - Resource type: Dataset.
-   - Licenses: CC BY 4.0 and MIT.
-   - Related works: "Is supplement to" with the URL of each published article, and "Cites" with the DOI of each paper or dataset the study builds on.
-   - Copyright, Languages and Dates (Collected) as on the previous version.
+3. Check the new version on Zenodo and fix it with Edit, then Publish. `.zenodo.json` can't express everything, so every version needs these by hand:
+   - Licenses: add MIT next to CC BY 4.0.
+   - Copyright: as on the previous version.
+   - Creators: Zenodo lists DMARKOFF as a person; change its type to organization.
+
+   Then compare the rest with `.zenodo.json`: resource type Dataset, related works, keywords, language and the Collected date.
 
    Editing metadata doesn't create a new version or change a DOI. The files of a published version can't be changed; a fix is a new release.

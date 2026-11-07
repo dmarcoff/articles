@@ -1,0 +1,47 @@
+# The "deep" shape of the lookup limit: run g3, a follow-up to spf-mailgun-limit (g2).
+#
+# g2 put every include at the top level ("wide"): Gmail and the Yahoo family passed 17 lookups and
+# refused 22. A receiver could also cap how deep includes nest, apart from how many lookups they
+# take. Here Mailgun's include sits at the bottom of a chain: include:cNN.chain.mailpath.io
+# includes c(NN-1), and so on down to c01, which holds include:_spf.mailgun.org. {{chain N}} nests
+# N links deep, and a receiver needs N+2 lookups to match Mailgun's US IPs in _spf1 (N chain links,
+# _spf.mailgun.org, _spf1), N+3 in _spf2.
+#
+# In a chain the lookup count grows with the depth, so the cases sit on both sides of what g2
+# showed for the count alone:
+#   m17  5 links,  7 lookups: within 10, so every receiver should pass it (the chain works at all)
+#   m18 10 links, 12 lookups: over 10; Gmail and Yahoo passed 13 in g2
+#   m19 15 links, 17 lookups: the count Gmail and Yahoo passed in g2 (m13)
+#   m20 20 links, 22 lookups: the count Gmail and Yahoo refused in g2 (m14)
+# A refusal at m18 or m19 from Gmail or Yahoo means they limit depth below what they allow for
+# the count. New domains, so these DMARC reports don't mix with g2's.
+
+experiment: spf-mailgun-depth
+domain: mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+chain_end: "include:_spf.mailgun.org"
+
+cases:
+  - id: m17
+    name: include chain 5 deep, Mailgun at the bottom
+    spf: ["v=spf1 {{chain 5}} -all"]
+    expect: SPF pass, DMARC pass (7 lookups)
+
+  - id: m18
+    name: include chain 10 deep, Mailgun at the bottom
+    spf: ["v=spf1 {{chain 10}} -all"]
+    expect: permerror past the 10th lookup (RFC 7208 4.6.4), DMARC fail
+
+  - id: m19
+    name: include chain 15 deep, Mailgun at the bottom
+    spf: ["v=spf1 {{chain 15}} -all"]
+    expect: permerror past the 10th lookup, DMARC fail
+
+  - id: m20
+    name: include chain 20 deep, Mailgun at the bottom
+    spf: ["v=spf1 {{chain 20}} -all"]
+    expect: permerror past the 10th lookup, DMARC fail
