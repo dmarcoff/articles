@@ -145,7 +145,7 @@ the name's own records.
   (`experiments/spf-cname-txt/matrix.py`).
 - `dns.json`: the case zone as authdns served it, checked with
   `mailexp dns check --resolver 184.195.33.8:53` at 10:49:37 UTC, right after the switch.
-- `dmarc.csv`: the receivers' aggregate reports for this mail that arrived by 2026-11-06, as in
+- `dmarc.csv`: the receivers' aggregate reports for this mail that arrived by 2026-11-07, as in
   `results/g2` (`experiments/spf-cname-txt/results_g4.py`). La Poste's are not in it yet.
 
 The GlockApps results are summarized above; the tests are listed in the case table.
@@ -157,7 +157,7 @@ the way Yahoo's for m15 and m17 were (`results/g2`, `results/g3`). Google, Yahoo
 GMX, web.de, mail.com, Interia, Amazon (for WorkMail) and Zoho reported on 2026-11-01, Microsoft
 (Outlook.com and Microsoft 365) on 2026-11-02 (`dmarc.csv`). La Poste's reports usually come six
 days after the mail, so these were due by about 15:20 UTC on 2026-11-06; they hadn't arrived by
-20:30 UTC that day. The zone stays delegated until they are in.
+08:17 UTC on 2026-11-07. The zone stays delegated until they are in.
 
 - **The reports agree with the SMTP answers.** Where a reporter refused a message at SMTP, its
   report says `reject` with SPF `fail` (Interia aside, below); where it accepted one, `pass`.
