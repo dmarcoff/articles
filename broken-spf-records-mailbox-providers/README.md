@@ -4,6 +4,8 @@ Data behind the DMARKOFF blog article [What Mailbox Providers Really Do With Bro
 
 A follow-up article on the receivers' bounce codes, not published yet, reads the receivers' replies from the same `smtp.csv` and `events.csv`.
 
+Runs g5 and g6 are the data of *SPF ~all vs -all: Does Softfail Weaken DMARC p=reject? We Tested 20 Providers*, and run g7 is planned for *Multiple SPF Records: Why Two v=spf1 Records Break SPF and How to Merge Them*. Neither article is published yet.
+
 Between 21 and 23 October 2026 we sent about 3,800 test messages from 26 subdomains of `mailpath.io`, 13 SPF configurations on each of two sending paths, to GlockApps seed mailboxes at 21 mailbox providers and five spam filters. Every subdomain had `p=reject` and, except for one control per path, no aligned DKIM signature, so DMARC depended on SPF alone. This folder holds what we recorded: every SMTP reply, where each message landed, the authentication results in the seeds' headers, and the receivers' own DMARC aggregate reports.
 
 ## Quick start
@@ -47,15 +49,20 @@ The records are defined in [cases/spf.yaml](cases/spf.yaml) (direct path, subdom
 
 | Run | Path | Date (UTC) | Cases | Seeds per case |
 |---|---|---|---|---|
-| [p1](results/p1/) | direct, from our AWS address (PTR `mta.mailpath.io`) | 2026-10-21 19:29–19:51 | s00–s02 | 111 |
-| [r1](results/r1/) | direct | 2026-10-22 06:57–09:09 | s00–s12 | 110–111 |
-| [r2](results/r2/) | direct | 2026-10-23 08:02–10:16 | s00–s12 | 110–112 |
-| [g1](results/g1/) | Mailgun's US shared IPs | 2026-10-23 06:22–07:30 | m00–m12 | 44 |
-| [g2](results/g2/) | Mailgun's US shared IPs | 2026-10-29 13:02–13:08 | m01, m02, m13–m16 | 18 |
-| [g3](results/g3/) | Mailgun's US shared IPs | 2026-10-29 14:16–14:20 | m17–m20 | 18 |
-| [g4](results/g4/) | Mailgun's US shared IPs | 2026-10-31 10:55–11:18 | c01–c06 | 44 |
+| [p1](results/p1/) | direct, from our AWS address (PTR `mta.mailpath.io`) | 2026-10-21 19:29-19:51 | s00-s02 | 111 |
+| [r1](results/r1/) | direct | 2026-10-22 06:57-09:09 | s00-s12 | 110-111 |
+| [r2](results/r2/) | direct | 2026-10-23 08:02-10:16 | s00-s12 | 110-112 |
+| [g1](results/g1/) | Mailgun's US shared IPs | 2026-10-23 06:22-07:30 | m00-m12 | 44 |
+| [g2](results/g2/) | Mailgun's US shared IPs | 2026-10-29 13:02-13:08 | m01, m02, m13-m16 | 18 |
+| [g3](results/g3/) | Mailgun's US shared IPs | 2026-10-29 14:16-14:20 | m17-m20 | 18 |
+| [g4](results/g4/) | Mailgun's US shared IPs | 2026-10-31 10:55-11:18 | c01-c06 | 44 |
+| [g5](results/g5/) | Mailgun's US shared IPs | 2026-11-02 11:54-12:04 | m01, m21-m23 | 44 |
+| [g6](results/g6/) | Mailgun's US shared IPs | 2026-11-04 12:07-12:09 | m00, m21-m23 | 8 |
+| [g7](results/g7/) | Mailgun's US shared IPs | 2026-11-06 07:33-07:35 | c01, c03, c04 | 44 |
 
 Our AWS address was in Spamhaus PBL, so on the direct path about half the seeds refused it before evaluating SPF. The Mailgun run covers those receivers. g2 and g3 came after the article: a reader asked how far past 10 lookups Gmail and Yahoo go. g2 puts Mailgun's include after 15, 20 and 25 includes, with a record as long as the 25-include one but within 10 lookups as a control ([cases/spf-mailgun-limit.yaml](cases/spf-mailgun-limit.yaml)); g3 reaches 7 to 22 lookups through a chain of nested includes ([cases/spf-mailgun-depth.yaml](cases/spf-mailgun-depth.yaml)). g4 asks which record receivers evaluate when the MAIL FROM domain has a CNAME next to its own SPF record, the two leading to different records ([cases/spf-cname-txt.yaml](cases/spf-cname-txt.yaml)). Its zone, `cx.mailpath.io`, was served by our own authoritative server, which logged every query, so its `queries.csv` shows which record each receiver's resolvers fetched. The article doesn't cover these three runs; `python3 summary.py g2 g3 g4` prints their SMTP outcomes.
+
+g5, g6 and g7 came later. g5 asks whether the `all` qualifier matters under `p=reject`: its records end in `-all`, `~all` or `?all` and match no sender, and the mail carries no aligned DKIM signature ([cases/spf-all-qualifier.yaml](cases/spf-all-qualifier.yaml)). g6 sends the same records with an aligned DKIM signature to Onet, Interia and Naver, the receivers that told the qualifiers apart in g5, with a Gmail and an Outlook.com seed as a reference ([cases/spf-all-dkim.yaml](cases/spf-all-dkim.yaml)). g7 publishes two SPF records that both list a real sender, in both orders ([cases/spf-two-records.yaml](cases/spf-two-records.yaml)); its names are in `cx.mailpath.io` again, because our server answers in the order of the zone file, so each receiver's verdict shows which record it read. `python3 summary.py g5 g6 g7` prints their SMTP outcomes.
 
 Each run's `README.md` holds the notes we wrote during the experiment, with the GlockApps test ID of every case. Paths in them such as `runs/` or commands like `mailexp` refer to our private working repository, where the raw logs with seed addresses stay.
 
@@ -78,22 +85,22 @@ Each run's `README.md` holds the notes we wrote during the experiment, with the 
 
 **`events.csv`** (Mailgun run): Mailgun's delivery events, matched to cases by Message-ID. `event` is `accepted` (by Mailgun), `delivered` or `failed`; `severity` tells permanent from temporary failures; `reply` is the receiver's answer; `reason` is Mailgun's own classification (`espblock`, `generic`, or `old` when it gave up), `enhanced_code` the receiver's enhanced status code and `provider` Mailgun's name for the recipient's provider. Mailgun retried temporary failures for 8 hours, then gave up with `602 Too old`.
 
-**`glockapps.csv`**: one row per case and GlockApps provider group: the number of seeds, how many landed in the inbox, another tab or spam, how many never arrived, and (except in g2 and g3, which hold placement only) the SPF, DKIM and DMARC results GlockApps read from the delivered seeds' headers (`-` where the header had none; GlockApps doesn't parse Microsoft's and Yahoo's DMARC result, so those cells are empty even when DMARC passed). The SPF column is not the receiver's own verdict for Libero, Virgilio, Proton, T-Online, Vodafone and freenet: their headers have no `spf=` clause GlockApps reads (Libero and Virgilio write only `Received-SPF`, Proton uses separate Authentication-Results headers, the three German providers record no SPF result), and GlockApps shows a value of its own, which passes the 11-lookup record. The receivers' own results are in the run READMEs and the article. Five spam-filter seeds are counted by GlockApps' totals but not listed per group.
+**`glockapps.csv`**: one row per case and GlockApps provider group: the number of seeds, how many landed in the inbox, another tab or spam, how many never arrived, and (except in g2, g3 and g5 to g7, which hold placement only) the SPF, DKIM and DMARC results GlockApps read from the delivered seeds' headers (`-` where the header had none; GlockApps doesn't parse Microsoft's and Yahoo's DMARC result, so those cells are empty even when DMARC passed). The SPF column is not the receiver's own verdict for Libero, Virgilio, Proton, T-Online, Vodafone and freenet: their headers have no `spf=` clause GlockApps reads (Libero and Virgilio write only `Received-SPF`, Proton uses separate Authentication-Results headers, the three German providers record no SPF result), and GlockApps shows a value of its own, which passes the 11-lookup record. The receivers' own results are in the run READMEs and the article. Five spam-filter seeds are counted by GlockApps' totals but not listed per group (in g5 and g7, four filter seeds and one Google Workspace seed).
 
 **`dmarc.csv`**: the receivers' aggregate reports for the run's mail, one row per reporter and distinct result: messages, disposition, DMARC result, SPF result and domain, DKIM results with `domain/selector`. `report_date` is the UTC date the report's window starts. Two reporters need care when you match reports to a run:
 
 - Seznam's day starts at midnight Prague time: 22:00 UTC until 2026-10-24, 23:00 UTC since the clocks changed on 2026-10-25. Its report for a day's mail is dated the day before.
 - Google's reports state 00:00 to 23:59 UTC, but its day follows Pacific time: mail sent before 07:00 UTC is in the previous day's report. For g1 that's the cases sent before 07:00; their Google rows are dated 2026-10-22 and were told apart from the previous day's warm-up by the missing DKIM signature of the case domain. m00, signed like the warm-up, has no Google rows here.
 
-Message counts in the reports are not always the messages we sent. In the direct runs Google counts deferred attempts too, and Seznam's counts for passing mail are double what we sent; in the Mailgun runs both match. Outlook.com left out one of the messages it refused in g2 (m15) and in g4 (c03). Quote the verdicts, not the counts.
+Message counts in the reports are not always the messages we sent. In the direct runs Google counts deferred attempts too, and Seznam's counts for passing mail are double what we sent; in the Mailgun runs both match. Outlook.com left out one of the messages it refused in g2 (m15), g4 (c03) and g5 (m23), and GMX one in g5 (m21). Quote the verdicts, not the counts.
 
-**`dns.json`**: every record of the experiment as public DNS (1.1.1.1) served it right before the run; for g4, as our authoritative server served it right after the zone switch.
+**`dns.json`**: every record of the experiment as public DNS (1.1.1.1) served it right before the run; for g4, as our authoritative server served it right after the zone switch. In g7, 1.1.1.1 returned the two TXT records of each case in the order our server served them.
 
 **`queries.csv`** (g4): every query our authoritative server for `cx.mailpath.io` answered for the case names from 10:55 to 11:40 UTC. `name` says which name was asked (`name` for the case name itself, `target` for its CNAME target, `dmarc` for its DMARC record), `answer_kind` whether the answer was the name's own records (`data`), the CNAME (`cname`) or no records of that type (`nodata`), and `resolver_as` the resolver's network, from Team Cymru's DNS service. `resolver_ip` is empty for GlockApps' monitor, whose address would name its seed domain.
 
 **`dnslog.txt`** and **`matrix.txt`** (g4): the same queries per case and resolver network in the order they came, next to each receiver's SMTP outcome, and as a table of receiver by case with the outcome and the TXT record the receiver's resolvers fetched. Both are written by scripts in our private repository from the raw logs. g4 has no `glockapps.csv`; its README gives the folders and header verdicts that matter.
 
-**`headers.md`** (p1, r1, r2, g1): excerpts of seed headers, with addresses reduced to their domain: Gmail's `spf=pass` for the 11-lookup record, Mailgun's own `d=mailgun.org` DKIM signature, and the SPF verdicts Libero, Virgilio, Proton, ukr.net, Amazon WorkMail, Yandex and Microsoft wrote themselves, including where GlockApps' summary shows a different value.
+**`headers.md`** (p1, r1, r2, g1, g7): excerpts of seed headers, with addresses reduced to their domain: Gmail's `spf=pass` for the 11-lookup record, Mailgun's own `d=mailgun.org` DKIM signature, and the SPF verdicts Libero, Virgilio, Proton, ukr.net, Amazon WorkMail, Yandex and Microsoft wrote themselves, including where GlockApps' summary shows a different value. g7's show which of the two SPF records Gmail, Microsoft and Yandex used, and the `permerror` ukr.net, Libero and Amazon WorkMail wrote.
 
 **`bounce-server.md`** (in `results/`): what our bounce server received during the direct runs: no DSN from any receiver.
 

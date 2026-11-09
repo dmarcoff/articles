@@ -1,0 +1,51 @@
+# Does an aligned DKIM signature rescue a message that fails SPF, and does the all qualifier decide
+# whether it gets the chance? Run g6.
+#
+# RFC 9989 (7.1) warns that -all can get a message rejected early in the SMTP transaction, before any
+# DMARC processing, so a message that would pass DMARC on an aligned DKIM signature can be lost. g5 sent
+# no signed mail, but Naver, Interia and Onet refused its -all case citing SPF, and handled ~all and ?all
+# differently. This run repeats g5 at those three with Mailgun signing for the From domain.
+#
+# Same domains and records as g5, so DKIM is the one change: m21-m23 keep their ip4: term that matches no
+# sender, and their Mailgun DKIM keys are already in DNS. m00 is the control, passing both. Gmail and
+# Outlook.com seeds are the reference: if DKIM rescues the message there and not at the three, the
+# signature wasn't the problem. Mailgun has marked m21-m23 unverified since g5 and its API refuses such
+# domains, so they need the verify records first, and the case records right before sending.
+#
+# Expected, written before sending: Gmail and Outlook.com deliver all of them, DMARC passing on DKIM.
+# Interia answered at RCPT in g5 for -all and ~all alike, before it could see a signature, so it should
+# not change. Onet refused -all at RCPT and sent ~all a plain 5.7.1, so ~all might pass. Naver refused -all
+# early and accepted ~all, so ~all might now reach the mailbox.
+
+experiment: spf-all-dkim
+domain: mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: m00
+    name: control, SPF pass and aligned DKIM
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    dkim: true
+    expect: SPF pass, DKIM pass, DMARC pass
+
+  - id: m21
+    name: SPF fail (-all), aligned DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 -all"]
+    dkim: true
+    expect: fail, DKIM pass, DMARC pass, unless the receiver refuses on SPF first
+
+  - id: m22
+    name: SPF softfail (~all), aligned DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 ~all"]
+    dkim: true
+    expect: softfail, DKIM pass, DMARC pass
+
+  - id: m23
+    name: SPF neutral (?all), aligned DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 ?all"]
+    dkim: true
+    expect: neutral, DKIM pass, DMARC pass

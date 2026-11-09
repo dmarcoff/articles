@@ -1,0 +1,50 @@
+# Does DMARC p=reject still apply when SPF only softfails? Run g5.
+#
+# By RFC 9989 (5.3.3, 5.3.5) DMARC counts only an aligned SPF pass: softfail (~all), fail (-all)
+# and neutral (?all) all fail DMARC alike, and a p=reject domain should see each of them refused.
+# Microsoft Learn ("Set up SPF", updated 2026-07-17) says otherwise for its own receivers: the DMARC
+# policy is "effectively ignored" for ~all failures when the message has no DKIM signature, and it
+# recommends -all for that reason. Microsoft's compauth codes don't show such an exception, and no
+# ~all case has been sent so far. Whether ~all is weaker than -all under p=reject decides how an
+# audit should grade it.
+#
+# m21-m23 have one record, an ip4: term in the documentation range (RFC 5737) that matches no
+# sender, and differ only in the all qualifier. Mailgun doesn't sign DKIM for any case; its own
+# d=mailgun.org signature goes only to Gmail, the Yahoo family and United Internet (g1), so the
+# Outlook, Hotmail and Microsoft 365 seeds get unsigned mail, the condition in Microsoft's note.
+# m01 is the day's baseline, the same domain and record as in g1-g3; m21-m23 are new domains, so
+# their DMARC reports don't mix with earlier runs.
+#
+# The case records leave Mailgun out, so Mailgun's periodic re-check can mark m21-m23 unverified
+# mid-run, as it did c05/c06 in g4: switch the records right before sending.
+
+experiment: spf-all-qualifier
+domain: mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: m01
+    name: control, SPF pass only
+    spf: ["v=spf1 include:_spf.mailgun.org -all"]
+    expect: SPF pass, DMARC pass. The day's baseline
+
+  - id: m21
+    name: SPF fail (-all), no DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 -all"]
+    expect: fail, DMARC fail, refused under p=reject (as m08 in g1, 550 5.7.509 at Microsoft)
+
+  - id: m22
+    name: SPF softfail (~all), no DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 ~all"]
+    expect: >-
+      softfail, DMARC fail, refused as m21. Accepted where m21 is refused means the receiver
+      doesn't apply p=reject to a softfail, as Microsoft's note says
+
+  - id: m23
+    name: SPF neutral (?all), no DKIM
+    spf: ["v=spf1 ip4:192.0.2.1 ?all"]
+    expect: neutral (treated as none, RFC 7208 8.2), DMARC fail, refused as m21

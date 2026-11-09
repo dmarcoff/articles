@@ -1,0 +1,10 @@
+case,report_date,reporter,messages,disposition,dmarc,spf_result,spf_domain,dkim_result,dkim_domain_selector
+m00,2026-11-04,Google,1,none,pass,pass,m00.mailpath.io,pass;pass,m00.mailpath.io/mx;mailgun.org/mg
+m00,2026-11-04,Interia,3,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m00,2026-11-04,Outlook.com,1,none,pass,pass,m00.mailpath.io,pass,m00.mailpath.io/mx
+m21,2026-11-04,Google,1,none,pass,fail,m21.mailpath.io,pass;pass,m21.mailpath.io/mailo;mailgun.org/mg
+m21,2026-11-04,Outlook.com,1,none,pass,fail,m21.mailpath.io,pass,m21.mailpath.io/mailo
+m22,2026-11-04,Google,1,none,pass,softfail,m22.mailpath.io,pass;pass,m22.mailpath.io/k1;mailgun.org/mg
+m22,2026-11-04,Outlook.com,1,none,pass,softfail,m22.mailpath.io,pass,m22.mailpath.io/k1
+m23,2026-11-04,Google,1,none,pass,neutral,m23.mailpath.io,pass;pass,m23.mailpath.io/mailo;mailgun.org/mg
+m23,2026-11-04,Outlook.com,1,none,pass,neutral,m23.mailpath.io,pass,m23.mailpath.io/mailo
