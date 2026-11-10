@@ -1,0 +1,115 @@
+time,run,case,rcpt_domain,event,severity,code,mx,attempt,reply,reason,enhanced_code,provider
+2026-11-04T12:07:47.066669Z,g6,m00,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-11-04T12:07:49.170571Z,g6,m00,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as CBE8C20588,,2.0.0,Other
+2026-11-04T12:08:03.427089Z,g6,m00,gmail.com,accepted,,,,,,,,
+2026-11-04T12:08:04.795939Z,g6,m00,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793794084 6a1803df08f44-91e7e74203fsi20558096d6.229 - gsmtp,,2.0.0,Gmail
+2026-11-04T12:07:50.361832Z,g6,m00,interia.pl,accepted,,,,,,,,
+2026-11-04T12:07:53.071275Z,g6,m00,interia.pl,delivered,,250,mx.interia.pl,1,OK. ID: d820c1996c28b6b7,,,Other
+2026-11-04T12:08:00.156055Z,g6,m00,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:02.270054Z,g6,m00,interia.pl,delivered,,250,mx.interia.pl,1,OK. ID: d576d54576d6894b,,,Other
+2026-11-04T12:08:13.244555Z,g6,m00,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:15.348344Z,g6,m00,interia.pl,delivered,,250,mx.interia.pl,1,OK. ID: b0a204d34fba4e57,,,Other
+2026-11-04T12:08:09.977168Z,g6,m00,naver.com,accepted,,,,,,,,
+2026-11-04T12:08:14.816829Z,g6,m00,naver.com,delivered,,250,mx1.mail.naver.com,1,2.0.0 OK hldB3ZPsT+SeDS8R-97CMQ - nsmtp,,2.0.0,Other
+2026-11-04T12:07:53.618892Z,g6,m00,onet.pl,accepted,,,,,,,,
+2026-11-04T12:07:56.879934Z,g6,m00,onet.pl,accepted,,,,,,,,
+2026-11-04T12:07:57.969640Z,g6,m00,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPMv4xLBzFggq,,2.0.0,Other EU
+2026-11-04T12:08:02.017122Z,g6,m00,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPMz4qLZz18TJ,,2.0.0,Other EU
+2026-11-04T12:08:06.696676Z,g6,m00,outlook.com,accepted,,,,,,,,
+2026-11-04T12:08:09.017763Z,g6,m00,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m00.mailpath.io> [InternalId=3685081947903, Hostname=DU2PPF22E4F0FEA.EURP194.PROD.OUTLOOK.COM] 11527 bytes in 0.147, 76.525 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-11-04T12:08:43.317127Z,g6,m21,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-11-04T12:08:45.422392Z,g6,m21,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 27F6120588,,2.0.0,Other
+2026-11-04T12:09:09.532968Z,g6,m21,gmail.com,accepted,,,,,,,,
+2026-11-04T12:09:11.736740Z,g6,m21,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793794151 6a1803df08f44-91e7e831ddesi19471396d6.469 - gsmtp,,2.0.0,Gmail
+2026-11-04T12:08:53.103885Z,g6,m21,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:54.770255Z,g6,m21,interia.pl,failed,permanent,550,mx.interia.pl,1,5.7.1 <…@interia.pl>: Recipient address rejected: Rejected due to SPF http://l.int.pl/500,generic,5.7.1,Other
+2026-11-04T12:08:56.397232Z,g6,m21,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:58.007216Z,g6,m21,interia.pl,failed,permanent,550,mx.interia.pl,1,5.7.1 <…@interia.pl>: Recipient address rejected: Rejected due to SPF http://l.int.pl/500,generic,5.7.1,Other
+2026-11-04T12:09:06.251884Z,g6,m21,interia.pl,accepted,,,,,,,,
+2026-11-04T12:09:09.343060Z,g6,m21,interia.pl,failed,permanent,550,mx.interia.pl,1,5.7.1 <…@interia.pl>: Recipient address rejected: Rejected due to SPF http://l.int.pl/500,generic,5.7.1,Other
+2026-11-04T12:08:49.863648Z,g6,m21,naver.com,accepted,,,,,,,,
+2026-11-04T12:08:53.150145Z,g6,m21,naver.com,delivered,,250,mx1.mail.naver.com,1,2.0.0 OK 0a0vAeQERUmN9UX9HkWgoA - nsmtp,,2.0.0,Other
+2026-11-04T12:08:59.694857Z,g6,m21,onet.pl,accepted,,,,,,,,
+2026-11-04T12:09:02.928397Z,g6,m21,onet.pl,failed,permanent,550,mx.poczta.onet.pl,1,5.7.23 <…@onet.pl>: Recipient address rejected: Message rejected due to: SPF fail - not authorized. Please see http://www.openspf.net/Why?s=mfrom;…@m21.mailpath.io;ip=159.135.228.63;r=<UNKNOWN>,generic,5.7.23,Other EU
+2026-11-04T12:09:02.989249Z,g6,m21,onet.pl,accepted,,,,,,,,
+2026-11-04T12:09:05.800013Z,g6,m21,onet.pl,failed,permanent,550,mx.poczta.onet.pl,1,5.7.23 <…@onet.pl>: Recipient address rejected: Message rejected due to: SPF fail - not authorized. Please see http://www.openspf.net/Why?s=mfrom;…@m21.mailpath.io;ip=159.135.228.63;r=<UNKNOWN>,generic,5.7.23,Other EU
+2026-11-04T12:08:46.611671Z,g6,m21,outlook.com,accepted,,,,,,,,
+2026-11-04T12:08:47.591743Z,g6,m21,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m21.mailpath.io> [InternalId=128849018884298, Hostname=DBBP194MB1097.EURP194.PROD.OUTLOOK.COM] 11321 bytes in 0.147, 74.796 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-11-04T12:07:18.941011Z,g6,m22,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-11-04T12:07:21.514175Z,g6,m22,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as C05AC20588,,2.0.0,Other
+2026-11-04T12:07:22.197741Z,g6,m22,gmail.com,accepted,,,,,,,,
+2026-11-04T12:07:22.999206Z,g6,m22,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793794042 d75a77b69052e-54b10cd6001si21995751cf.331 - gsmtp,,2.0.0,Gmail
+2026-11-04T12:07:32.027131Z,g6,m22,interia.pl,accepted,,,,,,,,
+2026-11-04T12:07:34.125068Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:07:35.322185Z,g6,m22,interia.pl,accepted,,,,,,,,
+2026-11-04T12:07:37.717627Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:07:45.189481Z,g6,m22,interia.pl,accepted,,,,,,,,
+2026-11-04T12:07:47.723496Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:17:35.884614Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:17:39.438394Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:17:49.513486Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:27:38.332057Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:27:41.260856Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:27:51.209214Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:42:40.438161Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:42:43.488292Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:42:53.025107Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:12:42.630901Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:12:45.927825Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:12:54.857387Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:12:45.044624Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:12:47.834360Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:12:56.914861Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:12:47.352026Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:12:50.049876Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:12:59.113680Z,g6,m22,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T20:12:49.265964Z,g6,m22,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T20:12:51.939734Z,g6,m22,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T20:13:00.875618Z,g6,m22,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T12:07:28.749374Z,g6,m22,naver.com,accepted,,,,,,,,
+2026-11-04T12:07:33.123074Z,g6,m22,naver.com,delivered,,250,mx1.mail.naver.com,1,2.0.0 OK atEeQq1ZSw2oNSJwVLkxLQ - nsmtp,,2.0.0,Other
+2026-11-04T12:07:38.613933Z,g6,m22,onet.pl,accepted,,,,,,,,
+2026-11-04T12:07:41.917089Z,g6,m22,onet.pl,accepted,,,,,,,,
+2026-11-04T12:07:44.172554Z,g6,m22,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPMd5PN7zFs73,,2.0.0,Other EU
+2026-11-04T12:07:46.975214Z,g6,m22,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPMh4HgBz2xHV,,2.0.0,Other EU
+2026-11-04T12:07:25.459576Z,g6,m22,outlook.com,accepted,,,,,,,,
+2026-11-04T12:07:28.578099Z,g6,m22,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m22.mailpath.io> [InternalId=129020817577705, Hostname=VE1P194MB0878.EURP194.PROD.OUTLOOK.COM] 11340 bytes in 0.281, 39.329 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US
+2026-11-04T12:08:15.049950Z,g6,m23,spamassassin-filter.seed.example,accepted,,,,,,,,
+2026-11-04T12:08:17.920969Z,g6,m23,spamassassin-filter.seed.example,delivered,,250,mx.spamassassin-filter.seed.example,1,2.0.0 Ok: queued as 9857220588,,2.0.0,Other
+2026-11-04T12:08:38.067375Z,g6,m23,gmail.com,accepted,,,,,,,,
+2026-11-04T12:08:39.372397Z,g6,m23,gmail.com,delivered,,250,gmail-smtp-in.l.google.com,1,2.0.0 OK 1793794119 d75a77b69052e-54b10cd78adsi21760131cf.336 - gsmtp,,2.0.0,Gmail
+2026-11-04T12:08:21.631614Z,g6,m23,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:23.964579Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:08:24.934781Z,g6,m23,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:26.935670Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:08:34.786619Z,g6,m23,interia.pl,accepted,,,,,,,,
+2026-11-04T12:08:36.820063Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,1,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:18:25.849704Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:18:29.124757Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:18:38.419602Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,2,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:28:27.838463Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:28:31.262735Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:28:40.121352Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,3,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:43:30.579065Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:43:33.448938Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T12:43:41.790479Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,4,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:13:32.473650Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:13:35.253804Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T13:13:44.305086Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,5,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:13:34.750311Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:13:37.087824Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T14:13:46.005827Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,6,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:13:36.972144Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:13:38.829304Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T16:13:47.841556Z,g6,m23,interia.pl,failed,temporary,451,mx.interia.pl,7,4.4.0 <…@interia.pl>: Recipient address rejected: Deferred due to SPF unsafe http://l.int.pl/500,generic,4.4.0,Other
+2026-11-04T20:13:39.168815Z,g6,m23,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T20:13:41.199599Z,g6,m23,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T20:13:49.581656Z,g6,m23,interia.pl,failed,permanent,602,mx.interia.pl,8,Too old,old,,Other
+2026-11-04T12:08:18.345739Z,g6,m23,naver.com,accepted,,,,,,,,
+2026-11-04T12:08:21.257195Z,g6,m23,naver.com,delivered,,250,mx1.mail.naver.com,1,2.0.0 OK 0JC18JuSTKGpdvtBKNizcA - nsmtp,,2.0.0,Other
+2026-11-04T12:08:28.227766Z,g6,m23,onet.pl,accepted,,,,,,,,
+2026-11-04T12:08:31.495781Z,g6,m23,onet.pl,accepted,,,,,,,,
+2026-11-04T12:08:32.932378Z,g6,m23,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPNZ3VtQz18pR,,2.0.0,Other EU
+2026-11-04T12:08:35.700832Z,g6,m23,onet.pl,delivered,,250,mx.poczta.onet.pl,1,2.0.0 Ok: queued as 4jKPNd2m2xz527h,,2.0.0,Other EU
+2026-11-04T12:08:41.344775Z,g6,m23,outlook.com,accepted,,,,,,,,
+2026-11-04T12:08:43.349428Z,g6,m23,outlook.com,delivered,,250,outlook-com.olc.protection.outlook.com,1,"2.6.0 <…@m23.mailpath.io> [InternalId=3685081948248, Hostname=DU2PPF22E4F0FEA.EURP194.PROD.OUTLOOK.COM] 11237 bytes in 0.124, 87.821 KB/sec Queued mail for delivery -> 250 2.1.5",,2.6.0,Outlook US

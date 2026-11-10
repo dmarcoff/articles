@@ -1,0 +1,54 @@
+# Two SPF records that both list a real sender, in both orders: run g7.
+#
+# g1's two-record case paired our sender's record with `v=spf1 -all`, which DNS returned first. That
+# left a question open: a `fail` from Google or Interia could mean they read only the first record, or
+# could be how they label any domain with two records. And real domains rarely publish `v=spf1 -all`
+# next to another record: they publish two working records, one per provider.
+#
+# Here both records end in ~all, so every label tells which record was read:
+#   pass       the record listing our sender (Mailgun)
+#   softfail   the other record (Google)
+#   permerror  RFC 7208 4.5, neither record
+#   fail       comes from neither record, so it can only be a label for the two-record state
+#
+# Route 53 doesn't keep the order of a change batch (m11's batch listed the include first, every
+# resolver returned `v=spf1 -all` first), so these names live in cx.mailpath.io, where authdns answers
+# in the order of the zone file and logs every query. c03 and c04 hold the same two records in opposite
+# order. A resolver can still reorder them, so the order is what the authoritative server answered.
+#
+# c01, c03 and c04 are reused from g4 (active in Mailgun, paid in DMARKOFF, so no reports get lost); g4's
+# mail is from 2026-10-31, so its reports don't overlap. c02, c05 and c06 keep serving g4's records until
+# La Poste's g4 report arrives. DKIM is off, so DMARC (p=reject) rests on SPF alone, as in g1.
+#
+# Expected, written before sending:
+#   c01 passes everywhere, as m01 did in g1: this is the merged record the article recommends.
+#   Yahoo, GMX, WEB.DE, mail.com, Mail.ru, Seznam, La Poste and Zoho report permerror in both orders.
+#   Google and Interia: pass in c03 and softfail in c04 if they read the first record only; fail in both
+#   if fail is their label for two records.
+#   Microsoft: a mix of pass and softfail in both orders if it picks a record per message; if the order
+#   decides, pass in c03 and softfail in c04.
+#   T-Online, Vodafone and WorkMail deliver all three to the inbox, as in g1.
+
+experiment: spf-two-records
+domain: cx.mailpath.io
+via: mailgun
+mx: ["10 mxa.mailgun.org.", "10 mxb.mailgun.org."]
+dmarc: "v=DMARC1; p=reject; rua=mailto:{{.RUA}}"
+from_local: test
+subject: "Mailpath delivery test"
+
+cases:
+  - id: c01
+    name: merged record (control)
+    spf: ["v=spf1 include:_spf.mailgun.org include:_spf.google.com ~all"]
+    expect: SPF pass, DMARC pass
+
+  - id: c03
+    name: two records, our sender's first
+    spf: ["v=spf1 include:_spf.mailgun.org ~all", "v=spf1 include:_spf.google.com ~all"]
+    expect: permerror (RFC 7208 4.5); pass from a receiver reading the first record only
+
+  - id: c04
+    name: two records, our sender's second
+    spf: ["v=spf1 include:_spf.google.com ~all", "v=spf1 include:_spf.mailgun.org ~all"]
+    expect: permerror (RFC 7208 4.5); softfail from a receiver reading the first record only
