@@ -138,6 +138,7 @@ hours after their window closed).
   2026-11-06 22:53 UTC. The others are dated 2026-11-06.
 - **Not received by 2026-11-09.** Mail.ru sent no report for any of the three domains, the control
   included, so it isn't about two records; it reported g4 on these domains (window ending 2026-11-01).
-  La Poste's reports usually come about six days after the mail, here about 2026-11-12, and had not
-  been received by 2026-11-09. Naver, Apple, Yandex, Onet, mailo, ukr.net, Libero, Virgilio, freenet,
+  La Poste's reports usually come about six days after the mail, here about 2026-11-12. We stopped
+  waiting on 2026-11-10: it sent none for g4 or g5, and the newest window it reported for any of our
+  domains ends on 2026-10-23 (g1). Naver, Apple, Yandex, Onet, mailo, ukr.net, Libero, Virgilio, freenet,
   T-Online, Vodafone and WorkMail sent none in g1 or g5 either.

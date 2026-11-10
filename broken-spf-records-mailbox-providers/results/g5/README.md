@@ -77,8 +77,10 @@ is the SpamAssassin filter seed: it accepts every message.
 
 ## DMARC aggregate reports
 
-Read in DMARKOFF on 2026-11-05. La Poste's reports, which usually come about six days after the mail
-(here about 2026-11-08), had not been received by 2026-11-05.
+Read in DMARKOFF on 2026-11-05. La Poste sent no report for this run. Its reports usually come about
+six days after the mail (here by about 11:30 UTC on 2026-11-09), and none had arrived by 14:05 UTC on
+2026-11-10, nor for g4 or g7. The newest window it reported for any of our domains ends on 2026-10-23
+(g1), and DMARKOFF dropped none of its reports on arrival.
 
 | Reporter (messages per case) | m01 | m21 `-all` | m22 `~all` | m23 `?all` |
 |---|---|---|---|---|
@@ -89,6 +91,7 @@ Read in DMARKOFF on 2026-11-05. La Poste's reports, which usually come about six
 | GMX Mail (2) | pass, none | fail, reject (1 of 2) | softfail, reject | neutral, reject |
 | WEB.DE Mail, mail.com, Mail.ru, Seznam.cz, Zoho (1 each) | pass, none | fail, reject | softfail, reject | neutral, reject |
 | Interia (1) | pass, none | no row | no row | no row |
+| La Poste (1) | no report | no report | no report | no report |
 
 - **DMARC failed on every failing record, and no row carries a policy override or a comment.**
 - **Microsoft's reports have no DKIM entry for these domains,** so its mailboxes saw what its note
