@@ -1,6 +1,6 @@
 # Screenshots
 
-Images used in the two articles. 01–04 were taken on 2026-10-24 from GlockApps' web report, 05–08 on 2026-10-25 from DMARKOFF (period 11–25 October), 09 on 2026-10-25 and 10–11 on 2026-10-26 (for the follow-up on bounces) from Mailgun's logs. Seed addresses are hidden: blurred in 01, the local part replaced with dots elsewhere. GlockApps' chat widget, admin badge and sidebar were hidden before capture.
+Images used in the two articles. 01–04 were taken on 2026-10-24 from GlockApps' web report, 05–08 on 2026-10-25 from DMARKOFF (period 11–25 October; 05 and 06 retaken on 2026-11-12 for the same period, after DMARKOFF began naming each reporter's SPF result next to the Return-Path), 09 on 2026-10-25 and 10–11 on 2026-10-26 (for the follow-up on bounces) from Mailgun's logs. Seed addresses are hidden: blurred in 01, the local part replaced with dots elsewhere. GlockApps' chat widget, admin badge and sidebar were hidden before capture.
 
 | File | Case and test | What it shows | How it was made |
 |---|---|---|---|
@@ -9,7 +9,7 @@ Images used in the two articles. 01–04 were taken on 2026-10-24 from GlockApps
 | `03-m11-two-records-microsoft.png` | g1 m11, 2026-10-23-06:21:37:869t | Two SPF records: 2 of 6 Microsoft consumer mailboxes receive the message with `spf=pass`, 4 don't | Provider view; only Outlook, Hotmail, Outlook.de and Outlook.fr kept |
 | `04-gmail-m04-mailgun-dkim.png` | g1 m04, 2026-10-23-06:21:41:182t | Mailgun's own `d=mailgun.org; s=mg` signature next to `X-Mailgun-Dkim: false` | Header view filtered by "dkim"; the two ARC rows (1–2) hidden |
 | `05-dmarkoff-s02-reporters.png` | s02, all direct runs | The receivers' own reports for the 11-lookup record: Google and Seznam `pass`, Mail.ru `permerror` and `reject` | Source details, Reporter tab |
-| `06-dmarkoff-s09-reporters-outlook-pass.png` | s09, all direct runs | `ipv4:` typo: Google, Mail.ru and Seznam reject it, Outlook.com reports SPF and DMARC pass | Source details, Reporter tab |
+| `06-dmarkoff-s09-reporters-outlook-pass.png` | s09, all direct runs | `ipv4:` typo: Google, Mail.ru and Seznam reject it, Outlook.com reports SPF and DMARC pass; the four SPF results read `fail`, `none`, `permerror` and `pass` | Source details, Reporter tab |
 | `07-dmarkoff-s03-lookup-limit-sender-first.png` | s03 | The same 11 includes after the sender: DMARKOFF flags 11/10 lookups, and all 82 reported messages passed SPF | Domain records health, SPF row expanded |
 | `08-dmarkoff-s11-two-records.png` | s11 | Two SPF records flagged, both shown, with the fix | Domain records health, SPF row expanded |
 | `09-mailgun-m02-refusals.png` | g1 m02 | How nine receivers refused the 11-lookup record through Mailgun: Outlook.com (outlook.de), Zoho, Mail.ru, Apple, Yandex, Interia, GMX, Onet, La Poste | Mailgun logs, failed events for m02.mailpath.io; one row per receiver kept, the Microsoft 365 and Barracuda seed rows (GlockApps' own domains) and the mailo row hidden; recipient and in-message addresses replaced with dots; From and Actions columns hidden; long messages clamped to two lines (timestamps Europe/Minsk) |
