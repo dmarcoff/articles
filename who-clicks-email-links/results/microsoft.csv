@@ -1,0 +1,7 @@
+mailbox,l1_format,l1_links_opened,l1_delay_s,l2_format,l2_links_opened,l2_delay_s,l3_format,l3_links_opened,l3_delay_s,l4_format,l4_links_opened,l4_delay_s,l5_format,l5_links_opened,l5_delay_s,l6_format,l6_links_opened,l6_delay_s
+Exchange (Office365) 1,html,yes,65,text,yes,100,html,yes,99,nolinks,no,5,html,yes,120,unsub,yes,64
+Exchange (Office365) 2,text,no,4,html,no,7,text,no,4,html,no,6,html,no,5,unsub,no,3
+Exchange (Office365) 3,html,yes,64,text,no,7,html,yes,68,nolinks,no,6,html,yes,144,unsub,no,6
+Exchange (Office365) 4,text,no,4,html,yes,206,text,no,13,html,yes,71,html,no,6,unsub,no,6
+Exchange (Office365) 5,html,yes,94,text,no,7,html,yes,112,html,yes,97,html,yes,118,unsub,no,6
+Microsoft (EOP) 1,html,yes,,text,yes,,html,yes,,html,no,,html,yes,,unsub,yes,

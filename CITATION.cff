@@ -6,7 +6,9 @@ abstract: >-
   Data and scripts behind articles on the DMARKOFF blog about SPF and DMARC:
   a comparison of free SPF checkers against RFC 7208, a test of how mailbox
   providers handle broken SPF records, and a DNS snapshot of SPF and DMARC
-  across the Tranco top 100,000 domains (October 2026). One folder per article.
+  across the Tranco top 100,000 domains (October 2026); and, for an article on
+  the GlockApps blog, a test of which mail filters open the links in an email
+  before the recipient does (November 2026). One folder per article.
 authors:
   - family-names: Markau
     given-names: Aliaksandr
@@ -16,8 +18,8 @@ url: "https://github.com/dmarcoff/articles"
 repository-code: "https://github.com/dmarcoff/articles"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.23809122
-version: 1.0.3
-date-released: 2026-11-10
+version: 1.1.0
+date-released: 2026-12-04
 keywords:
   - SPF
   - DMARC
@@ -25,6 +27,9 @@ keywords:
   - DNS
   - RFC 7208
   - Tranco
+  - email link scanning
+  - Microsoft Safe Links
+  - List-Unsubscribe
 references:
   - type: conference-paper
     title: "Tranco: A Research-Oriented Top Sites Ranking Hardened Against Manipulation"

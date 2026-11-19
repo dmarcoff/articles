@@ -1,7 +1,7 @@
 {
   "upload_type": "dataset",
   "title": "DMARKOFF articles: data and scripts",
-  "description": "Data and scripts behind articles on the DMARKOFF blog about SPF and DMARC: a comparison of free SPF checkers against RFC 7208, a test of how mailbox providers handle broken SPF records, and a DNS snapshot of SPF and DMARC across the Tranco top 100,000 domains (October 2026). One folder per article.",
+  "description": "Data and scripts behind articles on the DMARKOFF blog about SPF and DMARC: a comparison of free SPF checkers against RFC 7208, a test of how mailbox providers handle broken SPF records, and a DNS snapshot of SPF and DMARC across the Tranco top 100,000 domains (October 2026); and, for an article on the GlockApps blog, a test of which mail filters open the links in an email before the recipient does (November 2026). One folder per article.",
   "creators": [
     {
       "name": "Markau, Aliaksandr",
@@ -18,14 +18,17 @@
     "email authentication",
     "DNS",
     "RFC 7208",
-    "Tranco"
+    "Tranco",
+    "email link scanning",
+    "Microsoft Safe Links",
+    "List-Unsubscribe"
   ],
   "language": "eng",
   "dates": [
     {
       "type": "Collected",
       "start": "2026-10-15",
-      "end": "2026-11-10"
+      "end": "2026-11-19"
     }
   ],
   "related_identifiers": [

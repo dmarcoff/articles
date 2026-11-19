@@ -1,0 +1,15 @@
+variant,copies_carrying,requested,requested_as_sent,requested_rewritten,used_up,note
+V1,19,15,0,15,,
+V2,17,13,13,0,,
+V3,17,17,0,17,0,
+V4,17,17,0,17,0,
+V5,15,15,15,0,,
+V6,15,15,0,15,,
+V8,17,0,0,0,,17 requests to /q from AS8075 with the query values rewritten (token unknown)
+V9,17,6,6,0,,
+V10,17,17,17,0,17,
+V11,15,15,15,0,15,
+V12,4,4,4,0,0,
+V13,4,4,4,0,0,
+V14,2,2,2,0,2,
+V15,2,2,2,0,0,
