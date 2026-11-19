@@ -1,0 +1,14 @@
+messages: 550 in 6 runs
+messages whose links were opened: 19, by {'microsoft_scanner': 19}
+Microsoft 365 business messages with links: 34
+scanner timing after delivery: image 3 to 9 s, first link 16 to 57 s, last link 17 to 79 s, one-time links used up 17 to 68 s
+Exchange delivery time in GlockApps: scanned 14 messages 64 to 206 s, not scanned 16 messages 3 to 13 s
+Google image proxy: 63 of 65 HTML messages to Gmail and Google Workspace
+V3: carried by 17 scanned messages, requested as sent in 0, used up in 0
+V4: carried by 17 scanned messages, requested as sent in 0, used up in 0
+V10: carried by 17 scanned messages, requested as sent in 17, used up in 17
+V11: carried by 15 scanned messages, requested as sent in 15, used up in 15
+V12: carried by 4 scanned messages, requested as sent in 4, used up in 0
+V13: carried by 4 scanned messages, requested as sent in 4, used up in 0
+V14: carried by 2 scanned messages, requested as sent in 2, used up in 2
+V15: carried by 2 scanned messages, requested as sent in 2, used up in 0

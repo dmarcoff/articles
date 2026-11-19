@@ -1,0 +1,551 @@
+run,mailbox,provider,format,delivered_utc,glockapps_placement,glockapps_delay_s
+l1,AOL 1,AOL,html,2026-11-16T06:12:55Z,spam,1
+l1,AOL 2,AOL,text,2026-11-16T06:15:47Z,spam,1
+l1,AOL 3,AOL,html,2026-11-16T06:12:10Z,spam,1
+l1,AOL 4,AOL,text,2026-11-16T06:12:49Z,inbox,1
+l1,AOL 5,AOL,html,2026-11-16T06:15:04Z,spam,1
+l1,AOL 6,AOL,text,2026-11-16T06:09:25Z,spam,1
+l1,AOL 7,AOL,html,2026-11-16T06:16:10Z,spam,1
+l1,AOL 8,AOL,text,2026-11-16T06:10:44Z,spam,17
+l1,Amazon WorkMail 1,Amazon WorkMail,html,2026-11-16T06:14:59Z,inbox,2
+l1,Amazon WorkMail 2,Amazon WorkMail,text,2026-11-16T06:15:00Z,inbox,1
+l1,Apple 1,Apple,html,2026-11-16T06:13:55Z,inbox,5
+l1,Apple 2,Apple,text,2026-11-16T06:14:13Z,inbox,3
+l1,Apple 3,Apple,html,2026-11-16T06:14:16Z,pending,
+l1,Barracuda 1,Barracuda,html,2026-11-16T06:13:29Z,,
+l1,Exchange (Office365) 1,Exchange (Office365),html,2026-11-16T06:09:33Z,spam,65
+l1,Exchange (Office365) 2,Exchange (Office365),text,2026-11-16T06:13:55Z,inbox,4
+l1,Exchange (Office365) 3,Exchange (Office365),html,2026-11-16T06:11:31Z,inbox,64
+l1,Exchange (Office365) 4,Exchange (Office365),text,2026-11-16T06:14:05Z,inbox,4
+l1,Exchange (Office365) 5,Exchange (Office365),html,2026-11-16T06:10:45Z,inbox,94
+l1,Freenet.de 1,Freenet.de,html,2026-11-16T06:11:37Z,inbox,2
+l1,Freenet.de 2,Freenet.de,text,2026-11-16T06:15:28Z,inbox,2
+l1,GlockApps auth check 1,GlockApps auth check,html,2026-11-16T06:10:42Z,,
+l1,Gmail (4 years+) 1,Gmail (4 years+),html,2026-11-16T06:11:32Z,inbox,1
+l1,Gmail (4 years+) 2,Gmail (4 years+),text,2026-11-16T06:14:07Z,inbox,1
+l1,Gmail (4 years+) 3,Gmail (4 years+),html,2026-11-16T06:10:07Z,inbox,1
+l1,Gmail (6 months+) 1,Gmail (6 months+),html,2026-11-16T06:15:13Z,inbox,1
+l1,Gmail (6 months+) 2,Gmail (6 months+),text,2026-11-16T06:16:17Z,inbox,2
+l1,Gmail (6 months+) 3,Gmail (6 months+),html,2026-11-16T06:10:54Z,inbox,2
+l1,Gmail (6 months+) 4,Gmail (6 months+),text,2026-11-16T06:10:47Z,inbox,2
+l1,Gmail (6 months+) 5,Gmail (6 months+),html,2026-11-16T06:14:17Z,inbox,1
+l1,Gmail (6 months+) 6,Gmail (6 months+),text,2026-11-16T06:11:00Z,inbox,37
+l1,Gmail (6 months+) 7,Gmail (6 months+),html,2026-11-16T06:15:59Z,inbox,0
+l1,Gmail (6 months+) 8,Gmail (6 months+),text,2026-11-16T06:14:30Z,inbox,0
+l1,Gmail (6 months+) 9,Gmail (6 months+),html,2026-11-16T06:14:27Z,inbox,1
+l1,Gmail (6 months+) 10,Gmail (6 months+),text,2026-11-16T06:12:15Z,inbox,1
+l1,Gmail (6 months+) 11,Gmail (6 months+),html,2026-11-16T06:10:46Z,inbox,17
+l1,Gmail (6 months+) 12,Gmail (6 months+),text,2026-11-16T06:14:37Z,inbox,1
+l1,Gmail (6 months+) 13,Gmail (6 months+),html,2026-11-16T06:14:21Z,inbox,1
+l1,Gmail (6 months+) 14,Gmail (6 months+),text,2026-11-16T06:13:06Z,inbox,2
+l1,Gmail (6 months+) 15,Gmail (6 months+),html,2026-11-16T06:12:29Z,inbox,1
+l1,Gmail (6 months+) 16,Gmail (6 months+),text,2026-11-16T06:12:58Z,inbox,1
+l1,Gmail (6 months+) 17,Gmail (6 months+),html,2026-11-16T06:15:57Z,inbox,2
+l1,Google Spam Filter 1,Google Spam Filter,html,2026-11-16T06:11:39Z,,
+l1,Google Workspace (4 years+) 1,Google Workspace (4 years+),html,2026-11-16T06:11:03Z,inbox,1
+l1,Google Workspace (4 years+) 2,Google Workspace (4 years+),text,2026-11-16T06:11:26Z,inbox,1
+l1,Google Workspace (4 years+) 3,Google Workspace (4 years+),html,2026-11-16T06:13:16Z,inbox,2
+l1,Google Workspace (Up to 6 months) 1,Google Workspace (Up to 6 months),html,2026-11-16T06:10:57Z,inbox,2
+l1,Google Workspace (Up to 6 months) 2,Google Workspace (Up to 6 months),text,2026-11-16T06:14:24Z,inbox,1
+l1,Hotmail 1,Hotmail,html,2026-11-16T06:14:45Z,inbox,2
+l1,Hotmail 2,Hotmail,text,2026-11-16T06:13:39Z,inbox,4
+l1,Hotmail 3,Hotmail,html,2026-11-16T06:11:47Z,inbox,3
+l1,Hotmail 4,Hotmail,text,2026-11-16T06:16:28Z,inbox,3
+l1,Hotmail 5,Hotmail,html,2026-11-16T06:11:54Z,inbox,4
+l1,Hotmail 6,Hotmail,text,2026-11-16T06:11:21Z,inbox,4
+l1,Interia.pl 1,Interia.pl,html,2026-11-16T06:16:24Z,other,1
+l1,Interia.pl 2,Interia.pl,text,2026-11-16T06:11:58Z,other,2
+l1,Interia.pl 3,Interia.pl,html,2026-11-16T06:13:49Z,other,0
+l1,Laposte.net (FR) 1,Laposte.net (FR),html,2026-11-16T06:10:05Z,inbox,2
+l1,Laposte.net (FR) 2,Laposte.net (FR),text,2026-11-16T06:16:26Z,inbox,8
+l1,Libero.it 1,Libero.it,html,2026-11-16T06:10:52Z,inbox,2
+l1,Mail.com 1,Mail.com,html,2026-11-16T06:10:11Z,spam,2
+l1,Mail.ru 1,Mail.ru,html,2026-11-16T06:09:53Z,inbox,3
+l1,Mail.ru 2,Mail.ru,text,2026-11-16T06:14:53Z,inbox,3
+l1,Microsoft (EOP) 1,Microsoft (EOP),html,2026-11-16T06:15:42Z,,
+l1,Onet.pl 1,Onet.pl,html,2026-11-16T06:14:37Z,spam,4
+l1,Onet.pl 2,Onet.pl,text,2026-11-16T06:16:33Z,spam,5
+l1,Outlook 1,Outlook,html,2026-11-16T06:11:23Z,inbox,2
+l1,Outlook 2,Outlook,text,2026-11-16T06:10:38Z,inbox,2
+l1,Outlook 3,Outlook,html,2026-11-16T06:12:55Z,inbox,6
+l1,Outlook 4,Outlook,text,2026-11-16T06:11:18Z,inbox,4
+l1,Outlook 5,Outlook,html,2026-11-16T06:09:56Z,inbox,3
+l1,Outlook 6,Outlook,text,2026-11-16T06:15:23Z,inbox,5
+l1,Outlook 7,Outlook,html,2026-11-16T06:13:19Z,inbox,3
+l1,Outlook 8,Outlook,text,2026-11-16T06:12:26Z,spam,5
+l1,Outlook.de 1,Outlook.de,html,2026-11-16T06:16:16Z,inbox,4
+l1,Outlook.fr 1,Outlook.fr,html,2026-11-16T06:11:11Z,inbox,3
+l1,Proofpoint 1,Proofpoint,html,2026-11-16T06:11:00Z,,
+l1,Protonmail 1,Protonmail,html,2026-11-16T06:13:18Z,inbox,8
+l1,Seznam.cz 1,Seznam.cz,html,2026-11-16T06:15:52Z,inbox,3
+l1,Seznam.cz 2,Seznam.cz,text,2026-11-16T06:13:37Z,inbox,3
+l1,SpamAssassin 1,SpamAssassin,html,2026-11-16T06:13:42Z,,
+l1,T-online.de 1,T-online.de,html,2026-11-16T06:11:07Z,inbox,3
+l1,Virgilio.it 1,Virgilio.it,html,2026-11-16T06:10:33Z,inbox,1
+l1,Virgilio.it 2,Virgilio.it,text,2026-11-16T06:09:37Z,inbox,4
+l1,Web.de 1,Web.de,html,2026-11-16T06:10:18Z,spam,2
+l1,Web.de 2,Web.de,text,2026-11-16T06:13:25Z,inbox,1
+l1,Web.de 3,Web.de,html,2026-11-16T06:13:23Z,spam,3
+l1,Web.de 4,Web.de,text,2026-11-16T06:10:22Z,inbox,2
+l1,Web.de 5,Web.de,html,2026-11-16T06:13:58Z,spam,1
+l1,Yahoo 1,Yahoo,html,2026-11-16T06:15:07Z,spam,1
+l1,Yahoo 2,Yahoo,text,2026-11-16T06:11:13Z,spam,1
+l1,Yahoo 3,Yahoo,html,2026-11-16T06:12:09Z,spam,1
+l1,Yahoo 4,Yahoo,text,2026-11-16T06:15:44Z,spam,1
+l1,Yahoo 5,Yahoo,html,2026-11-16T06:14:02Z,spam,1
+l1,Yahoo 6,Yahoo,text,2026-11-16T06:11:50Z,spam,1
+l1,Yahoo 7,Yahoo,html,2026-11-16T06:16:33Z,spam,2
+l1,Yahoo 8,Yahoo,text,2026-11-16T06:15:37Z,spam,1
+l1,Yahoo 9,Yahoo,html,2026-11-16T06:15:10Z,spam,1
+l1,Yandex.ru 1,Yandex.ru,html,2026-11-16T06:12:16Z,inbox,5
+l1,Yandex.ru 2,Yandex.ru,text,2026-11-16T06:15:25Z,spam,3
+l1,Zoho 1,Zoho,html,2026-11-16T06:12:40Z,inbox,2
+l1,Zoho 2,Zoho,text,2026-11-16T06:12:03Z,inbox,2
+l1,att.net 1,att.net,html,2026-11-16T06:12:46Z,spam,2
+l1,att.net 2,att.net,text,2026-11-16T06:15:34Z,spam,2
+l1,currently.com 1,currently.com,html,2026-11-16T06:10:01Z,spam,1
+l1,gmx.at 1,gmx.at,html,2026-11-16T06:12:33Z,spam,2
+l1,gmx.at 2,gmx.at,text,2026-11-16T06:09:41Z,inbox,1
+l1,gmx.at 3,gmx.at,html,2026-11-16T06:14:48Z,spam,2
+l1,gmx.ch 1,gmx.ch,html,2026-11-16T06:13:03Z,spam,2
+l1,gmx.ch 2,gmx.ch,text,2026-11-16T06:09:57Z,inbox,1
+l1,gmx.ch 3,gmx.ch,html,2026-11-16T06:15:31Z,spam,2
+l1,gmx.com 1,gmx.com,html,2026-11-16T06:12:00Z,spam,2
+l1,gmx.com 2,gmx.com,text,2026-11-16T06:13:32Z,inbox,2
+l1,gmx.de 1,gmx.de,html,2026-11-16T06:09:44Z,spam,1
+l1,gmx.de 2,gmx.de,text,2026-11-16T06:16:04Z,inbox,2
+l1,gmx.de 3,gmx.de,html,2026-11-16T06:12:42Z,spam,1
+l1,gmx.de 4,gmx.de,text,2026-11-16T06:14:54Z,inbox,1
+l1,gmx.de 5,gmx.de,html,2026-11-16T06:09:29Z,spam,2
+l1,gmx.de 6,gmx.de,text,2026-11-16T06:09:39Z,inbox,2
+l1,gmx.net 1,gmx.net,html,2026-11-16T06:10:15Z,spam,2
+l1,gmx.net 2,gmx.net,text,2026-11-16T06:13:12Z,inbox,0
+l1,gmx.net 3,gmx.net,html,2026-11-16T06:16:06Z,spam,1
+l1,mailo.com 1,mailo.com,html,2026-11-16T06:14:45Z,inbox,3
+l1,mailo.com 2,mailo.com,text,2026-11-16T06:09:49Z,inbox,3
+l1,mailo.com 3,mailo.com,html,2026-11-16T06:11:44Z,inbox,3
+l1,naver.com 1,naver.com,html,2026-11-16T06:12:38Z,inbox,3
+l1,rambler.ru 1,rambler.ru,html,2026-11-16T06:13:46Z,inbox,3
+l1,ukr.net 1,ukr.net,html,2026-11-16T06:12:19Z,inbox,1
+l1,ukr.net 2,ukr.net,text,2026-11-16T06:12:26Z,inbox,2
+l1,vodafonemail.de 1,vodafonemail.de,html,2026-11-16T06:15:56Z,inbox,4
+l1,vodafonemail.de 2,vodafonemail.de,text,2026-11-16T06:15:22Z,inbox,6
+l2,AOL 1,AOL,text,2026-11-17T19:03:37Z,spam,1
+l2,AOL 2,AOL,html,2026-11-17T19:01:52Z,spam,1
+l2,AOL 3,AOL,text,2026-11-17T19:03:18Z,spam,3
+l2,AOL 4,AOL,html,2026-11-17T19:06:41Z,spam,1
+l2,AOL 5,AOL,text,2026-11-17T19:03:43Z,spam,1
+l2,AOL 6,AOL,html,2026-11-17T19:00:59Z,spam,3
+l2,AOL 7,AOL,text,2026-11-17T19:04:47Z,spam,1
+l2,AOL 8,AOL,html,2026-11-17T19:00:56Z,spam,2
+l2,Amazon WorkMail 1,Amazon WorkMail,text,2026-11-17T19:06:48Z,inbox,2
+l2,Amazon WorkMail 2,Amazon WorkMail,html,2026-11-17T19:04:59Z,inbox,1
+l2,Apple 1,Apple,text,2026-11-17T19:06:53Z,inbox,6
+l2,Apple 2,Apple,html,2026-11-17T19:04:10Z,inbox,10
+l2,Apple 3,Apple,text,2026-11-17T19:02:56Z,inbox,3
+l2,Barracuda 1,Barracuda,text,2026-11-17T19:00:34Z,,
+l2,Exchange (Office365) 1,Exchange (Office365),text,2026-11-17T19:02:32Z,inbox,100
+l2,Exchange (Office365) 2,Exchange (Office365),html,2026-11-17T19:04:40Z,inbox,7
+l2,Exchange (Office365) 3,Exchange (Office365),text,2026-11-17T19:03:47Z,inbox,7
+l2,Exchange (Office365) 4,Exchange (Office365),html,2026-11-17T19:01:51Z,inbox,206
+l2,Exchange (Office365) 5,Exchange (Office365),text,2026-11-17T19:03:52Z,inbox,7
+l2,Freenet.de 1,Freenet.de,text,2026-11-17T19:03:01Z,inbox,3
+l2,Freenet.de 2,Freenet.de,html,2026-11-17T19:03:27Z,inbox,2
+l2,GlockApps auth check 1,GlockApps auth check,text,2026-11-17T19:06:26Z,,
+l2,Gmail (4 years+) 1,Gmail (4 years+),text,2026-11-17T19:00:41Z,spam,2
+l2,Gmail (4 years+) 2,Gmail (4 years+),html,2026-11-17T19:06:18Z,inbox,2
+l2,Gmail (4 years+) 3,Gmail (4 years+),text,2026-11-17T19:00:53Z,inbox,3
+l2,Gmail (6 months+) 1,Gmail (6 months+),text,2026-11-17T19:05:14Z,inbox,3
+l2,Gmail (6 months+) 2,Gmail (6 months+),html,2026-11-17T19:01:23Z,inbox,1
+l2,Gmail (6 months+) 3,Gmail (6 months+),text,2026-11-17T19:04:14Z,inbox,4
+l2,Gmail (6 months+) 4,Gmail (6 months+),html,2026-11-17T19:04:43Z,inbox,1
+l2,Gmail (6 months+) 5,Gmail (6 months+),text,2026-11-17T19:01:01Z,inbox,1
+l2,Gmail (6 months+) 6,Gmail (6 months+),html,2026-11-17T19:04:55Z,inbox,3
+l2,Gmail (6 months+) 7,Gmail (6 months+),text,2026-11-17T19:06:53Z,inbox,1
+l2,Gmail (6 months+) 8,Gmail (6 months+),html,2026-11-17T19:00:22Z,inbox,1
+l2,Gmail (6 months+) 9,Gmail (6 months+),text,2026-11-17T19:00:31Z,inbox,7
+l2,Gmail (6 months+) 10,Gmail (6 months+),html,2026-11-17T19:05:21Z,inbox,3
+l2,Gmail (6 months+) 11,Gmail (6 months+),text,2026-11-17T19:06:27Z,inbox,1
+l2,Gmail (6 months+) 12,Gmail (6 months+),html,2026-11-17T19:05:23Z,inbox,2
+l2,Gmail (6 months+) 13,Gmail (6 months+),text,2026-11-17T19:01:36Z,spam,2
+l2,Gmail (6 months+) 14,Gmail (6 months+),html,2026-11-17T19:02:08Z,inbox,1
+l2,Gmail (6 months+) 15,Gmail (6 months+),text,2026-11-17T19:06:33Z,inbox,1
+l2,Gmail (6 months+) 16,Gmail (6 months+),html,2026-11-17T19:05:32Z,inbox,1
+l2,Gmail (6 months+) 17,Gmail (6 months+),text,2026-11-17T19:00:21Z,inbox,10
+l2,Google Spam Filter 1,Google Spam Filter,text,2026-11-17T19:02:23Z,,
+l2,Google Workspace (4 years+) 1,Google Workspace (4 years+),text,2026-11-17T19:05:45Z,inbox,1
+l2,Google Workspace (4 years+) 2,Google Workspace (4 years+),html,2026-11-17T19:00:32Z,inbox,5
+l2,Google Workspace (4 years+) 3,Google Workspace (4 years+),text,2026-11-17T19:05:18Z,inbox,3
+l2,Google Workspace (Up to 6 months) 1,Google Workspace (Up to 6 months),text,2026-11-17T19:06:00Z,inbox,3
+l2,Google Workspace (Up to 6 months) 2,Google Workspace (Up to 6 months),html,2026-11-17T19:04:11Z,inbox,4
+l2,Hotmail 1,Hotmail,text,2026-11-17T19:04:19Z,inbox,3
+l2,Hotmail 2,Hotmail,html,2026-11-17T19:02:07Z,inbox,4
+l2,Hotmail 3,Hotmail,text,2026-11-17T19:02:16Z,inbox,2
+l2,Hotmail 4,Hotmail,html,2026-11-17T19:05:58Z,inbox,6
+l2,Hotmail 5,Hotmail,text,2026-11-17T19:04:34Z,inbox,2
+l2,Hotmail 6,Hotmail,html,2026-11-17T19:02:48Z,inbox,6
+l2,Interia.pl 1,Interia.pl,text,2026-11-17T19:06:43Z,inbox,304
+l2,Interia.pl 2,Interia.pl,html,2026-11-17T19:11:24Z,inbox,304
+l2,Interia.pl 3,Interia.pl,text,2026-11-17T19:11:39Z,inbox,303
+l2,Laposte.net (FR) 1,Laposte.net (FR),text,2026-11-17T19:04:47Z,inbox,8
+l2,Laposte.net (FR) 2,Laposte.net (FR),html,2026-11-17T19:03:03Z,inbox,7
+l2,Libero.it 1,Libero.it,text,2026-11-17T19:04:33Z,inbox,4
+l2,Mail.com 1,Mail.com,text,2026-11-17T19:01:10Z,inbox,6
+l2,Mail.ru 1,Mail.ru,text,2026-11-17T19:01:34Z,inbox,5
+l2,Mail.ru 2,Mail.ru,html,2026-11-17T19:01:30Z,inbox,5
+l2,Microsoft (EOP) 1,Microsoft (EOP),text,2026-11-17T19:00:47Z,,
+l2,Onet.pl 1,Onet.pl,text,2026-11-17T19:02:44Z,spam,8
+l2,Onet.pl 2,Onet.pl,html,2026-11-17T19:03:25Z,spam,3
+l2,Outlook 1,Outlook,text,2026-11-17T19:06:08Z,inbox,2
+l2,Outlook 2,Outlook,html,2026-11-17T19:00:15Z,inbox,8
+l2,Outlook 3,Outlook,text,2026-11-17T19:05:36Z,inbox,5
+l2,Outlook 4,Outlook,html,2026-11-17T19:03:59Z,inbox,3
+l2,Outlook 5,Outlook,text,2026-11-17T19:00:06Z,inbox,2
+l2,Outlook 6,Outlook,html,2026-11-17T19:03:08Z,inbox,4
+l2,Outlook 7,Outlook,text,2026-11-17T19:02:13Z,inbox,3
+l2,Outlook 8,Outlook,html,2026-11-17T19:04:38Z,inbox,12
+l2,Outlook.de 1,Outlook.de,text,2026-11-17T19:03:58Z,inbox,5
+l2,Outlook.fr 1,Outlook.fr,text,2026-11-17T19:03:56Z,inbox,6
+l2,Proofpoint 1,Proofpoint,text,2026-11-17T19:05:04Z,,
+l2,Protonmail 1,Protonmail,text,2026-11-17T19:05:34Z,inbox,1
+l2,Seznam.cz 1,Seznam.cz,text,2026-11-17T19:06:46Z,inbox,4
+l2,Seznam.cz 2,Seznam.cz,html,2026-11-17T19:02:01Z,inbox,3
+l2,SpamAssassin 1,SpamAssassin,text,2026-11-17T19:03:13Z,,
+l2,T-online.de 1,T-online.de,text,2026-11-17T19:04:52Z,inbox,8
+l2,Virgilio.it 1,Virgilio.it,text,2026-11-17T19:05:43Z,inbox,3
+l2,Virgilio.it 2,Virgilio.it,html,2026-11-17T19:04:18Z,inbox,4
+l2,Web.de 1,Web.de,text,2026-11-17T19:05:07Z,inbox,2
+l2,Web.de 2,Web.de,html,2026-11-17T19:01:17Z,inbox,8
+l2,Web.de 3,Web.de,text,2026-11-17T19:07:00Z,inbox,2
+l2,Web.de 4,Web.de,html,2026-11-17T19:03:20Z,inbox,2
+l2,Web.de 5,Web.de,text,2026-11-17T19:06:57Z,inbox,2
+l2,Yahoo 1,Yahoo,text,2026-11-17T19:06:13Z,inbox,3
+l2,Yahoo 2,Yahoo,html,2026-11-17T19:04:05Z,spam,0
+l2,Yahoo 3,Yahoo,text,2026-11-17T19:01:56Z,spam,1
+l2,Yahoo 4,Yahoo,html,2026-11-17T19:04:24Z,spam,1
+l2,Yahoo 5,Yahoo,text,2026-11-17T19:01:19Z,inbox,6
+l2,Yahoo 6,Yahoo,html,2026-11-17T19:05:52Z,spam,1
+l2,Yahoo 7,Yahoo,text,2026-11-17T19:06:05Z,spam,1
+l2,Yahoo 8,Yahoo,html,2026-11-17T19:03:40Z,spam,1
+l2,Yahoo 9,Yahoo,text,2026-11-17T19:00:25Z,spam,8
+l2,Yandex.ru 1,Yandex.ru,text,2026-11-17T19:06:35Z,inbox,6
+l2,Zoho 1,Zoho,text,2026-11-17T19:01:35Z,inbox,3
+l2,Zoho 2,Zoho,html,2026-11-17T19:02:26Z,inbox,1
+l2,att.net 1,att.net,text,2026-11-17T19:04:21Z,spam,1
+l2,att.net 2,att.net,html,2026-11-17T19:05:48Z,spam,0
+l2,currently.com 1,currently.com,text,2026-11-17T19:00:35Z,spam,1
+l2,gmx.at 1,gmx.at,text,2026-11-17T19:01:47Z,inbox,2
+l2,gmx.at 2,gmx.at,html,2026-11-17T19:06:15Z,inbox,2
+l2,gmx.at 3,gmx.at,text,2026-11-17T19:00:24Z,inbox,10
+l2,gmx.ch 1,gmx.ch,text,2026-11-17T19:03:33Z,inbox,2
+l2,gmx.ch 2,gmx.ch,html,2026-11-17T19:02:42Z,inbox,2
+l2,gmx.ch 3,gmx.ch,text,2026-11-17T19:06:02Z,inbox,2
+l2,gmx.com 1,gmx.com,text,2026-11-17T19:01:21Z,inbox,2
+l2,gmx.com 2,gmx.com,html,2026-11-17T19:02:48Z,inbox,2
+l2,gmx.de 1,gmx.de,text,2026-11-17T19:03:15Z,inbox,3
+l2,gmx.de 2,gmx.de,html,2026-11-17T19:01:43Z,inbox,2
+l2,gmx.de 3,gmx.de,text,2026-11-17T19:05:40Z,inbox,3
+l2,gmx.de 4,gmx.de,html,2026-11-17T19:04:57Z,inbox,2
+l2,gmx.de 5,gmx.de,text,2026-11-17T19:01:21Z,inbox,5
+l2,gmx.de 6,gmx.de,html,2026-11-17T19:01:13Z,inbox,7
+l2,gmx.net 1,gmx.net,text,2026-11-17T19:00:03Z,inbox,2
+l2,gmx.net 2,gmx.net,html,2026-11-17T19:05:09Z,inbox,1
+l2,gmx.net 3,gmx.net,text,2026-11-17T19:00:51Z,inbox,4
+l2,mailo.com 1,mailo.com,text,2026-11-17T19:02:53Z,inbox,2
+l2,mailo.com 2,mailo.com,html,2026-11-17T19:03:05Z,inbox,3
+l2,mailo.com 3,mailo.com,text,2026-11-17T19:02:35Z,inbox,5
+l2,naver.com 1,naver.com,text,2026-11-17T19:03:31Z,inbox,3
+l2,rambler.ru 1,rambler.ru,text,2026-11-17T19:02:04Z,inbox,3
+l2,ukr.net 1,ukr.net,text,2026-11-17T19:02:38Z,inbox,5
+l2,ukr.net 2,ukr.net,html,2026-11-17T19:00:39Z,inbox,2
+l2,vodafonemail.de 1,vodafonemail.de,text,2026-11-17T19:05:30Z,inbox,6
+l2,vodafonemail.de 2,vodafonemail.de,html,2026-11-17T19:02:20Z,inbox,3
+l3,AOL 1,AOL,html,2026-11-18T13:02:20Z,spam,4
+l3,AOL 2,AOL,text,2026-11-18T13:06:40Z,spam,1
+l3,AOL 3,AOL,html,2026-11-18T13:07:29Z,spam,2
+l3,AOL 4,AOL,text,2026-11-18T13:08:04Z,spam,0
+l3,AOL 5,AOL,html,2026-11-18T13:06:15Z,spam,1
+l3,AOL 6,AOL,text,2026-11-18T13:05:52Z,spam,1
+l3,AOL 7,AOL,html,2026-11-18T13:03:26Z,spam,4
+l3,AOL 8,AOL,text,2026-11-18T13:02:55Z,spam,1
+l3,Amazon WorkMail 1,Amazon WorkMail,html,2026-11-18T13:01:25Z,inbox,13
+l3,Amazon WorkMail 2,Amazon WorkMail,text,2026-11-18T13:07:48Z,inbox,1
+l3,Apple 1,Apple,html,2026-11-18T13:06:50Z,inbox,5
+l3,Apple 2,Apple,text,2026-11-18T13:04:48Z,inbox,6
+l3,Apple 3,Apple,html,2026-11-18T13:05:32Z,inbox,17
+l3,Barracuda 1,Barracuda,html,2026-11-18T13:02:05Z,,
+l3,Exchange (Office365) 1,Exchange (Office365),html,2026-11-18T13:06:47Z,inbox,99
+l3,Exchange (Office365) 2,Exchange (Office365),text,2026-11-18T13:05:24Z,inbox,4
+l3,Exchange (Office365) 3,Exchange (Office365),html,2026-11-18T13:06:20Z,inbox,68
+l3,Exchange (Office365) 4,Exchange (Office365),text,2026-11-18T13:07:43Z,inbox,13
+l3,Exchange (Office365) 5,Exchange (Office365),html,2026-11-18T13:03:47Z,inbox,112
+l3,Freenet.de 1,Freenet.de,html,2026-11-18T13:07:23Z,inbox,2
+l3,Freenet.de 2,Freenet.de,text,2026-11-18T13:01:46Z,inbox,2
+l3,GlockApps auth check 1,GlockApps auth check,html,2026-11-18T13:01:11Z,,
+l3,Gmail (4 years+) 1,Gmail (4 years+),html,2026-11-18T13:01:57Z,inbox,0
+l3,Gmail (4 years+) 2,Gmail (4 years+),text,2026-11-18T13:07:01Z,inbox,3
+l3,Gmail (4 years+) 3,Gmail (4 years+),html,2026-11-18T13:06:32Z,inbox,3
+l3,Gmail (6 months+) 1,Gmail (6 months+),html,2026-11-18T13:07:38Z,inbox,4
+l3,Gmail (6 months+) 2,Gmail (6 months+),text,2026-11-18T13:02:16Z,inbox,3
+l3,Gmail (6 months+) 3,Gmail (6 months+),html,2026-11-18T13:04:12Z,inbox,2
+l3,Gmail (6 months+) 4,Gmail (6 months+),text,2026-11-18T13:01:42Z,inbox,2
+l3,Gmail (6 months+) 5,Gmail (6 months+),html,2026-11-18T13:03:55Z,inbox,2
+l3,Gmail (6 months+) 6,Gmail (6 months+),text,2026-11-18T13:04:08Z,inbox,1
+l3,Gmail (6 months+) 7,Gmail (6 months+),html,2026-11-18T13:02:52Z,inbox,2
+l3,Gmail (6 months+) 8,Gmail (6 months+),text,2026-11-18T13:06:08Z,inbox,4
+l3,Gmail (6 months+) 9,Gmail (6 months+),html,2026-11-18T13:07:55Z,inbox,2
+l3,Gmail (6 months+) 10,Gmail (6 months+),text,2026-11-18T13:02:09Z,inbox,3
+l3,Gmail (6 months+) 11,Gmail (6 months+),html,2026-11-18T13:03:30Z,inbox,2
+l3,Gmail (6 months+) 12,Gmail (6 months+),text,2026-11-18T13:01:19Z,inbox,14
+l3,Gmail (6 months+) 13,Gmail (6 months+),html,2026-11-18T13:07:53Z,inbox,3
+l3,Gmail (6 months+) 14,Gmail (6 months+),text,2026-11-18T13:05:55Z,inbox,1
+l3,Gmail (6 months+) 15,Gmail (6 months+),html,2026-11-18T13:04:22Z,inbox,2
+l3,Gmail (6 months+) 16,Gmail (6 months+),text,2026-11-18T13:02:49Z,inbox,3
+l3,Gmail (6 months+) 17,Gmail (6 months+),html,2026-11-18T13:03:07Z,inbox,1
+l3,Google Spam Filter 1,Google Spam Filter,html,2026-11-18T13:04:47Z,,
+l3,Google Workspace (4 years+) 1,Google Workspace (4 years+),html,2026-11-18T13:03:42Z,inbox,1
+l3,Google Workspace (4 years+) 2,Google Workspace (4 years+),text,2026-11-18T13:04:38Z,inbox,2
+l3,Google Workspace (4 years+) 3,Google Workspace (4 years+),html,2026-11-18T13:01:21Z,inbox,6
+l3,Google Workspace (Up to 6 months) 1,Google Workspace (Up to 6 months),html,2026-11-18T13:06:08Z,inbox,1
+l3,Google Workspace (Up to 6 months) 2,Google Workspace (Up to 6 months),text,2026-11-18T13:08:01Z,inbox,1
+l3,Hotmail 1,Hotmail,html,2026-11-18T13:04:07Z,inbox,4
+l3,Hotmail 2,Hotmail,text,2026-11-18T13:03:26Z,inbox,15
+l3,Hotmail 3,Hotmail,html,2026-11-18T13:07:58Z,inbox,3
+l3,Hotmail 4,Hotmail,text,2026-11-18T13:03:35Z,inbox,4
+l3,Hotmail 5,Hotmail,html,2026-11-18T13:06:03Z,inbox,4
+l3,Hotmail 6,Hotmail,text,2026-11-18T13:03:21Z,inbox,3
+l3,Interia.pl 1,Interia.pl,html,2026-11-18T13:05:51Z,inbox,2
+l3,Interia.pl 2,Interia.pl,text,2026-11-18T13:01:30Z,inbox,8
+l3,Interia.pl 3,Interia.pl,html,2026-11-18T13:04:00Z,inbox,1
+l3,Laposte.net (FR) 1,Laposte.net (FR),html,2026-11-18T13:07:23Z,inbox,8
+l3,Laposte.net (FR) 2,Laposte.net (FR),text,2026-11-18T13:05:35Z,inbox,4
+l3,Libero.it 1,Libero.it,html,2026-11-18T13:01:42Z,inbox,14
+l3,Mail.com 1,Mail.com,html,2026-11-18T13:05:04Z,inbox,2
+l3,Mail.ru 1,Mail.ru,html,2026-11-18T13:01:41Z,inbox,3
+l3,Mail.ru 2,Mail.ru,text,2026-11-18T13:01:38Z,inbox,3
+l3,Microsoft (EOP) 1,Microsoft (EOP),html,2026-11-18T13:05:31Z,,
+l3,Onet.pl 1,Onet.pl,html,2026-11-18T13:04:54Z,spam,0
+l3,Onet.pl 2,Onet.pl,text,2026-11-18T13:04:44Z,spam,5
+l3,Outlook 1,Outlook,html,2026-11-18T13:01:19Z,inbox,2
+l3,Outlook 2,Outlook,text,2026-11-18T13:05:43Z,inbox,2
+l3,Outlook 3,Outlook,html,2026-11-18T13:02:06Z,inbox,5
+l3,Outlook 4,Outlook,text,2026-11-18T13:02:23Z,inbox,3
+l3,Outlook 5,Outlook,html,2026-11-18T13:04:19Z,inbox,5
+l3,Outlook 6,Outlook,text,2026-11-18T13:05:21Z,inbox,4
+l3,Outlook 7,Outlook,html,2026-11-18T13:05:26Z,inbox,2
+l3,Outlook 8,Outlook,text,2026-11-18T13:03:19Z,inbox,3
+l3,Outlook.de 1,Outlook.de,html,2026-11-18T13:04:56Z,inbox,5
+l3,Outlook.fr 1,Outlook.fr,html,2026-11-18T13:03:41Z,inbox,4
+l3,Proofpoint 1,Proofpoint,html,2026-11-18T13:03:05Z,,
+l3,Protonmail 1,Protonmail,html,2026-11-18T13:04:31Z,inbox,2
+l3,Seznam.cz 1,Seznam.cz,html,2026-11-18T13:03:03Z,inbox,4
+l3,Seznam.cz 2,Seznam.cz,text,2026-11-18T13:07:21Z,inbox,3
+l3,SpamAssassin 1,SpamAssassin,html,2026-11-18T13:01:19Z,,
+l3,T-online.de 1,T-online.de,html,2026-11-18T13:01:27Z,inbox,12
+l3,Virgilio.it 1,Virgilio.it,html,2026-11-18T13:06:53Z,inbox,1
+l3,Virgilio.it 2,Virgilio.it,text,2026-11-18T13:04:38Z,inbox,5
+l3,Web.de 1,Web.de,html,2026-11-18T13:04:03Z,inbox,2
+l3,Web.de 2,Web.de,text,2026-11-18T13:04:25Z,inbox,2
+l3,Web.de 3,Web.de,html,2026-11-18T13:07:33Z,inbox,2
+l3,Web.de 4,Web.de,text,2026-11-18T13:06:25Z,inbox,2
+l3,Web.de 5,Web.de,html,2026-11-18T13:03:37Z,inbox,2
+l3,Yahoo 1,Yahoo,html,2026-11-18T13:05:06Z,spam,1
+l3,Yahoo 2,Yahoo,text,2026-11-18T13:07:13Z,spam,1
+l3,Yahoo 3,Yahoo,html,2026-11-18T13:06:50Z,spam,1
+l3,Yahoo 4,Yahoo,text,2026-11-18T13:01:33Z,spam,1
+l3,Yahoo 5,Yahoo,html,2026-11-18T13:06:56Z,spam,0
+l3,Yahoo 6,Yahoo,text,2026-11-18T13:02:57Z,spam,1
+l3,Yahoo 7,Yahoo,html,2026-11-18T13:05:41Z,spam,3
+l3,Yahoo 8,Yahoo,text,2026-11-18T13:07:04Z,spam,2
+l3,Yahoo 9,Yahoo,html,2026-11-18T13:04:31Z,spam,0
+l3,Yandex.ru 1,Yandex.ru,html,2026-11-18T13:02:42Z,inbox,5
+l3,Yandex.ru 2,Yandex.ru,text,2026-11-18T13:06:16Z,spam,6
+l3,Zoho 1,Zoho,html,2026-11-18T13:06:22Z,inbox,2
+l3,Zoho 2,Zoho,text,2026-11-18T13:07:10Z,inbox,2
+l3,att.net 1,att.net,html,2026-11-18T13:06:28Z,spam,2
+l3,att.net 2,att.net,text,2026-11-18T13:07:25Z,spam,1
+l3,currently.com 1,currently.com,html,2026-11-18T13:07:09Z,spam,3
+l3,gmx.at 1,gmx.at,html,2026-11-18T13:06:37Z,inbox,0
+l3,gmx.at 2,gmx.at,text,2026-11-18T13:07:47Z,inbox,3
+l3,gmx.at 3,gmx.at,html,2026-11-18T13:03:50Z,inbox,2
+l3,gmx.ch 1,gmx.ch,html,2026-11-18T13:02:41Z,inbox,1
+l3,gmx.ch 2,gmx.ch,text,2026-11-18T13:06:34Z,inbox,1
+l3,gmx.ch 3,gmx.ch,html,2026-11-18T13:05:37Z,inbox,3
+l3,gmx.com 1,gmx.com,html,2026-11-18T13:05:01Z,inbox,1
+l3,gmx.com 2,gmx.com,text,2026-11-18T13:06:00Z,inbox,3
+l3,gmx.de 1,gmx.de,html,2026-11-18T13:02:28Z,inbox,1
+l3,gmx.de 2,gmx.de,text,2026-11-18T13:01:52Z,inbox,2
+l3,gmx.de 3,gmx.de,html,2026-11-18T13:02:32Z,inbox,2
+l3,gmx.de 4,gmx.de,text,2026-11-18T13:04:57Z,inbox,1
+l3,gmx.de 5,gmx.de,html,2026-11-18T13:05:15Z,inbox,3
+l3,gmx.de 6,gmx.de,text,2026-11-18T13:02:26Z,inbox,2
+l3,gmx.net 1,gmx.net,html,2026-11-18T13:02:44Z,inbox,1
+l3,gmx.net 2,gmx.net,text,2026-11-18T13:03:52Z,inbox,1
+l3,gmx.net 3,gmx.net,html,2026-11-18T13:03:28Z,inbox,2
+l3,mailo.com 1,mailo.com,html,2026-11-18T13:02:12Z,inbox,2
+l3,mailo.com 2,mailo.com,text,2026-11-18T13:01:49Z,inbox,2
+l3,mailo.com 3,mailo.com,html,2026-11-18T13:03:12Z,inbox,3
+l3,naver.com 1,naver.com,html,2026-11-18T13:01:59Z,inbox,3
+l3,rambler.ru 1,rambler.ru,html,2026-11-18T13:04:20Z,inbox,3
+l3,ukr.net 1,ukr.net,html,2026-11-18T13:07:42Z,inbox,2
+l3,ukr.net 2,ukr.net,text,2026-11-18T13:05:47Z,inbox,3
+l3,vodafonemail.de 1,vodafonemail.de,html,2026-11-18T13:02:37Z,inbox,3
+l3,vodafonemail.de 2,vodafonemail.de,text,2026-11-18T13:05:16Z,inbox,8
+l4,Exchange (Office365) 1,Exchange (Office365),nolinks,2026-11-19T09:56:26Z,inbox,5
+l4,Exchange (Office365) 2,Exchange (Office365),html,2026-11-19T09:57:05Z,inbox,6
+l4,Exchange (Office365) 3,Exchange (Office365),nolinks,2026-11-19T09:56:33Z,inbox,6
+l4,Exchange (Office365) 4,Exchange (Office365),html,2026-11-19T09:57:22Z,inbox,71
+l4,Exchange (Office365) 5,Exchange (Office365),html,2026-11-19T09:57:09Z,inbox,97
+l4,GlockApps auth check 1,GlockApps auth check,html,2026-11-19T09:57:15Z,,
+l4,Hotmail 1,Hotmail,html,2026-11-19T09:56:39Z,inbox,2
+l4,Hotmail 2,Hotmail,html,2026-11-19T09:56:50Z,inbox,8
+l4,Hotmail 3,Hotmail,html,2026-11-19T09:56:22Z,inbox,3
+l4,Hotmail 4,Hotmail,html,2026-11-19T09:57:19Z,inbox,4
+l4,Hotmail 5,Hotmail,html,2026-11-19T09:56:16Z,inbox,3
+l4,Hotmail 6,Hotmail,html,2026-11-19T09:56:55Z,inbox,3
+l4,Microsoft (EOP) 1,Microsoft (EOP),html,2026-11-19T09:56:58Z,,
+l4,Outlook 1,Outlook,html,2026-11-19T09:56:19Z,inbox,3
+l4,Outlook 2,Outlook,html,2026-11-19T09:56:45Z,inbox,2
+l4,Outlook 3,Outlook,html,2026-11-19T09:56:18Z,inbox,10
+l4,Outlook 4,Outlook,html,2026-11-19T09:56:28Z,inbox,2
+l4,Outlook 5,Outlook,html,2026-11-19T09:56:52Z,inbox,3
+l4,Outlook 6,Outlook,html,2026-11-19T09:56:09Z,inbox,3
+l4,Outlook 7,Outlook,html,2026-11-19T09:57:02Z,inbox,3
+l4,Outlook 8,Outlook,html,2026-11-19T09:57:13Z,inbox,3
+l4,Outlook.de 1,Outlook.de,html,2026-11-19T09:56:42Z,inbox,3
+l4,Outlook.fr 1,Outlook.fr,html,2026-11-19T09:56:37Z,inbox,5
+l5,Exchange (Office365) 1,Exchange (Office365),html,2026-11-19T10:18:08Z,inbox,120
+l5,Exchange (Office365) 2,Exchange (Office365),html,2026-11-19T10:18:01Z,inbox,5
+l5,Exchange (Office365) 3,Exchange (Office365),html,2026-11-19T10:18:18Z,inbox,144
+l5,Exchange (Office365) 4,Exchange (Office365),html,2026-11-19T10:18:05Z,inbox,6
+l5,Exchange (Office365) 5,Exchange (Office365),html,2026-11-19T10:18:15Z,inbox,118
+l5,GlockApps auth check 1,GlockApps auth check,html,2026-11-19T10:18:21Z,,
+l5,Microsoft (EOP) 1,Microsoft (EOP),html,2026-11-19T10:18:12Z,,
+l6,AOL 1,AOL,unsub,2026-11-19T12:05:31Z,spam,0
+l6,AOL 2,AOL,unsub,2026-11-19T12:05:40Z,spam,1
+l6,AOL 3,AOL,unsub,2026-11-19T12:04:00Z,spam,1
+l6,AOL 4,AOL,unsub,2026-11-19T12:05:43Z,spam,1
+l6,AOL 5,AOL,unsub,2026-11-19T12:09:33Z,spam,1
+l6,AOL 6,AOL,unsub,2026-11-19T12:04:18Z,spam,3
+l6,AOL 7,AOL,unsub,2026-11-19T12:06:29Z,spam,1
+l6,AOL 8,AOL,unsub,2026-11-19T12:05:37Z,spam,1
+l6,Amazon WorkMail 1,Amazon WorkMail,unsub,2026-11-19T12:03:52Z,inbox,2
+l6,Amazon WorkMail 2,Amazon WorkMail,unsub,2026-11-19T12:10:12Z,inbox,1
+l6,Apple 1,Apple,unsub,2026-11-19T12:07:49Z,inbox,5
+l6,Apple 2,Apple,unsub,2026-11-19T12:08:42Z,inbox,9
+l6,Apple 3,Apple,unsub,2026-11-19T12:07:02Z,inbox,10
+l6,Barracuda 1,Barracuda,unsub,2026-11-19T12:03:58Z,,
+l6,Exchange (Office365) 1,Exchange (Office365),unsub,2026-11-19T12:06:59Z,inbox,64
+l6,Exchange (Office365) 2,Exchange (Office365),unsub,2026-11-19T12:08:42Z,inbox,3
+l6,Exchange (Office365) 3,Exchange (Office365),unsub,2026-11-19T12:08:33Z,inbox,6
+l6,Exchange (Office365) 4,Exchange (Office365),unsub,2026-11-19T12:09:37Z,inbox,6
+l6,Exchange (Office365) 5,Exchange (Office365),unsub,2026-11-19T12:10:10Z,inbox,6
+l6,Freenet.de 1,Freenet.de,unsub,2026-11-19T12:04:27Z,inbox,2
+l6,Freenet.de 2,Freenet.de,unsub,2026-11-19T12:06:40Z,inbox,3
+l6,GlockApps auth check 1,GlockApps auth check,unsub,2026-11-19T12:04:07Z,,
+l6,Gmail (4 years+) 1,Gmail (4 years+),unsub,2026-11-19T12:05:54Z,inbox,2
+l6,Gmail (4 years+) 2,Gmail (4 years+),unsub,2026-11-19T12:05:47Z,inbox,1
+l6,Gmail (4 years+) 3,Gmail (4 years+),unsub,2026-11-19T12:05:25Z,inbox,2
+l6,Gmail (6 months+) 1,Gmail (6 months+),unsub,2026-11-19T12:09:39Z,inbox,1
+l6,Gmail (6 months+) 2,Gmail (6 months+),unsub,2026-11-19T12:07:01Z,other,1
+l6,Gmail (6 months+) 3,Gmail (6 months+),unsub,2026-11-19T12:09:55Z,inbox,1
+l6,Gmail (6 months+) 4,Gmail (6 months+),unsub,2026-11-19T12:03:35Z,inbox,3
+l6,Gmail (6 months+) 5,Gmail (6 months+),unsub,2026-11-19T12:07:20Z,inbox,1
+l6,Gmail (6 months+) 6,Gmail (6 months+),unsub,2026-11-19T12:09:58Z,inbox,1
+l6,Gmail (6 months+) 7,Gmail (6 months+),unsub,2026-11-19T12:06:09Z,inbox,1
+l6,Gmail (6 months+) 8,Gmail (6 months+),unsub,2026-11-19T12:07:04Z,inbox,1
+l6,Gmail (6 months+) 9,Gmail (6 months+),unsub,2026-11-19T12:05:15Z,inbox,2
+l6,Gmail (6 months+) 10,Gmail (6 months+),unsub,2026-11-19T12:07:27Z,inbox,1
+l6,Gmail (6 months+) 11,Gmail (6 months+),unsub,2026-11-19T12:09:10Z,inbox,1
+l6,Gmail (6 months+) 12,Gmail (6 months+),unsub,2026-11-19T12:03:41Z,inbox,1
+l6,Gmail (6 months+) 13,Gmail (6 months+),unsub,2026-11-19T12:05:28Z,inbox,2
+l6,Gmail (6 months+) 14,Gmail (6 months+),unsub,2026-11-19T12:08:25Z,inbox,1
+l6,Gmail (6 months+) 15,Gmail (6 months+),unsub,2026-11-19T12:05:12Z,inbox,2
+l6,Google Spam Filter 1,Google Spam Filter,unsub,2026-11-19T12:06:13Z,,
+l6,Google Workspace (4 years+) 1,Google Workspace (4 years+),unsub,2026-11-19T12:04:14Z,inbox,2
+l6,Google Workspace (4 years+) 2,Google Workspace (4 years+),unsub,2026-11-19T12:03:31Z,inbox,2
+l6,Google Workspace (4 years+) 3,Google Workspace (4 years+),unsub,2026-11-19T12:07:43Z,inbox,1
+l6,Google Workspace (Up to 6 months) 1,Google Workspace (Up to 6 months),unsub,2026-11-19T12:06:52Z,inbox,2
+l6,Google Workspace (Up to 6 months) 2,Google Workspace (Up to 6 months),unsub,2026-11-19T12:04:23Z,inbox,1
+l6,Hotmail 1,Hotmail,unsub,2026-11-19T12:08:55Z,inbox,3
+l6,Hotmail 2,Hotmail,unsub,2026-11-19T12:08:51Z,inbox,3
+l6,Hotmail 3,Hotmail,unsub,2026-11-19T12:08:19Z,inbox,3
+l6,Hotmail 4,Hotmail,unsub,2026-11-19T12:07:18Z,inbox,4
+l6,Hotmail 5,Hotmail,unsub,2026-11-19T12:04:32Z,inbox,5
+l6,Hotmail 6,Hotmail,unsub,2026-11-19T12:07:32Z,inbox,4
+l6,Interia.pl 1,Interia.pl,unsub,2026-11-19T12:09:02Z,spam,2
+l6,Interia.pl 2,Interia.pl,unsub,2026-11-19T12:06:04Z,spam,0
+l6,Interia.pl 3,Interia.pl,unsub,2026-11-19T12:04:41Z,spam,1
+l6,Laposte.net (FR) 1,Laposte.net (FR),unsub,2026-11-19T12:09:03Z,inbox,7
+l6,Laposte.net (FR) 2,Laposte.net (FR),unsub,2026-11-19T12:04:39Z,inbox,8
+l6,Libero.it 1,Libero.it,unsub,2026-11-19T12:05:08Z,inbox,1
+l6,Mail.com 1,Mail.com,unsub,2026-11-19T12:07:40Z,inbox,1
+l6,Mail.ru 1,Mail.ru,unsub,2026-11-19T12:07:59Z,inbox,3
+l6,Mail.ru 2,Mail.ru,unsub,2026-11-19T12:09:48Z,inbox,3
+l6,Microsoft (EOP) 1,Microsoft (EOP),unsub,2026-11-19T12:08:30Z,,
+l6,Onet.pl 1,Onet.pl,unsub,2026-11-19T12:09:20Z,spam,5
+l6,Onet.pl 2,Onet.pl,unsub,2026-11-19T12:09:55Z,spam,4
+l6,Outlook 1,Outlook,unsub,2026-11-19T12:04:19Z,inbox,2
+l6,Outlook 2,Outlook,unsub,2026-11-19T12:04:49Z,inbox,1
+l6,Outlook 3,Outlook,unsub,2026-11-19T12:08:14Z,inbox,5
+l6,Outlook 4,Outlook,unsub,2026-11-19T12:06:32Z,inbox,13
+l6,Outlook 5,Outlook,unsub,2026-11-19T12:04:36Z,inbox,2
+l6,Outlook 6,Outlook,unsub,2026-11-19T12:05:07Z,inbox,4
+l6,Outlook 7,Outlook,unsub,2026-11-19T12:10:15Z,inbox,2
+l6,Outlook 8,Outlook,unsub,2026-11-19T12:05:23Z,inbox,3
+l6,Outlook.de 1,Outlook.de,unsub,2026-11-19T12:06:46Z,inbox,3
+l6,Outlook.fr 1,Outlook.fr,unsub,2026-11-19T12:07:12Z,inbox,3
+l6,Proofpoint 1,Proofpoint,unsub,2026-11-19T12:05:02Z,,
+l6,Protonmail 1,Protonmail,unsub,2026-11-19T12:09:14Z,inbox,8
+l6,Seznam.cz 1,Seznam.cz,unsub,2026-11-19T12:10:07Z,inbox,3
+l6,Seznam.cz 2,Seznam.cz,unsub,2026-11-19T12:09:25Z,other,3
+l6,SpamAssassin 1,SpamAssassin,unsub,2026-11-19T12:09:08Z,,
+l6,Virgilio.it 1,Virgilio.it,unsub,2026-11-19T12:06:14Z,inbox,8
+l6,Virgilio.it 2,Virgilio.it,unsub,2026-11-19T12:04:15Z,inbox,13
+l6,Web.de 1,Web.de,unsub,2026-11-19T12:07:14Z,inbox,1
+l6,Web.de 2,Web.de,unsub,2026-11-19T12:03:40Z,inbox,4
+l6,Web.de 3,Web.de,unsub,2026-11-19T12:05:55Z,inbox,6
+l6,Web.de 4,Web.de,unsub,2026-11-19T12:09:30Z,inbox,2
+l6,Web.de 5,Web.de,unsub,2026-11-19T12:06:00Z,inbox,0
+l6,Yahoo 1,Yahoo,unsub,2026-11-19T12:08:38Z,spam,1
+l6,Yahoo 2,Yahoo,unsub,2026-11-19T12:06:32Z,spam,1
+l6,Yahoo 3,Yahoo,unsub,2026-11-19T12:08:15Z,spam,1
+l6,Yahoo 4,Yahoo,unsub,2026-11-19T12:05:18Z,spam,0
+l6,Yahoo 5,Yahoo,unsub,2026-11-19T12:03:53Z,spam,0
+l6,Yahoo 6,Yahoo,unsub,2026-11-19T12:07:09Z,spam,2
+l6,Yahoo 7,Yahoo,unsub,2026-11-19T12:08:44Z,spam,1
+l6,Yahoo 8,Yahoo,unsub,2026-11-19T12:04:42Z,spam,1
+l6,Yahoo 9,Yahoo,unsub,2026-11-19T12:06:35Z,spam,1
+l6,Yandex.ru 1,Yandex.ru,unsub,2026-11-19T12:08:50Z,spam,4
+l6,Yandex.ru 2,Yandex.ru,unsub,2026-11-19T12:09:44Z,spam,3
+l6,Zoho 1,Zoho,unsub,2026-11-19T12:09:27Z,other,2
+l6,Zoho 2,Zoho,unsub,2026-11-19T12:06:42Z,inbox,1
+l6,att.net 1,att.net,unsub,2026-11-19T12:07:37Z,spam,1
+l6,att.net 2,att.net,unsub,2026-11-19T12:03:44Z,spam,1
+l6,currently.com 1,currently.com,unsub,2026-11-19T12:03:47Z,spam,1
+l6,gmx.at 1,gmx.at,unsub,2026-11-19T12:10:18Z,inbox,1
+l6,gmx.at 2,gmx.at,unsub,2026-11-19T12:05:35Z,inbox,2
+l6,gmx.at 3,gmx.at,unsub,2026-11-19T12:04:10Z,inbox,1
+l6,gmx.ch 1,gmx.ch,unsub,2026-11-19T12:04:58Z,inbox,1
+l6,gmx.ch 2,gmx.ch,unsub,2026-11-19T12:06:20Z,inbox,2
+l6,gmx.ch 3,gmx.ch,unsub,2026-11-19T12:08:21Z,inbox,0
+l6,gmx.com 1,gmx.com,unsub,2026-11-19T12:04:53Z,inbox,2
+l6,gmx.com 2,gmx.com,unsub,2026-11-19T12:07:25Z,inbox,2
+l6,gmx.de 1,gmx.de,unsub,2026-11-19T12:08:10Z,inbox,2
+l6,gmx.de 2,gmx.de,unsub,2026-11-19T12:10:03Z,inbox,2
+l6,gmx.de 3,gmx.de,unsub,2026-11-19T12:09:20Z,inbox,1
+l6,gmx.de 4,gmx.de,unsub,2026-11-19T12:09:49Z,inbox,1
+l6,gmx.de 5,gmx.de,unsub,2026-11-19T12:06:49Z,inbox,2
+l6,gmx.de 6,gmx.de,unsub,2026-11-19T12:07:34Z,inbox,2
+l6,gmx.net 1,gmx.net,unsub,2026-11-19T12:04:56Z,inbox,2
+l6,gmx.net 2,gmx.net,unsub,2026-11-19T12:07:49Z,inbox,1
+l6,gmx.net 3,gmx.net,unsub,2026-11-19T12:10:22Z,inbox,2
+l6,mailo.com 1,mailo.com,unsub,2026-11-19T12:06:17Z,inbox,2
+l6,mailo.com 2,mailo.com,unsub,2026-11-19T12:08:02Z,inbox,1
+l6,mailo.com 3,mailo.com,unsub,2026-11-19T12:07:59Z,inbox,1
+l6,naver.com 1,naver.com,unsub,2026-11-19T12:05:59Z,inbox,3
+l6,rambler.ru 1,rambler.ru,unsub,2026-11-19T12:04:49Z,inbox,5
+l6,ukr.net 1,ukr.net,unsub,2026-11-19T12:07:53Z,inbox,1
+l6,ukr.net 2,ukr.net,unsub,2026-11-19T12:06:23Z,inbox,2
+l6,vodafonemail.de 1,vodafonemail.de,unsub,,pending,
+l6,vodafonemail.de 2,vodafonemail.de,unsub,2026-11-19T12:08:07Z,inbox,2
