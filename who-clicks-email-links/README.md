@@ -119,7 +119,7 @@ Who came to the host before the first email was sent, from the certificate (12 N
 - Seed mailboxes don't click. The data shows what filters do at delivery; checks at the time of a click, and whether links were rewritten in the delivered email, aren't in it.
 - The Microsoft 365, EOP, Proofpoint and Barracuda seeds run their owners' policies; real organizations scan more or less. Five Exchange mailboxes and one EOP mailbox: the buttons (V12, V13) come from four scanned emails and the unsubscribe links (V14, V15) from two.
 - `go.dmarcjet.com` was new, and the test emails were full of links, some of them hidden; an ordinary newsletter may draw fewer checks. The short newsletter of l6 was scanned in two of the six Microsoft 365 business mailboxes.
-- The host log was read on 19 November 2026 at 12:15 UTC: late visits after that aren't in this version.
+- The host log covers 12 November 2026, 20:09 UTC, to 22 November, 06:09 UTC, three to six days after each run; then the server was stopped. Every request with a token came within 86 seconds of delivery, and none came after 19 November, 12:10 UTC. A check after a longer gap isn't in the data.
 - GlockApps' delivery time comes from the email's own headers (the top `Received` header minus `Date:`), so it isn't GlockApps' polling time, and it isn't the moment the email appeared in the mailbox either.
 
 ## How to cite
