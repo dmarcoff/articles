@@ -126,6 +126,6 @@ Who came to the host before the first email was sent, from the certificate (12 N
 
 This folder:
 
-> Markau, A., & DMARKOFF. (2026). *Who clicks the links in your emails: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/who-clicks-email-links
+> Markau, A. (2026). *Who clicks the links in your emails: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/who-clicks-email-links
 
 For licensing, see [License](../README.md#license) in the repository README.

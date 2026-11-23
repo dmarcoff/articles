@@ -25,8 +25,8 @@ The code, meaning the `*.py` and `*.sql` files, is under the [MIT License](LICEN
 
 **Content produced by other systems.** Parts of the data were produced by systems we don't operate: DNS records of other domains, SMTP replies, Mailgun's exports, the receivers' DMARC aggregate reports, message headers and GlockApps' results. We claim no rights in that content, and CC BY 4.0 applies only within the rights we hold.
 
-When you reuse the data, name the authors and the folder and state the license, for example:
+When you reuse the data, name the author and the folder and state the license, for example:
 
-> Data: Aliaksandr Markau and DMARKOFF, "SPF and DMARC in the Tranco top 100,000: data", https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026, CC BY 4.0.
+> Data: Aliaksandr Markau, "SPF and DMARC in the Tranco top 100,000: data", https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026, CC BY 4.0.
 
 If you changed the data, say so.
