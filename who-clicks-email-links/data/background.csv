@@ -1,0 +1,10 @@
+category,records,ips,networks,first_seen_after_certificate,main_networks
+Secret probes,516,18,13,+3 s,"Google Cloud, TechTies, AWS"
+Home page only,144,61,29,+3 s,"DigitalOcean, AWS, Google Cloud"
+Declared scanners,94,14,10,+3 s,"DigitalOcean, BestDC, AWS"
+Phishing-kit check,60,1,1,+9 h,M247
+Script-running browsers,13,3,2,+20 h,"M247, HostRoyale"
+AI crawlers,9,3,2,+5 min,"AWS, Microsoft"
+Handshake only,14,4,4,+24 min,"IP Volume, AWS"
+"By IP, not by name",1512,458,70,from start,"AWS, Akamai, Censys"
+Old owner's NAS,727,10,10,+10 min,Home ISPs
