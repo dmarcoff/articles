@@ -129,6 +129,6 @@ The article:
 
 This folder:
 
-> Markau, A., & DMARKOFF. (2026). *Free SPF checkers compared: data and scripts* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/free-spf-checkers-compared
+> Markau, A. (2026). *Free SPF checkers compared: data and scripts* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/free-spf-checkers-compared
 
 For licensing, see [License](../README.md#license) in the repository README.

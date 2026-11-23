@@ -32,7 +32,7 @@ Follow the existing folders. The README should have:
 - **Quick start**: the commands that reproduce the committed output, and the Python version they need. Run them on that version before writing it down.
 - What each file holds, what the columns mean and how the data was collected, with dates in UTC.
 - **Caveats**: what the data can't show.
-- **How to cite**: the folder in the form the other folders use (`Markau, A., & DMARKOFF. (year). Title [Data set]. GitHub. URL`) and the article once it is published. Credit any list or dataset the study builds on, the way the census folder credits Tranco.
+- **How to cite**: the folder in the form the other folders use (`Markau, A. (year). Title [Data set]. GitHub. URL`) and the article once it is published. Credit any list or dataset the study builds on, the way the census folder credits Tranco.
 
 ## What not to publish
 
@@ -107,7 +107,6 @@ Each release is archived on Zenodo, which gives it a version DOI; the concept DO
 3. Check the new version on Zenodo and fix it with Edit, then Publish. `.zenodo.json` can't express everything, so every version needs these by hand:
    - Licenses: add MIT next to CC BY 4.0.
    - Copyright: as on the previous version.
-   - Creators: Zenodo lists DMARKOFF as a person; change its type to organization.
 
    Then compare the rest with `.zenodo.json`: resource type Dataset, related works, keywords, language and the Collected date.
 

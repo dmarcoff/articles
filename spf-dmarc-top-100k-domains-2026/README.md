@@ -108,6 +108,6 @@ The domains come from the Tranco list [W3ZV9](https://tranco-list.eu/list/W3ZV9)
 
 This folder:
 
-> Markau, A., & DMARKOFF. (2026). *SPF and DMARC in the Tranco top 100,000: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026
+> Markau, A. (2026). *SPF and DMARC in the Tranco top 100,000: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/spf-dmarc-top-100k-domains-2026
 
 If you use these counts, cite the Tranco paper above as well. A citation for the article will be added here once it is published. For licensing, see [License](../README.md#license) in the repository README.

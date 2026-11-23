@@ -142,6 +142,6 @@ The article:
 
 This folder:
 
-> Markau, A., & DMARKOFF. (2026). *Broken SPF records vs mailbox providers: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/broken-spf-records-mailbox-providers
+> Markau, A. (2026). *Broken SPF records vs mailbox providers: data* [Data set]. GitHub. https://github.com/dmarcoff/articles/tree/main/broken-spf-records-mailbox-providers
 
 For licensing, see [License](../README.md#license) in the repository README.
