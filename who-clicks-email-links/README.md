@@ -1,6 +1,6 @@
 # Who clicks the links in your emails: data
 
-Data behind the GlockApps blog article *Who Clicks Your Email Links? A Test Across 130 Seeds*, which isn't published yet.
+Data behind the GlockApps blog article [Who Clicks Your Email Links? A Test Across 130 Seeds](https://glockapps.com/blog/who-clicks-email-links/).
 
 Between 16 and 19 November 2026 we sent 550 test emails in six runs: 544 to 130 GlockApps seeds at about 30 mailbox providers, five of the seeds spam-filter checks, and one per run to GlockApps' own authentication-check mailbox. Every link in every email carried its own token and pointed to `go.dmarcjet.com`, a host that logged every request, so each request named the email and the seed mailbox it came from. The question was which mail filters open the links in an email before the recipient does, when, with what, and whether they use up one-time links. This folder holds one row per email (where it landed and what happened to its links) and one row per request to the link host, with the networks named by ASN.
 
@@ -123,6 +123,10 @@ Who came to the host before the first email was sent, from the certificate (12 N
 - GlockApps' delivery time comes from the email's own headers (the top `Received` header minus `Date:`), so it isn't GlockApps' polling time, and it isn't the moment the email appeared in the mailbox either.
 
 ## How to cite
+
+The article:
+
+> Markau, A. (2026, November 25). *Who Clicks Your Email Links? A Test Across 130 Seeds*. GlockApps blog. https://glockapps.com/blog/who-clicks-email-links/
 
 This folder:
 
