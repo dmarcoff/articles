@@ -11,7 +11,7 @@ The code is under the MIT License and the data and documentation under CC BY 4.0
 | [free-spf-checkers-compared](free-spf-checkers-compared/) | Free SPF Checkers Compared: What They Get Wrong About Five Real-World SPF Records (October 2026) |
 | [broken-spf-records-mailbox-providers](broken-spf-records-mailbox-providers/) | What Mailbox Providers Really Do With Broken SPF Records: We Tested 21 of Them (October 2026) |
 | [spf-dmarc-top-100k-domains-2026](spf-dmarc-top-100k-domains-2026/) | SPF and DMARC in the Tranco Top 100,000: Our October 2026 DNS Snapshot (October 2026) |
-| [who-clicks-email-links](who-clicks-email-links/) | Who Clicks Your Email Links? A Test Across 130 Seeds (GlockApps blog, not published yet) |
+| [who-clicks-email-links](who-clicks-email-links/) | Who Clicks Your Email Links? A Test Across 130 Seeds (GlockApps blog, November 2026) |
 
 ## How to cite
 

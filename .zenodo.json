@@ -45,6 +45,11 @@
       "resource_type": "publication"
     },
     {
+      "identifier": "https://glockapps.com/blog/who-clicks-email-links/",
+      "relation": "isSupplementTo",
+      "resource_type": "publication"
+    },
+    {
       "identifier": "10.14722/ndss.2019.23386",
       "relation": "cites",
       "resource_type": "publication-conferencepaper"
